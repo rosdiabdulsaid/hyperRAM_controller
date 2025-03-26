@@ -1,0 +1,307 @@
+Analysis & Synthesis report for top_ohbmc
+Thu Mar 20 15:06:48 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                            ;
++------------------------------------+----------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Thu Mar 20 15:06:48 2025                  ;
+; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Standard Edition ;
+; Revision Name                      ; top_ohbmc                                          ;
+; Top-level Entity Name              ; topv2                                              ;
+; Family                             ; Cyclone 10 LP                                      ;
+; Total logic elements               ; N/A until Partition Merge                          ;
+;     Total combinational functions  ; N/A until Partition Merge                          ;
+;     Dedicated logic registers      ; N/A until Partition Merge                          ;
+; Total registers                    ; N/A until Partition Merge                          ;
+; Total pins                         ; N/A until Partition Merge                          ;
+; Total virtual pins                 ; N/A until Partition Merge                          ;
+; Total memory bits                  ; N/A until Partition Merge                          ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                          ;
+; Total PLLs                         ; N/A until Partition Merge                          ;
++------------------------------------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10CL025YU256I7G    ;                    ;
+; Top-level entity name                                            ; topv2              ; top_ohbmc          ;
+; Family name                                                      ; Cyclone 10 LP      ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
+    Info: Processing started: Thu Mar 20 15:06:28 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top_ohbmc
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/ohbmc.v
+    Info (12023): Found entity 1: ohbmc File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/ohbmc.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0.v
+    Info (12023): Found entity 1: ohbmc_mm_interconnect_0 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: ohbmc_mm_interconnect_0_rsp_mux File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 2 design units, including 2 entities, in source file ohbmc/synthesis/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: ohbmc_mm_interconnect_0_rsp_demux File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: ohbmc_mm_interconnect_0_cmd_mux File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: ohbmc_mm_interconnect_0_cmd_demux File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_merlin_traffic_limiter.sv
+    Info (12023): Found entity 1: altera_merlin_traffic_limiter File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_traffic_limiter.sv Line: 49
+Info (12021): Found 2 design units, including 2 entities, in source file ohbmc/synthesis/submodules/altera_merlin_reorder_memory.sv
+    Info (12023): Found entity 1: altera_merlin_reorder_memory File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_reorder_memory.sv Line: 28
+    Info (12023): Found entity 2: memory_pointer_controller File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_reorder_memory.sv Line: 185
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_st_pipeline_base.v Line: 22
+Info (12021): Found 2 design units, including 2 entities, in source file ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_router_001.sv
+    Info (12023): Found entity 1: ohbmc_mm_interconnect_0_router_001_default_decode File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_router_001.sv Line: 45
+    Info (12023): Found entity 2: ohbmc_mm_interconnect_0_router_001 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_router_001.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: ohbmc_mm_interconnect_0_router_default_decode File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: ohbmc_mm_interconnect_0_router File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_merlin_axi_slave_ni.sv
+    Info (12023): Found entity 1: altera_merlin_axi_slave_ni File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_axi_slave_ni.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_merlin_address_alignment.sv
+    Info (12023): Found entity 1: altera_merlin_address_alignment File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_address_alignment.sv Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_master_agent.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_merlin_axi_translator.sv
+    Info (12023): Found entity 1: altera_merlin_axi_translator File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_axi_translator.sv Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_merlin_master_translator.sv Line: 32
+Warning (10335): Unrecognized synthesis attribute "KEEP_HIERARCHY" at ohbmc/synthesis/submodules/hbmc_arst_sync.v(29) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_arst_sync.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/hbmc_arst_sync.v
+    Info (12023): Found entity 1: hbmc_arst_sync File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_arst_sync.v Line: 30
+Warning (10335): Unrecognized synthesis attribute "IODELAY_GROUP" at ohbmc/synthesis/submodules/hbmc_axi_top.v(303) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_axi_top.v Line: 303
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/hbmc_axi_top.v
+    Info (12023): Found entity 1: hbmc_axi_top File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_axi_top.v Line: 28
+Warning (10335): Unrecognized synthesis attribute "KEEP_HIERARCHY" at ohbmc/synthesis/submodules/hbmc_bit_sync.v(28) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_bit_sync.v Line: 28
+Warning (10335): Unrecognized synthesis attribute "shreg_extract" at ohbmc/synthesis/submodules/hbmc_bit_sync.v(41) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_bit_sync.v Line: 41
+Warning (10335): Unrecognized synthesis attribute "ASYNC_REG" at ohbmc/synthesis/submodules/hbmc_bit_sync.v(41) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_bit_sync.v Line: 41
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/hbmc_bit_sync.v
+    Info (12023): Found entity 1: hbmc_bit_sync File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_bit_sync.v Line: 29
+Warning (10335): Unrecognized synthesis attribute "KEEP_HIERARCHY" at ohbmc/synthesis/submodules/hbmc_bus_sync.v(28) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_bus_sync.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/hbmc_bus_sync.v
+    Info (12023): Found entity 1: hbmc_bus_sync File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_bus_sync.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/hbmc_clk_obuf.v
+    Info (12023): Found entity 1: hbmc_clk_obuf File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_clk_obuf.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/hbmc_ctrl.v
+    Info (12023): Found entity 1: hbmc_ctrl File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_ctrl.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/hbmc_dfifo.v
+    Info (12023): Found entity 1: hbmc_dfifo File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_dfifo.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/hbmc_dru.v
+    Info (12023): Found entity 1: hbmc_dru File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_dru.v Line: 109
+Error (10644): Verilog HDL error at hbmc_elastic_buf.v(102): this block requires a name File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_elastic_buf.v Line: 102
+Error (10112): Ignored design unit "hbmc_elastic_buf" at hbmc_elastic_buf.v(29) due to previous errors File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_elastic_buf.v Line: 29
+Info (12021): Found 0 design units, including 0 entities, in source file ohbmc/synthesis/submodules/hbmc_elastic_buf.v
+Warning (10335): Unrecognized synthesis attribute "IODELAY_GROUP" at ohbmc/synthesis/submodules/hbmc_iobuf.v(117) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_iobuf.v Line: 117
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/hbmc_iobuf.v
+    Info (12023): Found entity 1: hbmc_iobuf File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_iobuf.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/hbmc_ufifo.v
+    Info (12023): Found entity 1: hbmc_ufifo File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/hbmc_ufifo.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/ohbmc_master_0.v
+    Info (12023): Found entity 1: ohbmc_master_0 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_master_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/ohbmc_master_0_p2b_adapter.sv
+    Info (12023): Found entity 1: ohbmc_master_0_p2b_adapter File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_master_0_p2b_adapter.sv Line: 55
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/ohbmc_master_0_b2p_adapter.sv
+    Info (12023): Found entity 1: ohbmc_master_0_b2p_adapter File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_master_0_b2p_adapter.sv Line: 55
+Info (12021): Found 7 design units, including 7 entities, in source file ohbmc/synthesis/submodules/altera_avalon_packets_to_master.v
+    Info (12023): Found entity 1: altera_avalon_packets_to_master File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_packets_to_master.v Line: 22
+    Info (12023): Found entity 2: packets_to_fifo File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_packets_to_master.v Line: 142
+    Info (12023): Found entity 3: fifo_buffer_single_clock_fifo File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_packets_to_master.v Line: 512
+    Info (12023): Found entity 4: fifo_buffer_scfifo_with_controls File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_packets_to_master.v Line: 573
+    Info (12023): Found entity 5: fifo_buffer File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_packets_to_master.v Line: 627
+    Info (12023): Found entity 6: fifo_to_packet File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_packets_to_master.v Line: 697
+    Info (12023): Found entity 7: packets_to_master File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_packets_to_master.v Line: 851
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_avalon_st_packets_to_bytes.v
+    Info (12023): Found entity 1: altera_avalon_st_packets_to_bytes File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_st_packets_to_bytes.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_avalon_st_bytes_to_packets.v
+    Info (12023): Found entity 1: altera_avalon_st_bytes_to_packets File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_st_bytes_to_packets.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/ohbmc_master_0_timing_adt.sv
+    Info (12023): Found entity 1: ohbmc_master_0_timing_adt File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/ohbmc_master_0_timing_adt.sv Line: 60
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_avalon_st_jtag_interface.v
+    Info (12023): Found entity 1: altera_avalon_st_jtag_interface File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_st_jtag_interface.v Line: 20
+Info (12021): Found 3 design units, including 3 entities, in source file ohbmc/synthesis/submodules/altera_jtag_dc_streaming.v
+    Info (12023): Found entity 1: altera_jtag_control_signal_crosser File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_jtag_dc_streaming.v Line: 30
+    Info (12023): Found entity 2: altera_jtag_src_crosser File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_jtag_dc_streaming.v Line: 72
+    Info (12023): Found entity 3: altera_jtag_dc_streaming File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_jtag_dc_streaming.v Line: 135
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_jtag_sld_node.v
+    Info (12023): Found entity 1: altera_jtag_sld_node File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_jtag_sld_node.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_jtag_streaming.v
+    Info (12023): Found entity 1: altera_jtag_streaming File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_jtag_streaming.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_avalon_st_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_clock_crosser File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_st_clock_crosser.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_std_synchronizer_nocut.v
+    Info (12023): Found entity 1: altera_std_synchronizer_nocut File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_std_synchronizer_nocut.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_avalon_st_idle_remover.v
+    Info (12023): Found entity 1: altera_avalon_st_idle_remover File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_st_idle_remover.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_avalon_st_idle_inserter.v
+    Info (12023): Found entity 1: altera_avalon_st_idle_inserter File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_st_idle_inserter.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file ohbmc/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_stage File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ohbmc/synthesis/submodules/altera_avalon_st_pipeline_stage.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file openhbmc/top_hbmc.sv
+    Info (12023): Found entity 1: top_hbmc File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/openhbmc/top_hbmc.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file io/altddio_out/ddio_out.v
+    Info (12023): Found entity 1: ddio_out File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/io/altddio_out/ddio_out.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file async_fifo/async_fifo.v
+    Info (12023): Found entity 1: async_fifo File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/async_fifo/async_fifo.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file io/serdes/serdes.v
+    Info (12023): Found entity 1: serdes File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/io/serdes/serdes.v Line: 40
+Info (144001): Generated suppressed messages file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/output_files/top_ohbmc.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 8 warnings
+    Error: Peak virtual memory: 4733 megabytes
+    Error: Processing ended: Thu Mar 20 15:06:48 2025
+    Error: Elapsed time: 00:00:20
+    Error: Total CPU time (on all processors): 00:00:32
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/output_files/top_ohbmc.map.smsg.
+
+

@@ -1,0 +1,76 @@
+--altddio_bidir CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone 10 LP" EXTEND_OE_DISABLE="OFF" IMPLEMENT_INPUT_IN_LCELL="OFF" INVERT_OUTPUT="OFF" OE_REG="UNREGISTERED" POWER_UP_HIGH="OFF" WIDTH=8 datain_h datain_l dataout_h dataout_l inclock oe outclock padio
+--VERSION_BEGIN 23.1 cbx_altddio_bidir 2024:05:14:17:57:37:SC cbx_cycloneii 2024:05:14:17:57:38:SC cbx_maxii 2024:05:14:17:57:38:SC cbx_mgl 2024:05:14:17:57:46:SC cbx_stratix 2024:05:14:17:57:38:SC cbx_stratixii 2024:05:14:17:57:38:SC cbx_stratixiii 2024:05:14:17:57:38:SC cbx_stratixv 2024:05:14:17:57:38:SC cbx_util_mgl 2024:05:14:17:57:38:SC  VERSION_END
+
+
+-- Copyright (C) 2024  Intel Corporation. All rights reserved.
+--  Your use of Intel Corporation's design tools, logic functions 
+--  and other software and tools, and any partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Intel Program License 
+--  Subscription Agreement, the Intel Quartus Prime License Agreement,
+--  the Intel FPGA IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Intel and sold by Intel or its authorized distributors.  Please
+--  refer to the applicable agreement for further details, at
+--  https://fpgasoftware.intel.com/eula.
+
+
+FUNCTION cyclone10lp_ddio_out (areset, clk, clkhi, clklo, datainhi, datainlo, ena, muxsel, sreset)
+WITH ( async_mode, power_up, sync_mode, use_new_clocking_model)
+RETURNS ( dataout);
+FUNCTION TRI (in, oe)
+RETURNS ( out);
+
+--synthesis_resources = IO 8 reg 24 
+OPTIONS ALTERA_INTERNAL_OPTION = "ANALYZE_METASTABILITY=OFF;ADV_NETLIST_OPT_ALLOWED=DEFAULT;suppress_da_rule_internal=C106;{-to input_cell_h} DDIO_INPUT_REGISTER=HIGH;{-to input_cell_l} DDIO_INPUT_REGISTER=LOW;{-to tri_buf1a} MEGAFUNCTION_GENERATED_TRI=ON";
+
+SUBDESIGN ddio_bidir_a4p
+( 
+	datain_h[7..0]	:	input;
+	datain_l[7..0]	:	input;
+	dataout_h[7..0]	:	output;
+	dataout_l[7..0]	:	output;
+	inclock	:	input;
+	oe	:	input;
+	outclock	:	input;
+	padio[7..0]	:	bidir;
+) 
+VARIABLE 
+	input_cell_h[7..0] : dffe;
+	input_cell_l[7..0] : dffe;
+	input_latch_l[7..0] : dffe;
+	ddio_outa[7..0] : cyclone10lp_ddio_out
+		WITH (
+			async_mode = "none",
+			power_up = "low",
+			sync_mode = "none",
+			use_new_clocking_model = "true"
+		);
+	tri_buf1a[7..0] : TRI;
+	comb_wire[7..0]	: WIRE;
+	oe_out_wire[7..0]	: WIRE;
+
+BEGIN 
+	input_cell_h[].clk = inclock;
+	input_cell_h[].d = comb_wire[];
+	input_cell_l[].clk = (! inclock);
+	input_cell_l[].d = comb_wire[];
+	input_latch_l[].clk = inclock;
+	input_latch_l[].d = input_cell_l[].q;
+	ddio_outa[].clkhi = outclock;
+	ddio_outa[].clklo = outclock;
+	ddio_outa[].datainhi = datain_h[];
+	ddio_outa[].datainlo = datain_l[];
+	ddio_outa[].muxsel = outclock;
+	tri_buf1a[].in = ddio_outa[].dataout;
+	tri_buf1a[].oe = oe_out_wire[];
+	comb_wire[] = padio[];
+	dataout_h[] = input_cell_h[].q;
+	dataout_l[] = input_latch_l[].q;
+	oe_out_wire[] = oe;
+	padio[] = tri_buf1a[].out;
+END;
+--VALID FILE

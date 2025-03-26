@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ckout",
+					"strict" : false
+				},
+				{
+					"name" : "ckoutn",
+					"strict" : false
+				},
+				{
+					"name" : "csn",
+					"strict" : false
+				},
+				{
+					"name" : "rstn",
+					"strict" : false
+				},
+				{
+					"name" : "dq[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dq[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dq[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dq[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dq[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dq[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dq[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dq[7]",
+					"strict" : false
+				},
+				{
+					"name" : "rwds",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
