@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Thu Mar 27 09:44:33 2025
+Thu Mar 27 12:32:49 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
 
 
@@ -103,13 +103,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 27 09:44:33 2025              ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 27 12:32:49 2025              ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Standard Edition ;
 ; Revision Name                      ; top                                                ;
 ; Top-level Entity Name              ; topv3                                              ;
 ; Family                             ; Cyclone 10 LP                                      ;
-; Total logic elements               ; 4,015                                              ;
-;     Total combinational functions  ; 1,914                                              ;
+; Total logic elements               ; 4,022                                              ;
+;     Total combinational functions  ; 1,921                                              ;
 ;     Dedicated logic registers      ; 3,553                                              ;
 ; Total registers                    ; 3573                                               ;
 ; Total pins                         ; 14                                                 ;
@@ -231,6 +231,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------+
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                     ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------+
+; jamb/synthesis/submodules/altera_avalon_st_pipeline_stage.sv       ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_st_pipeline_stage.sv       ; jamb        ;
 ; comp_stm.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv                                                        ;             ;
 ; top_stm.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv                                                         ;             ;
 ; topv2.sv                                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv2.sv                                                           ;             ;
@@ -314,7 +315,6 @@ https://fpgasoftware.intel.com/eula.
 ; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
 ; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
 ; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                        ;             ;
-; db/pll2_altpll1.v                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/pll2_altpll1.v                                                  ;             ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
@@ -323,16 +323,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                               ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 4,015                                                                               ;
+; Estimated Total logic elements              ; 4,022                                                                               ;
 ;                                             ;                                                                                     ;
-; Total combinational functions               ; 1914                                                                                ;
+; Total combinational functions               ; 1921                                                                                ;
 ; Logic element usage by number of LUT inputs ;                                                                                     ;
-;     -- 4 input functions                    ; 524                                                                                 ;
+;     -- 4 input functions                    ; 532                                                                                 ;
 ;     -- 3 input functions                    ; 1130                                                                                ;
-;     -- <=2 input functions                  ; 260                                                                                 ;
+;     -- <=2 input functions                  ; 259                                                                                 ;
 ;                                             ;                                                                                     ;
 ; Logic elements by mode                      ;                                                                                     ;
-;     -- normal mode                          ; 1826                                                                                ;
+;     -- normal mode                          ; 1833                                                                                ;
 ;     -- arithmetic mode                      ; 88                                                                                  ;
 ;                                             ;                                                                                     ;
 ; Total registers                             ; 3573                                                                                ;
@@ -348,8 +348,8 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                   ;
 ;                                             ;                                                                                     ;
 ; Maximum fan-out node                        ; pll2:pll2_inst|altpll:altpll_component|pll2_altpll2:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 2489                                                                                ;
-; Total fan-out                               ; 18867                                                                               ;
+; Maximum fan-out                             ; 2513                                                                                ;
+; Total fan-out                               ; 18897                                                                               ;
 ; Average fan-out                             ; 3.32                                                                                ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 
@@ -359,7 +359,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                   ; Entity Name                             ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
-; |topv3                                                                                                                                  ; 1914 (2)            ; 3553 (0)                  ; 20096       ; 0            ; 0       ; 0         ; 14   ; 0            ; |topv3                                                                                                                                                                                                                                                                                                                                                                                ; topv3                                   ; work         ;
+; |topv3                                                                                                                                  ; 1921 (2)            ; 3553 (0)                  ; 20096       ; 0            ; 0       ; 0         ; 14   ; 0            ; |topv3                                                                                                                                                                                                                                                                                                                                                                                ; topv3                                   ; work         ;
 ;    |altsource_probe_top:rst_control|                                                                                                    ; 28 (0)              ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|altsource_probe_top:rst_control                                                                                                                                                                                                                                                                                                                                                ; altsource_probe_top                     ; issp         ;
 ;       |altsource_probe:issp_impl|                                                                                                       ; 28 (0)              ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|altsource_probe_top:rst_control|altsource_probe:issp_impl                                                                                                                                                                                                                                                                                                                      ; altsource_probe                         ; work         ;
 ;          |altsource_probe_body:altsource_probe_body_inst|                                                                               ; 28 (3)              ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|altsource_probe_top:rst_control|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                                                       ; altsource_probe_body                    ; work         ;
@@ -378,12 +378,12 @@ https://fpgasoftware.intel.com/eula.
 ;    |pll2:pll2_inst|                                                                                                                     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|pll2:pll2_inst                                                                                                                                                                                                                                                                                                                                                                 ; pll2                                    ; work         ;
 ;       |altpll:altpll_component|                                                                                                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|pll2:pll2_inst|altpll:altpll_component                                                                                                                                                                                                                                                                                                                                         ; altpll                                  ; work         ;
 ;          |pll2_altpll2:auto_generated|                                                                                                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|pll2:pll2_inst|altpll:altpll_component|pll2_altpll2:auto_generated                                                                                                                                                                                                                                                                                                             ; pll2_altpll2                            ; work         ;
-;    |sld_hub:auto_hub|                                                                                                                   ; 268 (1)             ; 158 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                                               ; sld_hub                                 ; altera_sld   ;
-;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 267 (0)             ; 158 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                                                               ; alt_sld_fab_with_jtag_input             ; altera_sld   ;
-;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 267 (0)             ; 158 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                                                            ; alt_sld_fab                             ; alt_sld_fab  ;
-;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 267 (1)             ; 158 (11)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                                                        ; alt_sld_fab_alt_sld_fab                 ; alt_sld_fab  ;
-;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 266 (0)             ; 147 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                                                            ; alt_sld_fab_alt_sld_fab_sldfabric       ; alt_sld_fab  ;
-;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 266 (217)           ; 147 (117)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                                                               ; sld_jtag_hub                            ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 270 (1)             ; 158 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                                               ; sld_hub                                 ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 269 (0)             ; 158 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                                                               ; alt_sld_fab_with_jtag_input             ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 269 (0)             ; 158 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                                                            ; alt_sld_fab                             ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 269 (1)             ; 158 (11)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                                                        ; alt_sld_fab_alt_sld_fab                 ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 268 (0)             ; 147 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                                                            ; alt_sld_fab_alt_sld_fab_sldfabric       ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 268 (219)           ; 147 (117)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                                                               ; sld_jtag_hub                            ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 31 (31)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg                                       ; sld_rom_sr                              ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm                                     ; sld_shadow_jsm                          ; altera_sld   ;
 ;    |sld_signaltap:auto_signaltap_0|                                                                                                     ; 468 (2)             ; 2114 (160)                ; 20096       ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                                                                 ; sld_signaltap                           ; work         ;
@@ -434,7 +434,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 157 (157)           ; 157 (157)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                                                                   ; lpm_shiftreg                            ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 15 (15)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                                                                ; lpm_shiftreg                            ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 30 (30)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                                                              ; sld_rom_sr                              ; work         ;
-;    |top_stm:stm_inst|                                                                                                                   ; 1148 (98)           ; 1245 (81)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst                                                                                                                                                                                                                                                                                                                                                               ; top_stm                                 ; work         ;
+;    |top_stm:stm_inst|                                                                                                                   ; 1153 (98)           ; 1245 (81)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst                                                                                                                                                                                                                                                                                                                                                               ; top_stm                                 ; work         ;
 ;       |altsource_probe_top:ca_input_inst|                                                                                               ; 117 (0)             ; 104 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst                                                                                                                                                                                                                                                                                                                             ; altsource_probe_top                     ; issp         ;
 ;          |altsource_probe:issp_impl|                                                                                                    ; 117 (0)             ; 104 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl                                                                                                                                                                                                                                                                                                   ; altsource_probe                         ; work         ;
 ;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 117 (3)             ; 104 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                                    ; altsource_probe_body                    ; work         ;
@@ -451,13 +451,13 @@ https://fpgasoftware.intel.com/eula.
 ;                |altsource_probe_body:altsource_probe_body_inst|                                                                         ; 39 (3)              ; 26 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                     ; altsource_probe_body                    ; work         ;
 ;                   |altsource_probe_impl:\wider_probe_gen:wider_probe_inst|                                                              ; 36 (25)             ; 26 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst                                                                                                                                                                              ; altsource_probe_impl                    ; work         ;
 ;                      |sld_rom_sr:\no_instance_id_gen:rom_info_inst|                                                                     ; 11 (11)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst                                                                                                                                 ; sld_rom_sr                              ; work         ;
-;       |rdreg_stm:rdreg_inst|                                                                                                            ; 123 (83)            ; 101 (76)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst                                                                                                                                                                                                                                                                                                                                          ; rdreg_stm                               ; work         ;
+;       |rdreg_stm:rdreg_inst|                                                                                                            ; 129 (89)            ; 101 (76)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst                                                                                                                                                                                                                                                                                                                                          ; rdreg_stm                               ; work         ;
 ;          |altsource_probe_top:sp_inst|                                                                                                  ; 40 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst                                                                                                                                                                                                                                                                                                              ; altsource_probe_top                     ; issp         ;
 ;             |altsource_probe:issp_impl|                                                                                                 ; 40 (0)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl                                                                                                                                                                                                                                                                                    ; altsource_probe                         ; work         ;
 ;                |altsource_probe_body:altsource_probe_body_inst|                                                                         ; 40 (3)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                     ; altsource_probe_body                    ; work         ;
 ;                   |altsource_probe_impl:\wider_probe_gen:wider_probe_inst|                                                              ; 37 (24)             ; 25 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst                                                                                                                                                                              ; altsource_probe_impl                    ; work         ;
 ;                      |sld_rom_sr:\no_instance_id_gen:rom_info_inst|                                                                     ; 13 (13)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst                                                                                                                                 ; sld_rom_sr                              ; work         ;
-;       |wrmem_stm:wrmem_inst|                                                                                                            ; 639 (361)           ; 838 (318)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst                                                                                                                                                                                                                                                                                                                                          ; wrmem_stm                               ; work         ;
+;       |wrmem_stm:wrmem_inst|                                                                                                            ; 638 (360)           ; 838 (318)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst                                                                                                                                                                                                                                                                                                                                          ; wrmem_stm                               ; work         ;
 ;          |altsource_probe_top:sp_inst|                                                                                                  ; 278 (0)             ; 520 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst                                                                                                                                                                                                                                                                                                              ; altsource_probe_top                     ; issp         ;
 ;             |altsource_probe:issp_impl|                                                                                                 ; 278 (0)             ; 520 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl                                                                                                                                                                                                                                                                                    ; altsource_probe                         ; work         ;
 ;                |altsource_probe_body:altsource_probe_body_inst|                                                                         ; 278 (3)             ; 520 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                     ; altsource_probe_body                    ; work         ;
@@ -628,6 +628,7 @@ Encoding Type:  One-Hot
 ; top_stm:stm_inst|datain[10]~1                                     ; Modified ; Timing optimization ;
 ; top_stm:stm_inst|datain[11]~2                                     ; Modified ; Timing optimization ;
 ; top_stm:stm_inst|datain[12]~3                                     ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[13]~4                                     ; Modified ; Timing optimization ;
 ; top_stm:stm_inst|datain[15]~6                                     ; Modified ; Timing optimization ;
 ; top_stm:stm_inst|datain~16                                        ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|datain~17                                        ; Deleted  ; Timing optimization ;
@@ -642,58 +643,63 @@ Encoding Type:  One-Hot
 ; top_stm:stm_inst|datain~26                                        ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|datain~27                                        ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|datain~28                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~29                                        ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|rdmem_stm:rdmem_inst|Add0~1                      ; Modified ; Timing optimization ;
 ; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]~9                ; Modified ; Timing optimization ;
 ; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~6                ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~7                ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~8                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~8_RESYN4_BDD5    ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~8_RESYN6_BDD7    ; Created  ; Timing optimization ;
 ; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~8_RESYN8_BDD9    ; Created  ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~8_RESYN10_BDD11  ; Created  ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~8_RESYN12_BDD13  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Add0~0                      ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Add0~1                      ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~0                ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~1                ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2                ; Modified ; Timing optimization ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2_RESYN14_BDD15  ; Created  ; Timing optimization ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2_RESYN16_BDD17  ; Created  ; Timing optimization ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2_RESYN18_BDD19  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2_RESYN30_BDD31  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2_RESYN32_BDD33  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2_RESYN34_BDD35  ; Created  ; Timing optimization ;
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[0]~2                ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[0]~3                ; Modified ; Timing optimization ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[0]~3_RESYN0_BDD1    ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[0]~3_RESYN10_BDD11  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[0]~3_RESYN12_BDD13  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[0]~3_RESYN14_BDD15  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[1]~4                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[1]~4_RESYN16_BDD17  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[1]~4_RESYN18_BDD19  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[2]~5                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[2]~5_RESYN20_BDD21  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[2]~5_RESYN22_BDD23  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[3]~6                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[3]~6_RESYN24_BDD25  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[3]~6_RESYN26_BDD27  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[3]~6_RESYN28_BDD29  ; Created  ; Timing optimization ;
 ; top_stm:stm_inst|wrmem_stm:wrmem_inst|Add0~1                      ; Modified ; Timing optimization ;
 ; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~0               ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~1               ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~2               ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3               ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN28_BDD29 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN30_BDD31 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN32_BDD33 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN34_BDD35 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN36_BDD37 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN38_BDD39 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN40_BDD41 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN42_BDD43 ; Created  ; Timing optimization ;
 ; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~0               ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~1               ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~2               ; Deleted  ; Timing optimization ;
 ; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3               ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN36_BDD37 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN38_BDD39 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN40_BDD41 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN42_BDD43 ; Created  ; Timing optimization ;
 ; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN44_BDD45 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~0                ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~1                ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~1_RESYN2_BDD3    ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~2                ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~3                ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~6                ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~6_RESYN4_BDD5    ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~6_RESYN6_BDD7    ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[1]~7                ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[1]~7_RESYN20_BDD21  ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[2]~8                ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[2]~8_RESYN22_BDD23  ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[3]~9                ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[3]~9_RESYN24_BDD25  ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~5                ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~10               ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~10_RESYN26_BDD27 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN46_BDD47 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN48_BDD49 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN50_BDD51 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN52_BDD53 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~6                ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~7                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~7_RESYN0_BDD1    ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~10               ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~15               ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~16               ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~16_RESYN2_BDD3   ; Created  ; Timing optimization ;
 +-------------------------------------------------------------------+----------+---------------------+
 
 
@@ -2214,19 +2220,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 259                         ;
 ;     plain             ; 165                         ;
 ; cycloneiii_io_obuf    ; 9                           ;
-; cycloneiii_lcell_comb ; 1178                        ;
+; cycloneiii_lcell_comb ; 1183                        ;
 ;     arith             ; 9                           ;
 ;         2 data inputs ; 9                           ;
-;     normal            ; 1169                        ;
+;     normal            ; 1174                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 100                         ;
+;         2 data inputs ; 97                          ;
 ;         3 data inputs ; 782                         ;
-;         4 data inputs ; 279                         ;
+;         4 data inputs ; 287                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 1.49                        ;
+; Average LUT depth     ; 1.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2235,7 +2241,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -2261,22 +2267,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; iobuf:iobuf_inst|datain[7]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|datain[7]                                                                                       ; N/A     ;
 ; iobuf:iobuf_inst|datain[8]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|datain[8]                                                                                       ; N/A     ;
 ; iobuf:iobuf_inst|datain[9]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|datain[9]                                                                                       ; N/A     ;
-; iobuf:iobuf_inst|dataout[0]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[0] ; N/A     ;
-; iobuf:iobuf_inst|dataout[10]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[2]  ; N/A     ;
-; iobuf:iobuf_inst|dataout[11]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[3]  ; N/A     ;
-; iobuf:iobuf_inst|dataout[12]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[4]  ; N/A     ;
-; iobuf:iobuf_inst|dataout[13]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[5]  ; N/A     ;
-; iobuf:iobuf_inst|dataout[14]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[6]  ; N/A     ;
-; iobuf:iobuf_inst|dataout[15]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[7]  ; N/A     ;
-; iobuf:iobuf_inst|dataout[1]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[1] ; N/A     ;
-; iobuf:iobuf_inst|dataout[2]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[2] ; N/A     ;
-; iobuf:iobuf_inst|dataout[3]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[3] ; N/A     ;
-; iobuf:iobuf_inst|dataout[4]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[4] ; N/A     ;
-; iobuf:iobuf_inst|dataout[5]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[5] ; N/A     ;
-; iobuf:iobuf_inst|dataout[6]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[6] ; N/A     ;
-; iobuf:iobuf_inst|dataout[7]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[7] ; N/A     ;
-; iobuf:iobuf_inst|dataout[8]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[0]  ; N/A     ;
-; iobuf:iobuf_inst|dataout[9]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[1]  ; N/A     ;
+; iobuf:iobuf_inst|dataout[0]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[0]  ; N/A     ;
+; iobuf:iobuf_inst|dataout[10]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[2] ; N/A     ;
+; iobuf:iobuf_inst|dataout[11]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[3] ; N/A     ;
+; iobuf:iobuf_inst|dataout[12]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[4] ; N/A     ;
+; iobuf:iobuf_inst|dataout[13]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[5] ; N/A     ;
+; iobuf:iobuf_inst|dataout[14]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[6] ; N/A     ;
+; iobuf:iobuf_inst|dataout[15]                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[7] ; N/A     ;
+; iobuf:iobuf_inst|dataout[1]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[1]  ; N/A     ;
+; iobuf:iobuf_inst|dataout[2]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[2]  ; N/A     ;
+; iobuf:iobuf_inst|dataout[3]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[3]  ; N/A     ;
+; iobuf:iobuf_inst|dataout[4]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[4]  ; N/A     ;
+; iobuf:iobuf_inst|dataout[5]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[5]  ; N/A     ;
+; iobuf:iobuf_inst|dataout[6]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[6]  ; N/A     ;
+; iobuf:iobuf_inst|dataout[7]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[7]  ; N/A     ;
+; iobuf:iobuf_inst|dataout[8]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[0] ; N/A     ;
+; iobuf:iobuf_inst|dataout[9]                            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[1] ; N/A     ;
 ; iobuf:iobuf_inst|oe_clk                                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|oe_clk                                                                                          ; N/A     ;
 ; iobuf:iobuf_inst|oe_data                               ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|oe_data                                                                                         ; N/A     ;
 ; pll2:pll2_inst|c0                                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; pll2:pll2_inst|altpll:altpll_component|pll2_altpll2:auto_generated|wire_pll1_clk[0]                              ; N/A     ;
@@ -2340,22 +2346,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|datain[7]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|rdreg_stm:rdreg_inst|buffer_out[0][7]                                                           ; N/A     ;
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|datain[8]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|rdreg_stm:rdreg_inst|buffer_out[0][8]                                                           ; N/A     ;
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|datain[9]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|rdreg_stm:rdreg_inst|buffer_out[0][9]                                                           ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[0]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[0] ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[10]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[2]  ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[11]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[3]  ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[12]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[4]  ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[13]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[5]  ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[14]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[6]  ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[15]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[7]  ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[1]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[1] ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[2]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[2] ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[3]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[3] ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[4]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[4] ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[5]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[5] ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[6]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[6] ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[7]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[7] ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[8]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[0]  ; N/A     ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[9]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[1]  ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[0]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[0]  ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[10]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[2] ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[11]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[3] ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[12]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[4] ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[13]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[5] ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[14]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[6] ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[15]      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[7] ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[1]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[1]  ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[2]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[2]  ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[3]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[3]  ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[4]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[4]  ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[5]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[5]  ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[6]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[6]  ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[7]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_cell_h[7]  ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[8]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[0] ; N/A     ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|dataout[9]       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated|input_latch_l[1] ; N/A     ;
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|oe               ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|rdreg_stm:rdreg_inst|oe                                                                         ; N/A     ;
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|oe               ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|rdreg_stm:rdreg_inst|oe                                                                         ; N/A     ;
 ; top_stm:stm_inst|rdreg_stm:rdreg_inst|oe_clk           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; top_stm:stm_inst|rdreg_stm:rdreg_inst|oe_clk                                                                     ; N/A     ;
@@ -2446,11 +2452,61 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
-    Info: Processing started: Thu Mar 27 09:43:03 2025
+    Info: Processing started: Thu Mar 27 12:31:42 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/jamb.v
+    Info (12023): Found entity 1: jamb File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/jamb.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/jamb_master_0.v
+    Info (12023): Found entity 1: jamb_master_0 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/jamb_master_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/jamb_master_0_p2b_adapter.sv
+    Info (12023): Found entity 1: jamb_master_0_p2b_adapter File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/jamb_master_0_p2b_adapter.sv Line: 55
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/jamb_master_0_b2p_adapter.sv
+    Info (12023): Found entity 1: jamb_master_0_b2p_adapter File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/jamb_master_0_b2p_adapter.sv Line: 55
+Info (12021): Found 7 design units, including 7 entities, in source file jamb/synthesis/submodules/altera_avalon_packets_to_master.v
+    Info (12023): Found entity 1: altera_avalon_packets_to_master File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_packets_to_master.v Line: 22
+    Info (12023): Found entity 2: packets_to_fifo File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_packets_to_master.v Line: 142
+    Info (12023): Found entity 3: fifo_buffer_single_clock_fifo File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_packets_to_master.v Line: 512
+    Info (12023): Found entity 4: fifo_buffer_scfifo_with_controls File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_packets_to_master.v Line: 573
+    Info (12023): Found entity 5: fifo_buffer File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_packets_to_master.v Line: 627
+    Info (12023): Found entity 6: fifo_to_packet File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_packets_to_master.v Line: 697
+    Info (12023): Found entity 7: packets_to_master File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_packets_to_master.v Line: 851
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_avalon_st_packets_to_bytes.v
+    Info (12023): Found entity 1: altera_avalon_st_packets_to_bytes File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_st_packets_to_bytes.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_avalon_st_bytes_to_packets.v
+    Info (12023): Found entity 1: altera_avalon_st_bytes_to_packets File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_st_bytes_to_packets.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/jamb_master_0_timing_adt.sv
+    Info (12023): Found entity 1: jamb_master_0_timing_adt File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/jamb_master_0_timing_adt.sv Line: 60
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_avalon_st_jtag_interface.v
+    Info (12023): Found entity 1: altera_avalon_st_jtag_interface File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_st_jtag_interface.v Line: 20
+Info (12021): Found 3 design units, including 3 entities, in source file jamb/synthesis/submodules/altera_jtag_dc_streaming.v
+    Info (12023): Found entity 1: altera_jtag_control_signal_crosser File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_jtag_dc_streaming.v Line: 30
+    Info (12023): Found entity 2: altera_jtag_src_crosser File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_jtag_dc_streaming.v Line: 72
+    Info (12023): Found entity 3: altera_jtag_dc_streaming File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_jtag_dc_streaming.v Line: 135
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_jtag_sld_node.v
+    Info (12023): Found entity 1: altera_jtag_sld_node File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_jtag_sld_node.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_jtag_streaming.v
+    Info (12023): Found entity 1: altera_jtag_streaming File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_jtag_streaming.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_avalon_st_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_clock_crosser File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_st_clock_crosser.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_std_synchronizer_nocut.v
+    Info (12023): Found entity 1: altera_std_synchronizer_nocut File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_std_synchronizer_nocut.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_st_pipeline_base.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_avalon_st_idle_remover.v
+    Info (12023): Found entity 1: altera_avalon_st_idle_remover File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_st_idle_remover.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_avalon_st_idle_inserter.v
+    Info (12023): Found entity 1: altera_avalon_st_idle_inserter File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_st_idle_inserter.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file jamb/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_stage File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/synthesis/submodules/altera_avalon_st_pipeline_stage.sv Line: 22
 Info (12021): Found 4 design units, including 4 entities, in source file comp_stm.sv
     Info (12023): Found entity 1: rdreg_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 1
     Info (12023): Found entity 2: wrmem_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 108
@@ -2479,7 +2535,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file iobuf.s
 Warning (10236): Verilog HDL Implicit Net warning at top_stm.sv(216): created implicit net for "wrmem_rwds_out" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 216
 Warning (10236): Verilog HDL Implicit Net warning at top_stm.sv(217): created implicit net for "wrmem_rwds_oe" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 217
 Warning (10236): Verilog HDL Implicit Net warning at topv3.sv(40): created implicit net for "lock" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at topv3.sv(73): created implicit net for "rwds_oe" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 73
+Warning (10236): Verilog HDL Implicit Net warning at topv3.sv(101): created implicit net for "rwds_oe" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 101
 Info (12127): Elaborating entity "topv3" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at topv3.sv(14): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 14
 Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "altsource_probe_top:rst_control" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 33
@@ -2600,7 +2656,7 @@ Info (12133): Instantiated megafunction "iobuf:iobuf_inst|ck:ckp_inst|altddio_ou
 Info (12021): Found 1 design units, including 1 entities, in source file db/ddio_out_8vj.tdf
     Info (12023): Found entity 1: ddio_out_8vj File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ddio_out_8vj.tdf Line: 30
 Info (12128): Elaborating entity "ddio_out_8vj" for hierarchy "iobuf:iobuf_inst|ck:ckp_inst|altddio_out:ALTDDIO_OUT_component|ddio_out_8vj:auto_generated" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altddio_out.tdf Line: 101
-Info (12128): Elaborating entity "top_stm" for hierarchy "top_stm:stm_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 75
+Info (12128): Elaborating entity "top_stm" for hierarchy "top_stm:stm_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 103
 Warning (10858): Verilog HDL warning at top_stm.sv(66): object wrreg_datain used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 66
 Warning (10858): Verilog HDL warning at top_stm.sv(67): object wrreg_oe used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 67
 Warning (10858): Verilog HDL warning at top_stm.sv(68): object wrreg_csn used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 68
@@ -2739,7 +2795,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
 Info (11172): Picked up _JAVA_OPTIONS: -Xmx1024M
-Info (11172): 2025.03.27.09:44:04 Progress: Loading sld4d43b179/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.03.27.12:32:27 Progress: Loading sld4d43b179/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2784,25 +2840,36 @@ Info (332111): Found 4 clocks
 Info (128002): Starting physical synthesis algorithm register retiming
 Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
-Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 721 ps
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 534 ps
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
+Warning (20013): Ignored 12 assignments for entity "altera_avalon_packets_to_master" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
+Warning (20013): Ignored 12 assignments for entity "altera_avalon_st_bytes_to_packets" -- entity does not exist in design
+Warning (20013): Ignored 18 assignments for entity "altera_avalon_st_jtag_interface" -- entity does not exist in design
+Warning (20013): Ignored 12 assignments for entity "altera_avalon_st_packets_to_bytes" -- entity does not exist in design
+Warning (20013): Ignored 35 assignments for entity "altera_reset_controller" -- entity does not exist in design
 Warning (20013): Ignored 16 assignments for entity "issp" -- entity does not exist in design
+Warning (20013): Ignored 20 assignments for entity "jamb" -- entity does not exist in design
+Warning (20013): Ignored 16 assignments for entity "jamb_master_0" -- entity does not exist in design
+Warning (20013): Ignored 21 assignments for entity "jamb_master_0_b2p_adapter" -- entity does not exist in design
+Warning (20013): Ignored 21 assignments for entity "jamb_master_0_p2b_adapter" -- entity does not exist in design
+Warning (20013): Ignored 21 assignments for entity "jamb_master_0_timing_adt" -- entity does not exist in design
 Info (144001): Generated suppressed messages file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/output_files/top.map.smsg
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 193 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4217 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4224 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 5 output pins
     Info (21060): Implemented 9 bidirectional pins
-    Info (21061): Implemented 4030 logic cells
+    Info (21061): Implemented 4037 logic cells
     Info (21064): Implemented 157 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
     Info: Peak virtual memory: 4952 megabytes
-    Info: Processing ended: Thu Mar 27 09:44:33 2025
-    Info: Elapsed time: 00:01:30
-    Info: Total CPU time (on all processors): 00:02:06
+    Info: Processing ended: Thu Mar 27 12:32:49 2025
+    Info: Elapsed time: 00:01:07
+    Info: Total CPU time (on all processors): 00:01:36
 
 
 +------------------------------------------+

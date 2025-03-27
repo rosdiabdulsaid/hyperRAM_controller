@@ -59,6 +59,34 @@ module topv3(
     assign rstn = !memrst;
     //state machine portion
 
+    wire		    clk_clk;                //i
+	wire		    clk_reset_reset;        //i
+	wire	[31:0]	master_address;         //o
+	wire	[31:0]	master_readdata;        //i
+	wire		    master_read;            //o
+	wire		    master_write;           //o
+	wire	[31:0]	master_writedata;       //o
+	wire		    master_waitrequest;     //i
+	wire		    master_readdatavalid;   //i
+	wire	[3:0]	master_byteenable;      //o
+	wire		    master_reset_reset;     //o
+
+
+    // jamb jamb (
+	// 	.clk_clk              (clk0),                 //          clk.clk
+	// 	.clk_reset_reset      (rst),                  //    clk_reset.reset
+	// 	.master_address       (master_address),       //       master.address
+	// 	.master_readdata      (master_readdata),      //             .readdata
+	// 	.master_read          (master_read),          //             .read
+	// 	.master_write         (master_write),         //             .write
+	// 	.master_writedata     (master_writedata),     //             .writedata
+	// 	.master_waitrequest   (master_waitrequest),   //             .waitrequest
+	// 	.master_readdatavalid (master_readdatavalid), //             .readdatavalid
+	// 	.master_byteenable    (4'hf),                 //             .byteenable
+	// 	.master_reset_reset   ()                      // master_reset.reset
+	// );
+
+
     
 
     top_stm stm_inst(

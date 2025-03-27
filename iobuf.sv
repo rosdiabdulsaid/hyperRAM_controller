@@ -17,9 +17,9 @@ module iobuf(
 		.outclock 	( clk0 ), // <-- center aligned to pad
 		.datain_h 	( datain[15:8] ),
 		.datain_l 	( datain[7:0] ),
-		.inclock  	( rwds ),  //<-- edge aligned to pad
-		.dataout_h 	( dataout[15:8] ),
-		.dataout_l 	( dataout[7:0] ),
+		.inclock  	( clk0 ),  //<-- edge aligned to pad
+		.dataout_h 	( dataout[7:0] ),	//somehow i wr big-endian but rd little-endian
+		.dataout_l 	( dataout[15:8] ),	//so lets swap this.
 		.oe 		( oe_data ),
 		.padio 		( dq )
 	);
@@ -31,7 +31,7 @@ module iobuf(
 		.aclr 		( 1'b0 ),
 		.datain_h 	( oe_clk ),
 		.datain_l 	( 1'b0 ),
-		.oe 			( 1'b1 ),
+		.oe 		( 1'b1 ),
 		.outclock 	( clk90 ),
 		.dataout 	( ckout )
 	);
@@ -40,7 +40,7 @@ module iobuf(
 		.aclr 		( 1'b0 ),
 		.datain_h 	( 1'b0 ),
 		.datain_l 	( oe_clk ),
-		.oe 			( 1'b1 ),
+		.oe 		( 1'b1 ),
 		.outclock 	( clk90 ),
 		.dataout 	( ckoutn )
 	);
