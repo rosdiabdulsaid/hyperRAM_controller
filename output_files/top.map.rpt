@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Wed Mar 26 17:25:40 2025
+Thu Mar 27 09:44:33 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
 
 
@@ -103,13 +103,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 26 17:25:40 2025              ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 27 09:44:33 2025              ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Standard Edition ;
 ; Revision Name                      ; top                                                ;
 ; Top-level Entity Name              ; topv3                                              ;
 ; Family                             ; Cyclone 10 LP                                      ;
-; Total logic elements               ; 4,014                                              ;
-;     Total combinational functions  ; 1,913                                              ;
+; Total logic elements               ; 4,015                                              ;
+;     Total combinational functions  ; 1,914                                              ;
 ;     Dedicated logic registers      ; 3,553                                              ;
 ; Total registers                    ; 3573                                               ;
 ; Total pins                         ; 14                                                 ;
@@ -220,102 +220,102 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                        ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                              ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+-------------+
-; comp_stm.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv                                                        ;             ;
-; top_stm.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv                                                         ;             ;
-; topv2.sv                                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv2.sv                                                           ;             ;
-; issp/issp/synthesis/submodules/altsource_probe_top.v               ; yes             ; User Verilog HDL File                        ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v               ; issp        ;
-; dq/dq.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/dq/dq.v                                                            ;             ;
-; pll2/pll2.v                                                        ; yes             ; User Wizard-Generated File                   ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/pll2/pll2.v                                                        ;             ;
-; topv3.sv                                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv                                                           ;             ;
-; ck/ck.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ck/ck.v                                                            ;             ;
-; iobuf.sv                                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/iobuf.sv                                                           ;             ;
-; altsource_probe.v                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe.v                                                ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                    ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                ;             ;
-; altsource_probe_body.vhd                                           ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd                                         ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                   ;             ;
-; altpll.tdf                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altpll.tdf                                                       ;             ;
-; aglobal231.inc                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                                   ;             ;
-; stratix_pll.inc                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/stratix_pll.inc                                                  ;             ;
-; stratixii_pll.inc                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/stratixii_pll.inc                                                ;             ;
-; cycloneii_pll.inc                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/cycloneii_pll.inc                                                ;             ;
-; db/pll2_altpll2.v                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/pll2_altpll2.v                                                  ;             ;
-; altddio_bidir.tdf                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altddio_bidir.tdf                                                ;             ;
-; stratix_ddio.inc                                                   ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/stratix_ddio.inc                                                 ;             ;
-; cyclone_ddio.inc                                                   ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/cyclone_ddio.inc                                                 ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                      ;             ;
-; stratix_lcell.inc                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/stratix_lcell.inc                                                ;             ;
-; db/ddio_bidir_a4p.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ddio_bidir_a4p.tdf                                              ;             ;
-; altddio_out.tdf                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altddio_out.tdf                                                  ;             ;
-; db/ddio_out_8vj.tdf                                                ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ddio_out_8vj.tdf                                                ;             ;
-; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_signaltap.vhd                                                ;             ;
-; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                           ;             ;
-; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_ela_control.vhd                                              ;             ;
-; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                 ;             ;
-; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_constant.inc                                                 ;             ;
-; dffeea.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/dffeea.inc                                                       ;             ;
-; sld_ela_trigger.tdf                                                ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_ela_trigger.tdf                                              ;             ;
-; db/sld_ela_trigger_35o.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/sld_ela_trigger_35o.tdf                                         ;             ;
-; db/sld_reserved_top_auto_signaltap_0_1_672.v                       ; yes             ; Encrypted Auto-Generated Megafunction        ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/sld_reserved_top_auto_signaltap_0_1_672.v                       ;             ;
-; sld_alt_reduction.vhd                                              ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_alt_reduction.vhd                                            ;             ;
-; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                    ;             ;
-; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                     ;             ;
-; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                           ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                   ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                            ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                   ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                    ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altrom.inc                                                       ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altram.inc                                                       ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altdpram.inc                                                     ;             ;
-; db/altsyncram_a824.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/altsyncram_a824.tdf                                             ;             ;
-; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altdpram.tdf                                                     ;             ;
-; memmodes.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/others/maxplus2/memmodes.inc                                                   ;             ;
-; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/a_hdffe.inc                                                      ;             ;
-; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                              ;             ;
-; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsyncram.inc                                                   ;             ;
-; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_mux.tdf                                                      ;             ;
-; muxlut.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/muxlut.inc                                                       ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/bypassff.inc                                                     ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altshift.inc                                                     ;             ;
-; db/mux_lsc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/mux_lsc.tdf                                                     ;             ;
-; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_decode.tdf                                                   ;             ;
-; declut.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/declut.inc                                                       ;             ;
-; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_compare.inc                                                  ;             ;
-; db/decode_6vf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/decode_6vf.tdf                                                  ;             ;
-; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_counter.tdf                                                  ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                                  ;             ;
-; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/cmpconst.inc                                                     ;             ;
-; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_counter.inc                                                  ;             ;
-; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/alt_counter_stratix.inc                                          ;             ;
-; db/cntr_4ii.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cntr_4ii.tdf                                                    ;             ;
-; db/cmpr_ngc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cmpr_ngc.tdf                                                    ;             ;
-; db/cntr_b6j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cntr_b6j.tdf                                                    ;             ;
-; db/cntr_7gi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cntr_7gi.tdf                                                    ;             ;
-; db/cmpr_jgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cmpr_jgc.tdf                                                    ;             ;
-; db/cntr_r2j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cntr_r2j.tdf                                                    ;             ;
-; db/cmpr_ggc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cmpr_ggc.tdf                                                    ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_hub.vhd                                                      ; altera_sld  ;
-; db/ip/sld4d43b179/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                 ;             ;
-; db/pll2_altpll1.v                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/pll2_altpll1.v                                                  ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+-------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                               ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                     ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------+
+; comp_stm.sv                                                        ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv                                                        ;             ;
+; top_stm.sv                                                         ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv                                                         ;             ;
+; topv2.sv                                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv2.sv                                                           ;             ;
+; issp/issp/synthesis/submodules/altsource_probe_top.v               ; yes             ; User Verilog HDL File                        ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v               ; issp        ;
+; dq/dq.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/dq/dq.v                                                            ;             ;
+; pll2/pll2.v                                                        ; yes             ; User Wizard-Generated File                   ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/pll2/pll2.v                                                        ;             ;
+; topv3.sv                                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv                                                           ;             ;
+; ck/ck.v                                                            ; yes             ; User Wizard-Generated File                   ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/ck/ck.v                                                            ;             ;
+; iobuf.sv                                                           ; yes             ; User SystemVerilog HDL File                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/iobuf.sv                                                           ;             ;
+; altsource_probe.v                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe.v                                                       ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                           ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                       ;             ;
+; altsource_probe_body.vhd                                           ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd                                                ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                          ;             ;
+; altpll.tdf                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altpll.tdf                                                              ;             ;
+; aglobal231.inc                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                                          ;             ;
+; stratix_pll.inc                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/stratix_pll.inc                                                         ;             ;
+; stratixii_pll.inc                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/stratixii_pll.inc                                                       ;             ;
+; cycloneii_pll.inc                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/cycloneii_pll.inc                                                       ;             ;
+; db/pll2_altpll2.v                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/pll2_altpll2.v                                                  ;             ;
+; altddio_bidir.tdf                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altddio_bidir.tdf                                                       ;             ;
+; stratix_ddio.inc                                                   ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/stratix_ddio.inc                                                        ;             ;
+; cyclone_ddio.inc                                                   ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/cyclone_ddio.inc                                                        ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                             ;             ;
+; stratix_lcell.inc                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/stratix_lcell.inc                                                       ;             ;
+; db/ddio_bidir_a4p.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ddio_bidir_a4p.tdf                                              ;             ;
+; altddio_out.tdf                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altddio_out.tdf                                                         ;             ;
+; db/ddio_out_8vj.tdf                                                ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ddio_out_8vj.tdf                                                ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_signaltap.vhd                                                       ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                  ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_ela_control.vhd                                                     ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                        ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_constant.inc                                                        ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/dffeea.inc                                                              ;             ;
+; sld_ela_trigger.tdf                                                ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_ela_trigger.tdf                                                     ;             ;
+; db/sld_ela_trigger_35o.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/sld_ela_trigger_35o.tdf                                         ;             ;
+; db/sld_reserved_top_auto_signaltap_0_1_672.v                       ; yes             ; Encrypted Auto-Generated Megafunction        ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/sld_reserved_top_auto_signaltap_0_1_672.v                       ;             ;
+; sld_alt_reduction.vhd                                              ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_alt_reduction.vhd                                                   ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                           ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                            ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                  ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                          ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                                   ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                          ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                           ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altrom.inc                                                              ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altram.inc                                                              ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altdpram.inc                                                            ;             ;
+; db/altsyncram_a824.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/altsyncram_a824.tdf                                             ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altdpram.tdf                                                            ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/others/maxplus2/memmodes.inc                                                          ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/a_hdffe.inc                                                             ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                     ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsyncram.inc                                                          ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_mux.tdf                                                             ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/muxlut.inc                                                              ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/bypassff.inc                                                            ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altshift.inc                                                            ;             ;
+; db/mux_lsc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/mux_lsc.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_decode.tdf                                                          ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/declut.inc                                                              ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_compare.inc                                                         ;             ;
+; db/decode_6vf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/decode_6vf.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_counter.tdf                                                         ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                                         ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/cmpconst.inc                                                            ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/lpm_counter.inc                                                         ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                 ;             ;
+; db/cntr_4ii.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cntr_4ii.tdf                                                    ;             ;
+; db/cmpr_ngc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cmpr_ngc.tdf                                                    ;             ;
+; db/cntr_b6j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cntr_b6j.tdf                                                    ;             ;
+; db/cntr_7gi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cntr_7gi.tdf                                                    ;             ;
+; db/cmpr_jgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cmpr_jgc.tdf                                                    ;             ;
+; db/cntr_r2j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cntr_r2j.tdf                                                    ;             ;
+; db/cmpr_ggc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cmpr_ggc.tdf                                                    ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_hub.vhd                                                             ; altera_sld  ;
+; db/ip/sld4d43b179/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                        ;             ;
+; db/pll2_altpll1.v                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/pll2_altpll1.v                                                  ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
@@ -323,16 +323,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                               ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 4,014                                                                               ;
+; Estimated Total logic elements              ; 4,015                                                                               ;
 ;                                             ;                                                                                     ;
-; Total combinational functions               ; 1913                                                                                ;
+; Total combinational functions               ; 1914                                                                                ;
 ; Logic element usage by number of LUT inputs ;                                                                                     ;
-;     -- 4 input functions                    ; 526                                                                                 ;
-;     -- 3 input functions                    ; 1132                                                                                ;
-;     -- <=2 input functions                  ; 255                                                                                 ;
+;     -- 4 input functions                    ; 524                                                                                 ;
+;     -- 3 input functions                    ; 1130                                                                                ;
+;     -- <=2 input functions                  ; 260                                                                                 ;
 ;                                             ;                                                                                     ;
 ; Logic elements by mode                      ;                                                                                     ;
-;     -- normal mode                          ; 1825                                                                                ;
+;     -- normal mode                          ; 1826                                                                                ;
 ;     -- arithmetic mode                      ; 88                                                                                  ;
 ;                                             ;                                                                                     ;
 ; Total registers                             ; 3573                                                                                ;
@@ -349,7 +349,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                                     ;
 ; Maximum fan-out node                        ; pll2:pll2_inst|altpll:altpll_component|pll2_altpll2:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 2489                                                                                ;
-; Total fan-out                               ; 18871                                                                               ;
+; Total fan-out                               ; 18867                                                                               ;
 ; Average fan-out                             ; 3.32                                                                                ;
 +---------------------------------------------+-------------------------------------------------------------------------------------+
 
@@ -359,7 +359,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                   ; Entity Name                             ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------+--------------+
-; |topv3                                                                                                                                  ; 1913 (2)            ; 3553 (0)                  ; 20096       ; 0            ; 0       ; 0         ; 14   ; 0            ; |topv3                                                                                                                                                                                                                                                                                                                                                                                ; topv3                                   ; work         ;
+; |topv3                                                                                                                                  ; 1914 (2)            ; 3553 (0)                  ; 20096       ; 0            ; 0       ; 0         ; 14   ; 0            ; |topv3                                                                                                                                                                                                                                                                                                                                                                                ; topv3                                   ; work         ;
 ;    |altsource_probe_top:rst_control|                                                                                                    ; 28 (0)              ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|altsource_probe_top:rst_control                                                                                                                                                                                                                                                                                                                                                ; altsource_probe_top                     ; issp         ;
 ;       |altsource_probe:issp_impl|                                                                                                       ; 28 (0)              ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|altsource_probe_top:rst_control|altsource_probe:issp_impl                                                                                                                                                                                                                                                                                                                      ; altsource_probe                         ; work         ;
 ;          |altsource_probe_body:altsource_probe_body_inst|                                                                               ; 28 (3)              ; 12 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|altsource_probe_top:rst_control|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                                                       ; altsource_probe_body                    ; work         ;
@@ -434,7 +434,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 157 (157)           ; 157 (157)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                                                                   ; lpm_shiftreg                            ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 15 (15)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                                                                ; lpm_shiftreg                            ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 30 (30)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                                                              ; sld_rom_sr                              ; work         ;
-;    |top_stm:stm_inst|                                                                                                                   ; 1147 (103)          ; 1245 (81)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst                                                                                                                                                                                                                                                                                                                                                               ; top_stm                                 ; work         ;
+;    |top_stm:stm_inst|                                                                                                                   ; 1148 (98)           ; 1245 (81)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst                                                                                                                                                                                                                                                                                                                                                               ; top_stm                                 ; work         ;
 ;       |altsource_probe_top:ca_input_inst|                                                                                               ; 117 (0)             ; 104 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst                                                                                                                                                                                                                                                                                                                             ; altsource_probe_top                     ; issp         ;
 ;          |altsource_probe:issp_impl|                                                                                                    ; 117 (0)             ; 104 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl                                                                                                                                                                                                                                                                                                   ; altsource_probe                         ; work         ;
 ;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 117 (3)             ; 104 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                                    ; altsource_probe_body                    ; work         ;
@@ -445,7 +445,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |altsource_probe_body:altsource_probe_body_inst|                                                                            ; 30 (3)              ; 16 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                                     ; altsource_probe_body                    ; work         ;
 ;                |altsource_probe_impl:\wider_source_gen:wider_source_inst|                                                               ; 27 (14)             ; 16 (9)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst                                                                                                                                                                                            ; altsource_probe_impl                    ; work         ;
 ;                   |sld_rom_sr:\no_instance_id_gen:rom_info_inst|                                                                        ; 13 (13)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst                                                                                                                                               ; sld_rom_sr                              ; work         ;
-;       |rdmem_stm:rdmem_inst|                                                                                                            ; 136 (97)            ; 105 (79)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst                                                                                                                                                                                                                                                                                                                                          ; rdmem_stm                               ; work         ;
+;       |rdmem_stm:rdmem_inst|                                                                                                            ; 141 (102)           ; 105 (79)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst                                                                                                                                                                                                                                                                                                                                          ; rdmem_stm                               ; work         ;
 ;          |altsource_probe_top:sp_inst|                                                                                                  ; 39 (0)              ; 26 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst                                                                                                                                                                                                                                                                                                              ; altsource_probe_top                     ; issp         ;
 ;             |altsource_probe:issp_impl|                                                                                                 ; 39 (0)              ; 26 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl                                                                                                                                                                                                                                                                                    ; altsource_probe                         ; work         ;
 ;                |altsource_probe_body:altsource_probe_body_inst|                                                                         ; 39 (3)              ; 26 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                     ; altsource_probe_body                    ; work         ;
@@ -457,7 +457,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |altsource_probe_body:altsource_probe_body_inst|                                                                         ; 40 (3)              ; 25 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                     ; altsource_probe_body                    ; work         ;
 ;                   |altsource_probe_impl:\wider_probe_gen:wider_probe_inst|                                                              ; 37 (24)             ; 25 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst                                                                                                                                                                              ; altsource_probe_impl                    ; work         ;
 ;                      |sld_rom_sr:\no_instance_id_gen:rom_info_inst|                                                                     ; 13 (13)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst                                                                                                                                 ; sld_rom_sr                              ; work         ;
-;       |wrmem_stm:wrmem_inst|                                                                                                            ; 638 (360)           ; 838 (318)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst                                                                                                                                                                                                                                                                                                                                          ; wrmem_stm                               ; work         ;
+;       |wrmem_stm:wrmem_inst|                                                                                                            ; 639 (361)           ; 838 (318)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst                                                                                                                                                                                                                                                                                                                                          ; wrmem_stm                               ; work         ;
 ;          |altsource_probe_top:sp_inst|                                                                                                  ; 278 (0)             ; 520 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst                                                                                                                                                                                                                                                                                                              ; altsource_probe_top                     ; issp         ;
 ;             |altsource_probe:issp_impl|                                                                                                 ; 278 (0)             ; 520 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl                                                                                                                                                                                                                                                                                    ; altsource_probe                         ; work         ;
 ;                |altsource_probe_body:altsource_probe_body_inst|                                                                         ; 278 (3)             ; 520 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst                                                                                                                                                                                                                                     ; altsource_probe_body                    ; work         ;
@@ -611,53 +611,90 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Physical Synthesis Netlist Optimizations                                                        ;
-+----------------------------------------------------------------+----------+---------------------+
-; Node                                                           ; Action   ; Reason              ;
-+----------------------------------------------------------------+----------+---------------------+
-; top_stm:stm_inst|datain[0]~0                                   ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[1]~7                                   ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[2]~8                                   ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[3]~9                                   ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[4]~10                                  ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[5]~11                                  ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[7]~13                                  ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[9]~15                                  ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[10]~1                                  ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[11]~2                                  ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[12]~3                                  ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain[15]~6                                  ; Modified ; Timing optimization ;
-; top_stm:stm_inst|datain~16                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~17                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~18                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~19                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~20                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~21                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~22                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~23                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~24                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~25                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~26                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|datain~27                                     ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|Add0~1                   ; Modified ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]~0             ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]~1             ; Modified ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]~1_RESYN0_BDD1 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]~2             ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]~3             ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]~6             ; Modified ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]~6_RESYN2_BDD3 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]~6_RESYN4_BDD5 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[3]~2             ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[3]~3             ; Modified ; Timing optimization ;
-; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[3]~3_RESYN6_BDD7 ; Created  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|Add0~1                   ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~8             ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~6             ; Deleted  ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~7             ; Modified ; Timing optimization ;
-; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~7_RESYN8_BDD9 ; Created  ; Timing optimization ;
-+----------------------------------------------------------------+----------+---------------------+
++----------------------------------------------------------------------------------------------------+
+; Physical Synthesis Netlist Optimizations                                                           ;
++-------------------------------------------------------------------+----------+---------------------+
+; Node                                                              ; Action   ; Reason              ;
++-------------------------------------------------------------------+----------+---------------------+
+; top_stm:stm_inst|datain[0]~0                                      ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[1]~7                                      ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[2]~8                                      ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[3]~9                                      ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[4]~10                                     ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[5]~11                                     ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[7]~13                                     ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[8]~14                                     ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[9]~15                                     ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[10]~1                                     ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[11]~2                                     ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[12]~3                                     ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain[15]~6                                     ; Modified ; Timing optimization ;
+; top_stm:stm_inst|datain~16                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~17                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~18                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~19                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~20                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~21                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~22                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~23                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~24                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~25                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~26                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~27                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|datain~28                                        ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|rdmem_stm:rdmem_inst|Add0~1                      ; Modified ; Timing optimization ;
+; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]~9                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~6                ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~7                ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~8                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~8_RESYN8_BDD9    ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~8_RESYN10_BDD11  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]~8_RESYN12_BDD13  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~0                ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~1                ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2_RESYN14_BDD15  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2_RESYN16_BDD17  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|Selector58~2_RESYN18_BDD19  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[0]~2                ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[0]~3                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[0]~3_RESYN0_BDD1    ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Add0~1                      ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~0               ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~1               ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~2               ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3               ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN28_BDD29 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN30_BDD31 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN32_BDD33 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector315~3_RESYN34_BDD35 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~0               ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~1               ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~2               ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3               ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN36_BDD37 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN38_BDD39 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN40_BDD41 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN42_BDD43 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|Selector316~3_RESYN44_BDD45 ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~0                ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~1                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~1_RESYN2_BDD3    ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~2                ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~3                ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~6                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~6_RESYN4_BDD5    ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]~6_RESYN6_BDD7    ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[1]~7                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[1]~7_RESYN20_BDD21  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[2]~8                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[2]~8_RESYN22_BDD23  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[3]~9                ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[3]~9_RESYN24_BDD25  ; Created  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~5                ; Deleted  ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~10               ; Modified ; Timing optimization ;
+; top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[4]~10_RESYN26_BDD27 ; Created  ; Timing optimization ;
++-------------------------------------------------------------------+----------+---------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -665,34 +702,34 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|shift_reg[3]                                                                 ;
-; 3:1                ; 47 bits   ; 94 LEs        ; 47 LEs               ; 47 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|shift_reg[43]                                                               ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|shift_reg[1]                                                                 ;
+; 3:1                ; 47 bits   ; 94 LEs        ; 47 LEs               ; 47 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|shift_reg[25]                                                               ;
 ; 3:1                ; 255 bits  ; 510 LEs       ; 255 LEs              ; 255 LEs                ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|shift_reg[2]                                                 ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|altsource_probe_top:rst_control|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[2]                                   ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[0]                 ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[2]                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|altsource_probe_top:rst_control|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[0]                                   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[1]                 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[0]                ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[0]   ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[2]   ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[1] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|word_counter[0] ;
 ; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|shift_reg[8]                                                   ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|shift_reg[11]                                                  ;
-; 6:1                ; 18 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|datain[0]                                                                                                                                                                                                                                       ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|shift_reg[2]                                                   ;
+; 6:1                ; 18 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|datain[2]                                                                                                                                                                                                                                       ;
 ; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|buffer_out[2][8]                                                                                                                                                                                                           ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|buffer_out[0][3]                                                                                                                                                                                                           ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|buffer_out[1][1]                                                                                                                                                                                                           ;
 ; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|buffer_out[2][9]                                                                                                                                                                                                           ;
 ; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|buffer_out[1][2]                                                                                                                                                                                                           ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|buffer_out[18][2]                                                                                                                                                                                                          ;
-; 6:1                ; 240 bits  ; 960 LEs       ; 240 LEs              ; 720 LEs                ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|buffer_out[3][4]                                                                                                                                                                                                           ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|buffer_out[18][1]                                                                                                                                                                                                          ;
+; 6:1                ; 240 bits  ; 960 LEs       ; 240 LEs              ; 720 LEs                ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|buffer_out[3][6]                                                                                                                                                                                                           ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |topv3|altsource_probe_top:rst_control|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[0]                                        ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[1]                      ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[2]                     ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[3]        ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[0]        ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[1]      ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[3]                     ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[2]        ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[2]        ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst|WORD_SR[3]      ;
 ; 7:1                ; 48 bits   ; 192 LEs       ; 96 LEs               ; 96 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|buffer_out[0][15]                                                                                                                                                                                                          ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[3]                                                                                                                                                                                                                 ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[2]                                                                                                                                                                                                                 ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[0]                                                                                                                                                                                                                 ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|counter[0]                                                                                                                                                                                                                 ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|counter[0]                                                                                                                                                                                                                 ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|counter[5]                                                                                                                                                                                                                 ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |topv3|top_stm:stm_inst|wrmem_stm:wrmem_inst|state                                                                                                                                                                                                                      ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |topv3|top_stm:stm_inst|rdmem_stm:rdmem_inst|state                                                                                                                                                                                                                      ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |topv3|top_stm:stm_inst|rdreg_stm:rdreg_inst|state                                                                                                                                                                                                                      ;
@@ -2177,19 +2214,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 259                         ;
 ;     plain             ; 165                         ;
 ; cycloneiii_io_obuf    ; 9                           ;
-; cycloneiii_lcell_comb ; 1177                        ;
+; cycloneiii_lcell_comb ; 1178                        ;
 ;     arith             ; 9                           ;
 ;         2 data inputs ; 9                           ;
-;     normal            ; 1168                        ;
+;     normal            ; 1169                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 95                          ;
-;         3 data inputs ; 784                         ;
-;         4 data inputs ; 281                         ;
+;         2 data inputs ; 100                         ;
+;         3 data inputs ; 782                         ;
+;         4 data inputs ; 279                         ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 1.45                        ;
+; Average LUT depth     ; 1.49                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2409,46 +2446,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
-    Info: Processing started: Wed Mar 26 17:24:37 2025
+    Info: Processing started: Thu Mar 27 09:43:03 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 4 design units, including 4 entities, in source file comp_stm.sv
-    Info (12023): Found entity 1: rdreg_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 1
-    Info (12023): Found entity 2: wrmem_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 108
-    Info (12023): Found entity 3: wrreg_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 266
-    Info (12023): Found entity 4: rdmem_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 276
+    Info (12023): Found entity 1: rdreg_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 1
+    Info (12023): Found entity 2: wrmem_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 108
+    Info (12023): Found entity 3: wrreg_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 266
+    Info (12023): Found entity 4: rdmem_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 276
 Info (12021): Found 1 design units, including 1 entities, in source file top_stm.sv
-    Info (12023): Found entity 1: top_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 2
+    Info (12023): Found entity 1: top_stm File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file topv2.sv
-    Info (12023): Found entity 1: topv2 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv2.sv Line: 2
+    Info (12023): Found entity 1: topv2 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv2.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file issp/issp/synthesis/issp.v
-    Info (12023): Found entity 1: issp File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/issp.v Line: 6
+    Info (12023): Found entity 1: issp File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/issp.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file issp/issp/synthesis/submodules/altsource_probe_top.v
-    Info (12023): Found entity 1: altsource_probe_top File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 14
+    Info (12023): Found entity 1: altsource_probe_top File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file dq/dq.v
-    Info (12023): Found entity 1: dq File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/dq/dq.v Line: 40
+    Info (12023): Found entity 1: dq File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/dq/dq.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file pll2/pll2.v
-    Info (12023): Found entity 1: pll2 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/pll2/pll2.v Line: 40
+    Info (12023): Found entity 1: pll2 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/pll2/pll2.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file bootup.sv
-    Info (12023): Found entity 1: bootup File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/bootup.sv Line: 1
+    Info (12023): Found entity 1: bootup File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/bootup.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file topv3.sv
-    Info (12023): Found entity 1: topv3 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 1
+    Info (12023): Found entity 1: topv3 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ck/ck.v
-    Info (12023): Found entity 1: ck File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ck/ck.v Line: 40
+    Info (12023): Found entity 1: ck File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/ck/ck.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file iobuf.sv
-    Info (12023): Found entity 1: iobuf File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/iobuf.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at top_stm.sv(216): created implicit net for "wrmem_rwds_out" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 216
-Warning (10236): Verilog HDL Implicit Net warning at top_stm.sv(217): created implicit net for "wrmem_rwds_oe" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 217
-Warning (10236): Verilog HDL Implicit Net warning at topv3.sv(40): created implicit net for "lock" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at topv3.sv(73): created implicit net for "rwds_oe" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 73
+    Info (12023): Found entity 1: iobuf File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/iobuf.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at top_stm.sv(216): created implicit net for "wrmem_rwds_out" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 216
+Warning (10236): Verilog HDL Implicit Net warning at top_stm.sv(217): created implicit net for "wrmem_rwds_oe" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 217
+Warning (10236): Verilog HDL Implicit Net warning at topv3.sv(40): created implicit net for "lock" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at topv3.sv(73): created implicit net for "rwds_oe" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 73
 Info (12127): Elaborating entity "topv3" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at topv3.sv(14): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 14
-Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "altsource_probe_top:rst_control" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 33
-Info (12128): Elaborating entity "altsource_probe" for hierarchy "altsource_probe_top:rst_control|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12130): Elaborated megafunction instantiation "altsource_probe_top:rst_control|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12133): Instantiated megafunction "altsource_probe_top:rst_control|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Warning (10230): Verilog HDL assignment warning at topv3.sv(14): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 14
+Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "altsource_probe_top:rst_control" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 33
+Info (12128): Elaborating entity "altsource_probe" for hierarchy "altsource_probe_top:rst_control|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12130): Elaborated megafunction instantiation "altsource_probe_top:rst_control|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12133): Instantiated megafunction "altsource_probe_top:rst_control|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
     Info (12134): Parameter "lpm_type" = "altsource_probe"
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "sld_auto_instance_index" = "YES"
@@ -2465,10 +2502,10 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy 
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "altsource_probe_top:rst_control|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 243
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "altsource_probe_top:rst_control|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 536
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "altsource_probe_top:rst_control|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst|sld_rom_sr:\no_instance_id_gen:rom_info_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 776
-Info (12128): Elaborating entity "pll2" for hierarchy "pll2:pll2_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 41
-Info (12128): Elaborating entity "altpll" for hierarchy "pll2:pll2_inst|altpll:altpll_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/pll2/pll2.v Line: 108
-Info (12130): Elaborated megafunction instantiation "pll2:pll2_inst|altpll:altpll_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/pll2/pll2.v Line: 108
-Info (12133): Instantiated megafunction "pll2:pll2_inst|altpll:altpll_component" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/pll2/pll2.v Line: 108
+Info (12128): Elaborating entity "pll2" for hierarchy "pll2:pll2_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 41
+Info (12128): Elaborating entity "altpll" for hierarchy "pll2:pll2_inst|altpll:altpll_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/pll2/pll2.v Line: 108
+Info (12130): Elaborated megafunction instantiation "pll2:pll2_inst|altpll:altpll_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/pll2/pll2.v Line: 108
+Info (12133): Instantiated megafunction "pll2:pll2_inst|altpll:altpll_component" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/pll2/pll2.v Line: 108
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -2529,13 +2566,13 @@ Info (12133): Instantiated megafunction "pll2:pll2_inst|altpll:altpll_component"
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll2_altpll2.v
-    Info (12023): Found entity 1: pll2_altpll2 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/pll2_altpll2.v Line: 31
+    Info (12023): Found entity 1: pll2_altpll2 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/pll2_altpll2.v Line: 31
 Info (12128): Elaborating entity "pll2_altpll2" for hierarchy "pll2:pll2_inst|altpll:altpll_component|pll2_altpll2:auto_generated" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "iobuf" for hierarchy "iobuf:iobuf_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 56
-Info (12128): Elaborating entity "dq" for hierarchy "iobuf:iobuf_inst|dq:dq_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/iobuf.sv Line: 25
-Info (12128): Elaborating entity "altddio_bidir" for hierarchy "iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/dq/dq.v Line: 81
-Info (12130): Elaborated megafunction instantiation "iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/dq/dq.v Line: 81
-Info (12133): Instantiated megafunction "iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/dq/dq.v Line: 81
+Info (12128): Elaborating entity "iobuf" for hierarchy "iobuf:iobuf_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 56
+Info (12128): Elaborating entity "dq" for hierarchy "iobuf:iobuf_inst|dq:dq_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/iobuf.sv Line: 25
+Info (12128): Elaborating entity "altddio_bidir" for hierarchy "iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/dq/dq.v Line: 81
+Info (12130): Elaborated megafunction instantiation "iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/dq/dq.v Line: 81
+Info (12133): Instantiated megafunction "iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/dq/dq.v Line: 81
     Info (12134): Parameter "extend_oe_disable" = "OFF"
     Info (12134): Parameter "implement_input_in_lcell" = "OFF"
     Info (12134): Parameter "intended_device_family" = "Cyclone 10 LP"
@@ -2546,12 +2583,12 @@ Info (12133): Instantiated megafunction "iobuf:iobuf_inst|dq:dq_inst|altddio_bid
     Info (12134): Parameter "power_up_high" = "OFF"
     Info (12134): Parameter "width" = "8"
 Info (12021): Found 1 design units, including 1 entities, in source file db/ddio_bidir_a4p.tdf
-    Info (12023): Found entity 1: ddio_bidir_a4p File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ddio_bidir_a4p.tdf Line: 30
+    Info (12023): Found entity 1: ddio_bidir_a4p File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ddio_bidir_a4p.tdf Line: 30
 Info (12128): Elaborating entity "ddio_bidir_a4p" for hierarchy "iobuf:iobuf_inst|dq:dq_inst|altddio_bidir:ALTDDIO_BIDIR_component|ddio_bidir_a4p:auto_generated" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altddio_bidir.tdf Line: 116
-Info (12128): Elaborating entity "ck" for hierarchy "iobuf:iobuf_inst|ck:ckp_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/iobuf.sv Line: 37
-Info (12128): Elaborating entity "altddio_out" for hierarchy "iobuf:iobuf_inst|ck:ckp_inst|altddio_out:ALTDDIO_OUT_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ck/ck.v Line: 69
-Info (12130): Elaborated megafunction instantiation "iobuf:iobuf_inst|ck:ckp_inst|altddio_out:ALTDDIO_OUT_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ck/ck.v Line: 69
-Info (12133): Instantiated megafunction "iobuf:iobuf_inst|ck:ckp_inst|altddio_out:ALTDDIO_OUT_component" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/ck/ck.v Line: 69
+Info (12128): Elaborating entity "ck" for hierarchy "iobuf:iobuf_inst|ck:ckp_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/iobuf.sv Line: 37
+Info (12128): Elaborating entity "altddio_out" for hierarchy "iobuf:iobuf_inst|ck:ckp_inst|altddio_out:ALTDDIO_OUT_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/ck/ck.v Line: 69
+Info (12130): Elaborated megafunction instantiation "iobuf:iobuf_inst|ck:ckp_inst|altddio_out:ALTDDIO_OUT_component" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/ck/ck.v Line: 69
+Info (12133): Instantiated megafunction "iobuf:iobuf_inst|ck:ckp_inst|altddio_out:ALTDDIO_OUT_component" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/ck/ck.v Line: 69
     Info (12134): Parameter "extend_oe_disable" = "OFF"
     Info (12134): Parameter "intended_device_family" = "Cyclone 10 LP"
     Info (12134): Parameter "invert_output" = "OFF"
@@ -2561,28 +2598,28 @@ Info (12133): Instantiated megafunction "iobuf:iobuf_inst|ck:ckp_inst|altddio_ou
     Info (12134): Parameter "power_up_high" = "OFF"
     Info (12134): Parameter "width" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/ddio_out_8vj.tdf
-    Info (12023): Found entity 1: ddio_out_8vj File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ddio_out_8vj.tdf Line: 30
+    Info (12023): Found entity 1: ddio_out_8vj File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ddio_out_8vj.tdf Line: 30
 Info (12128): Elaborating entity "ddio_out_8vj" for hierarchy "iobuf:iobuf_inst|ck:ckp_inst|altddio_out:ALTDDIO_OUT_component|ddio_out_8vj:auto_generated" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altddio_out.tdf Line: 101
-Info (12128): Elaborating entity "top_stm" for hierarchy "top_stm:stm_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 75
-Warning (10858): Verilog HDL warning at top_stm.sv(66): object wrreg_datain used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 66
-Warning (10858): Verilog HDL warning at top_stm.sv(67): object wrreg_oe used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 67
-Warning (10858): Verilog HDL warning at top_stm.sv(68): object wrreg_csn used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 68
-Warning (10858): Verilog HDL warning at top_stm.sv(69): object wrreg_oe_clk used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 69
-Warning (10230): Verilog HDL assignment warning at top_stm.sv(152): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 152
-Warning (10230): Verilog HDL assignment warning at top_stm.sv(153): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 153
-Warning (10230): Verilog HDL assignment warning at top_stm.sv(155): truncated value with size 32 to match size of target (16) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 155
-Warning (10230): Verilog HDL assignment warning at top_stm.sv(160): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 160
-Warning (10230): Verilog HDL assignment warning at top_stm.sv(165): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 165
-Warning (10230): Verilog HDL assignment warning at top_stm.sv(170): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 170
-Warning (10030): Net "stm_end[1]" at top_stm.sv(63) has no driver or initial value, using a default initial value '0' File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 63
-Warning (10030): Net "wrreg_datain" at top_stm.sv(66) has no driver or initial value, using a default initial value '0' File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 66
-Warning (10030): Net "wrreg_oe" at top_stm.sv(67) has no driver or initial value, using a default initial value '0' File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 67
-Warning (10030): Net "wrreg_csn" at top_stm.sv(68) has no driver or initial value, using a default initial value '0' File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 68
-Warning (10030): Net "wrreg_oe_clk" at top_stm.sv(69) has no driver or initial value, using a default initial value '0' File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 69
-Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "top_stm:stm_inst|altsource_probe_top:control_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 41
-Info (12128): Elaborating entity "altsource_probe" for hierarchy "top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12130): Elaborated megafunction instantiation "top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12133): Instantiated megafunction "top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12128): Elaborating entity "top_stm" for hierarchy "top_stm:stm_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 75
+Warning (10858): Verilog HDL warning at top_stm.sv(66): object wrreg_datain used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 66
+Warning (10858): Verilog HDL warning at top_stm.sv(67): object wrreg_oe used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 67
+Warning (10858): Verilog HDL warning at top_stm.sv(68): object wrreg_csn used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 68
+Warning (10858): Verilog HDL warning at top_stm.sv(69): object wrreg_oe_clk used but never assigned File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 69
+Warning (10230): Verilog HDL assignment warning at top_stm.sv(152): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 152
+Warning (10230): Verilog HDL assignment warning at top_stm.sv(153): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 153
+Warning (10230): Verilog HDL assignment warning at top_stm.sv(155): truncated value with size 32 to match size of target (16) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 155
+Warning (10230): Verilog HDL assignment warning at top_stm.sv(160): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 160
+Warning (10230): Verilog HDL assignment warning at top_stm.sv(165): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 165
+Warning (10230): Verilog HDL assignment warning at top_stm.sv(170): truncated value with size 32 to match size of target (1) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 170
+Warning (10030): Net "stm_end[1]" at top_stm.sv(63) has no driver or initial value, using a default initial value '0' File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 63
+Warning (10030): Net "wrreg_datain" at top_stm.sv(66) has no driver or initial value, using a default initial value '0' File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 66
+Warning (10030): Net "wrreg_oe" at top_stm.sv(67) has no driver or initial value, using a default initial value '0' File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 67
+Warning (10030): Net "wrreg_csn" at top_stm.sv(68) has no driver or initial value, using a default initial value '0' File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 68
+Warning (10030): Net "wrreg_oe_clk" at top_stm.sv(69) has no driver or initial value, using a default initial value '0' File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 69
+Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "top_stm:stm_inst|altsource_probe_top:control_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 41
+Info (12128): Elaborating entity "altsource_probe" for hierarchy "top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12130): Elaborated megafunction instantiation "top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12133): Instantiated megafunction "top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
     Info (12134): Parameter "lpm_type" = "altsource_probe"
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "sld_auto_instance_index" = "YES"
@@ -2596,10 +2633,10 @@ Info (12133): Instantiated megafunction "top_stm:stm_inst|altsource_probe_top:co
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 243
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "top_stm:stm_inst|altsource_probe_top:control_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 536
-Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "top_stm:stm_inst|altsource_probe_top:ca_input_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 57
-Info (12128): Elaborating entity "altsource_probe" for hierarchy "top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12130): Elaborated megafunction instantiation "top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12133): Instantiated megafunction "top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "top_stm:stm_inst|altsource_probe_top:ca_input_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 57
+Info (12128): Elaborating entity "altsource_probe" for hierarchy "top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12130): Elaborated megafunction instantiation "top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12133): Instantiated megafunction "top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
     Info (12134): Parameter "lpm_type" = "altsource_probe"
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "sld_auto_instance_index" = "YES"
@@ -2613,13 +2650,13 @@ Info (12133): Instantiated megafunction "top_stm:stm_inst|altsource_probe_top:ca
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 243
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "top_stm:stm_inst|altsource_probe_top:ca_input_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 536
-Info (12128): Elaborating entity "rdreg_stm" for hierarchy "top_stm:stm_inst|rdreg_stm:rdreg_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 190
-Warning (10230): Verilog HDL assignment warning at comp_stm.sv(58): truncated value with size 32 to match size of target (4) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 58
-Warning (10230): Verilog HDL assignment warning at comp_stm.sv(78): truncated value with size 32 to match size of target (4) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 78
-Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 101
-Info (12128): Elaborating entity "altsource_probe" for hierarchy "top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12130): Elaborated megafunction instantiation "top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12133): Instantiated megafunction "top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12128): Elaborating entity "rdreg_stm" for hierarchy "top_stm:stm_inst|rdreg_stm:rdreg_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 190
+Warning (10230): Verilog HDL assignment warning at comp_stm.sv(58): truncated value with size 32 to match size of target (4) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 58
+Warning (10230): Verilog HDL assignment warning at comp_stm.sv(78): truncated value with size 32 to match size of target (4) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 78
+Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 101
+Info (12128): Elaborating entity "altsource_probe" for hierarchy "top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12130): Elaborated megafunction instantiation "top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12133): Instantiated megafunction "top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
     Info (12134): Parameter "lpm_type" = "altsource_probe"
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "sld_auto_instance_index" = "YES"
@@ -2633,14 +2670,14 @@ Info (12133): Instantiated megafunction "top_stm:stm_inst|rdreg_stm:rdreg_inst|a
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 281
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 508
-Info (12128): Elaborating entity "rdmem_stm" for hierarchy "top_stm:stm_inst|rdmem_stm:rdmem_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 204
-Warning (10230): Verilog HDL assignment warning at comp_stm.sv(336): truncated value with size 32 to match size of target (6) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 336
-Warning (10230): Verilog HDL assignment warning at comp_stm.sv(359): truncated value with size 32 to match size of target (6) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 359
-Warning (10230): Verilog HDL assignment warning at comp_stm.sv(362): truncated value with size 32 to match size of target (6) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 362
-Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 385
-Info (12128): Elaborating entity "altsource_probe" for hierarchy "top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12130): Elaborated megafunction instantiation "top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12133): Instantiated megafunction "top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12128): Elaborating entity "rdmem_stm" for hierarchy "top_stm:stm_inst|rdmem_stm:rdmem_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 204
+Warning (10230): Verilog HDL assignment warning at comp_stm.sv(336): truncated value with size 32 to match size of target (6) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 336
+Warning (10230): Verilog HDL assignment warning at comp_stm.sv(359): truncated value with size 32 to match size of target (6) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 359
+Warning (10230): Verilog HDL assignment warning at comp_stm.sv(362): truncated value with size 32 to match size of target (6) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 362
+Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 385
+Info (12128): Elaborating entity "altsource_probe" for hierarchy "top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12130): Elaborated megafunction instantiation "top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12133): Instantiated megafunction "top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
     Info (12134): Parameter "lpm_type" = "altsource_probe"
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "sld_auto_instance_index" = "YES"
@@ -2654,14 +2691,14 @@ Info (12133): Instantiated megafunction "top_stm:stm_inst|rdmem_stm:rdmem_inst|a
     Info (12134): Parameter "enable_metastability" = "NO"
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 281
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_probe_gen:wider_probe_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 508
-Info (12128): Elaborating entity "wrmem_stm" for hierarchy "top_stm:stm_inst|wrmem_stm:wrmem_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/top_stm.sv Line: 219
-Warning (10230): Verilog HDL assignment warning at comp_stm.sv(220): truncated value with size 32 to match size of target (5) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 220
-Warning (10230): Verilog HDL assignment warning at comp_stm.sv(243): truncated value with size 32 to match size of target (5) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 243
-Warning (10230): Verilog HDL assignment warning at comp_stm.sv(249): truncated value with size 32 to match size of target (5) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 249
-Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/comp_stm.sv Line: 161
-Info (12128): Elaborating entity "altsource_probe" for hierarchy "top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12130): Elaborated megafunction instantiation "top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
-Info (12133): Instantiated megafunction "top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12128): Elaborating entity "wrmem_stm" for hierarchy "top_stm:stm_inst|wrmem_stm:wrmem_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 219
+Warning (10230): Verilog HDL assignment warning at comp_stm.sv(220): truncated value with size 32 to match size of target (5) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 220
+Warning (10230): Verilog HDL assignment warning at comp_stm.sv(243): truncated value with size 32 to match size of target (5) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 243
+Warning (10230): Verilog HDL assignment warning at comp_stm.sv(249): truncated value with size 32 to match size of target (5) File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 249
+Info (12128): Elaborating entity "altsource_probe_top" for hierarchy "top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/comp_stm.sv Line: 161
+Info (12128): Elaborating entity "altsource_probe" for hierarchy "top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12130): Elaborated megafunction instantiation "top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
+Info (12133): Instantiated megafunction "top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" with the following parameter: File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/synthesis/submodules/altsource_probe_top.v Line: 55
     Info (12134): Parameter "lpm_type" = "altsource_probe"
     Info (12134): Parameter "lpm_hint" = "UNUSED"
     Info (12134): Parameter "sld_auto_instance_index" = "YES"
@@ -2676,33 +2713,33 @@ Info (12133): Instantiated megafunction "top_stm:stm_inst|wrmem_stm:wrmem_inst|a
 Info (12128): Elaborating entity "altsource_probe_body" for hierarchy "top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe.v Line: 243
 Info (12128): Elaborating entity "altsource_probe_impl" for hierarchy "top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl|altsource_probe_body:altsource_probe_body_inst|altsource_probe_impl:\wider_source_gen:wider_source_inst" File: d:/intelfpga_pro/23.1std/quartus/libraries/megafunctions/altsource_probe_body.vhd Line: 536
 Info (12021): Found 1 design units, including 1 entities, in source file db/sld_ela_trigger_35o.tdf
-    Info (12023): Found entity 1: sld_ela_trigger_35o File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/sld_ela_trigger_35o.tdf Line: 26
+    Info (12023): Found entity 1: sld_ela_trigger_35o File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/sld_ela_trigger_35o.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/sld_reserved_top_auto_signaltap_0_1_672.v
-    Info (12023): Found entity 1: sld_reserved_top_auto_signaltap_0_1_672 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/sld_reserved_top_auto_signaltap_0_1_672.v Line: 29
+    Info (12023): Found entity 1: sld_reserved_top_auto_signaltap_0_1_672 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/sld_reserved_top_auto_signaltap_0_1_672.v Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a824.tdf
-    Info (12023): Found entity 1: altsyncram_a824 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/altsyncram_a824.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_a824 File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/altsyncram_a824.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_lsc.tdf
-    Info (12023): Found entity 1: mux_lsc File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/mux_lsc.tdf Line: 23
+    Info (12023): Found entity 1: mux_lsc File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/mux_lsc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_6vf.tdf
-    Info (12023): Found entity 1: decode_6vf File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/decode_6vf.tdf Line: 23
+    Info (12023): Found entity 1: decode_6vf File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/decode_6vf.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_4ii.tdf
-    Info (12023): Found entity 1: cntr_4ii File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cntr_4ii.tdf Line: 28
+    Info (12023): Found entity 1: cntr_4ii File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cntr_4ii.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ngc.tdf
-    Info (12023): Found entity 1: cmpr_ngc File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cmpr_ngc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_ngc File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cmpr_ngc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_b6j.tdf
-    Info (12023): Found entity 1: cntr_b6j File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cntr_b6j.tdf Line: 26
+    Info (12023): Found entity 1: cntr_b6j File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cntr_b6j.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_7gi.tdf
-    Info (12023): Found entity 1: cntr_7gi File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cntr_7gi.tdf Line: 28
+    Info (12023): Found entity 1: cntr_7gi File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cntr_7gi.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_jgc.tdf
-    Info (12023): Found entity 1: cmpr_jgc File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cmpr_jgc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_jgc File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cmpr_jgc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_r2j.tdf
-    Info (12023): Found entity 1: cntr_r2j File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cntr_r2j.tdf Line: 28
+    Info (12023): Found entity 1: cntr_r2j File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cntr_r2j.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ggc.tdf
-    Info (12023): Found entity 1: cmpr_ggc File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/cmpr_ggc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_ggc File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/cmpr_ggc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
 Info (11172): Picked up _JAVA_OPTIONS: -Xmx1024M
-Info (11172): 2025.03.26.17:25:17 Progress: Loading sld4d43b179/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.03.27.09:44:04 Progress: Loading sld4d43b179/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -2713,27 +2750,27 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld4d43b179/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 342
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 342
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ip/sld4d43b179/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (12241): 12 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13044): Always-enabled tri-state buffer(s) removed
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "iobuf:iobuf_inst|ck:ckp_inst|altddio_out:ALTDDIO_OUT_component|ddio_out_8vj:auto_generated|tri_buf1a[0]" to the node "ckout" into a wire File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ddio_out_8vj.tdf Line: 47
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "iobuf:iobuf_inst|ck:ckn_inst|altddio_out:ALTDDIO_OUT_component|ddio_out_8vj:auto_generated|tri_buf1a[0]" to the node "ckoutn" into a wire File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/db/ddio_out_8vj.tdf Line: 47
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "iobuf:iobuf_inst|ck:ckp_inst|altddio_out:ALTDDIO_OUT_component|ddio_out_8vj:auto_generated|tri_buf1a[0]" to the node "ckout" into a wire File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ddio_out_8vj.tdf Line: 47
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "iobuf:iobuf_inst|ck:ckn_inst|altddio_out:ALTDDIO_OUT_component|ddio_out_8vj:auto_generated|tri_buf1a[0]" to the node "ckoutn" into a wire File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/db/ddio_out_8vj.tdf Line: 47
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Warning (14632): Output pin "pre_syn.bp.rwds_in" driven by bidirectional pin "rwds" cannot be tri-stated File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 5
-Warning (14632): Output pin "pre_syn.bp.stm_inst_rdreg_inst_rwds_in" driven by bidirectional pin "rwds" cannot be tri-stated File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 5
-Warning (14632): Output pin "pre_syn.bp.stm_inst_rdmem_inst_rwds_in" driven by bidirectional pin "rwds" cannot be tri-stated File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 5
-Warning (14632): Output pin "pre_syn.bp.stm_inst_wrmem_inst_rwds_in" driven by bidirectional pin "rwds" cannot be tri-stated File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/topv3.sv Line: 5
+Warning (14632): Output pin "pre_syn.bp.rwds_in" driven by bidirectional pin "rwds" cannot be tri-stated File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 5
+Warning (14632): Output pin "pre_syn.bp.stm_inst_rdreg_inst_rwds_in" driven by bidirectional pin "rwds" cannot be tri-stated File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 5
+Warning (14632): Output pin "pre_syn.bp.stm_inst_rdmem_inst_rwds_in" driven by bidirectional pin "rwds" cannot be tri-stated File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 5
+Warning (14632): Output pin "pre_syn.bp.stm_inst_wrmem_inst_rwds_in" driven by bidirectional pin "rwds" cannot be tri-stated File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 5
 Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (128000): Starting physical synthesis optimizations for speed
 Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
@@ -2747,30 +2784,30 @@ Info (332111): Found 4 clocks
 Info (128002): Starting physical synthesis algorithm register retiming
 Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
-Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 647 ps
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 721 ps
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
 Warning (20013): Ignored 16 assignments for entity "issp" -- entity does not exist in design
-Info (144001): Generated suppressed messages file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/output_files/top.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/output_files/top.map.smsg
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 193 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4215 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4217 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 5 output pins
     Info (21060): Implemented 9 bidirectional pins
-    Info (21061): Implemented 4028 logic cells
+    Info (21061): Implemented 4030 logic cells
     Info (21064): Implemented 157 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
     Info: Peak virtual memory: 4952 megabytes
-    Info: Processing ended: Wed Mar 26 17:25:40 2025
-    Info: Elapsed time: 00:01:03
-    Info: Total CPU time (on all processors): 00:01:28
+    Info: Processing ended: Thu Mar 27 09:44:33 2025
+    Info: Elapsed time: 00:01:30
+    Info: Total CPU time (on all processors): 00:02:06
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/sim_test/qii/output_files/top.map.smsg.
+The suppressed messages can be found in C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/output_files/top.map.smsg.
 
 

@@ -226,7 +226,7 @@ always@(posedge clk) begin
                 end
             end
             STATE_RUN: begin
-                if (counter == 28) begin
+                if (counter == 29) begin
                         state   <= STATE_DONE;
                         counter <= 0;
                         stm_end <= 1;
@@ -234,7 +234,7 @@ always@(posedge clk) begin
                         oe      <= 0;
                         oe_clk  <= 0;
                         rwds_oe <= 0;
-                    end else if (counter > 12 && counter < 28) begin
+                    end else if (counter > 12) begin
                         for (int i = 0;i< 18 ;i++ ) begin
                             buffer_out[i] <= buffer_out[i+1];
                         end
@@ -346,14 +346,14 @@ always@(posedge clk) begin
                 end
             end
             STATE_RUN: begin
-                if (counter == 32) begin
+                if (counter == 33) begin
                     state <= STATE_DONE;
                     stm_end <= 1;
                     counter <= 0;
                     csn     <= 1;
                     valid   <= 0;
                 end else
-                if (counter > 16 && counter < 32) begin
+                if (counter > 16) begin
                     dataoutr <= dataout;
                     valid    <= 1;
                     counter <= counter + 1;
