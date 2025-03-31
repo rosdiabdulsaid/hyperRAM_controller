@@ -9,7 +9,9 @@ module rdreg_stm(
     input  wire rwds_in,
     output wire [15:0] datain,
     input  wire [15:0] dataout,
-    input  wire [47:0] casig
+    input  wire [47:0] casig,
+    output reg         valid,
+    output reg  [15:0] dataoutr
 );
 
 typedef enum logic [1:0] {
@@ -22,7 +24,7 @@ typedef enum logic [1:0] {
 reg [3:0] counter;
 fsm_state_e state;
 reg [15:0] buffer_out[0:2];
-reg [15:0] dataoutr;
+// reg [15:0] dataoutr;
 always@(posedge clk) begin
     if(rst) begin
         stm_end <= 0;
@@ -31,6 +33,7 @@ always@(posedge clk) begin
         oe      <= 0;
         oe_clk  <= 0;
         csn     <= 1;
+        valid   <= 0;
         for (int i =0 ;i<3 ;i++ ) begin
             buffer_out[i] <= 0;
         end
@@ -43,6 +46,7 @@ always@(posedge clk) begin
                 buffer_out[1] <= casig[31:16];
                 buffer_out[2] <= casig[15:0];
                 csn   <= 1;
+                valid <= 0;
                 if(stm_start) begin
                     state <= STATE_CA;
                     csn   <= 0;
@@ -74,6 +78,7 @@ always@(posedge clk) begin
                     counter <= 0;
                     csn     <= 1;
                     dataoutr <= dataout;
+                    valid    <= 1;
                 end begin
                     counter <= counter + 1;
                 end
@@ -81,6 +86,7 @@ always@(posedge clk) begin
             STATE_DONE: begin
                 state <= STATE_IDLE;
                 oe_clk <= 0;
+                valid  <= 0;
             end 
             default: state <= STATE_IDLE;
         endcase

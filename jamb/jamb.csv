@@ -1,0 +1,48 @@
+# system info jamb on 2025.03.28.09:46:11
+system_info:
+name,value
+DEVICE,10CL025YU256I7G
+DEVICE_FAMILY,Cyclone 10 LP
+GENERATION_ID,1743126350
+#
+#
+# Files generated for jamb on 2025.03.28.09:46:11
+files:
+filepath,kind,attributes,module,is_top
+simulation/jamb.v,VERILOG,,jamb,true
+simulation/submodules/jamb_master_0.v,VERILOG,,jamb_master_0,false
+simulation/submodules/altera_avalon_st_jtag_interface.v,VERILOG,,altera_avalon_st_jtag_interface,false
+simulation/submodules/altera_jtag_dc_streaming.v,VERILOG,,altera_avalon_st_jtag_interface,false
+simulation/submodules/altera_jtag_sld_node.v,VERILOG,,altera_avalon_st_jtag_interface,false
+simulation/submodules/altera_jtag_streaming.v,VERILOG,,altera_avalon_st_jtag_interface,false
+simulation/submodules/altera_avalon_st_clock_crosser.v,VERILOG,,altera_avalon_st_jtag_interface,false
+simulation/submodules/altera_std_synchronizer_nocut.v,VERILOG,,altera_avalon_st_jtag_interface,false
+simulation/submodules/altera_avalon_st_pipeline_base.v,VERILOG,,altera_avalon_st_jtag_interface,false
+simulation/submodules/altera_avalon_st_idle_remover.v,VERILOG,,altera_avalon_st_jtag_interface,false
+simulation/submodules/altera_avalon_st_idle_inserter.v,VERILOG,,altera_avalon_st_jtag_interface,false
+simulation/submodules/altera_avalon_st_pipeline_stage.sv,SYSTEM_VERILOG,,altera_avalon_st_jtag_interface,false
+simulation/submodules/altera_avalon_st_jtag_interface.sdc,SDC,,altera_avalon_st_jtag_interface,false
+simulation/submodules/jamb_master_0_timing_adt.sv,SYSTEM_VERILOG,,jamb_master_0_timing_adt,false
+simulation/submodules/altera_avalon_sc_fifo.v,VERILOG,,altera_avalon_sc_fifo,false
+simulation/submodules/altera_avalon_st_bytes_to_packets.v,VERILOG,,altera_avalon_st_bytes_to_packets,false
+simulation/submodules/altera_avalon_st_packets_to_bytes.v,VERILOG,,altera_avalon_st_packets_to_bytes,false
+simulation/submodules/altera_avalon_packets_to_master.v,VERILOG,,altera_avalon_packets_to_master,false
+simulation/submodules/jamb_master_0_b2p_adapter.sv,SYSTEM_VERILOG,,jamb_master_0_b2p_adapter,false
+simulation/submodules/jamb_master_0_p2b_adapter.sv,SYSTEM_VERILOG,,jamb_master_0_p2b_adapter,false
+simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+jamb.master_0,jamb_master_0
+jamb.master_0.jtag_phy_embedded_in_jtag_master,altera_avalon_st_jtag_interface
+jamb.master_0.timing_adt,jamb_master_0_timing_adt
+jamb.master_0.fifo,altera_avalon_sc_fifo
+jamb.master_0.b2p,altera_avalon_st_bytes_to_packets
+jamb.master_0.p2b,altera_avalon_st_packets_to_bytes
+jamb.master_0.transacto,altera_avalon_packets_to_master
+jamb.master_0.b2p_adapter,jamb_master_0_b2p_adapter
+jamb.master_0.p2b_adapter,jamb_master_0_p2b_adapter
+jamb.master_0.rst_controller,altera_reset_controller

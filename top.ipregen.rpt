@@ -1,0 +1,221 @@
+IP Upgrade report for top
+Fri Mar 28 09:50:00 2025
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Successfully Upgraded IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++------------------------------------------------------------------------------------+
+; IP Upgrade Summary                                                                 ;
++------------------------------+-----------------------------------------------------+
+; IP Components Upgrade Status ; Passed - Fri Mar 28 09:50:00 2025                   ;
+; Quartus Prime Version        ; 24.1std.0 Build 1077 03/04/2025 SC Standard Edition ;
+; Revision Name                ; top                                                 ;
+; Top-level Entity Name        ; topv3                                               ;
+; Family                       ; Cyclone 10 LP                                       ;
++------------------------------+-----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Successfully Upgraded IP Components                                                                                                                    ;
++-------------+---------------------------------+---------+------------------------------+----------------------+------------------------------+---------+
+; Entity Name ; Component Name                  ; Version ; Original Source File         ; Generation File Path ; New Source File              ; Message ;
++-------------+---------------------------------+---------+------------------------------+----------------------+------------------------------+---------+
+; jamb        ; altera_jtag_avalon_master       ; 23.1    ; jamb/synthesis/jamb.qip      ; jamb.qsys            ; jamb/synthesis/jamb.qip      ;         ;
+; issp        ; altera_in_system_sources_probes ; 23.1    ; issp/issp/synthesis/issp.qip ; issp/issp.qsys       ; issp/issp/synthesis/issp.qip ;         ;
+; dq          ; ALTDDIO_BIDIR                   ; 23.1    ; dq/dq.qip                    ; dq/dq.v              ; dq/dq.qip                    ;         ;
+; pll2        ; ALTPLL                          ; 23.1    ; pll2/pll2.qip                ; pll2/pll2.v          ; pll2/pll2.qip                ;         ;
+; ck          ; ALTDDIO_OUT                     ; 23.1    ; ck/ck.qip                    ; ck/ck.v              ; ck/ck.qip                    ;         ;
++-------------+---------------------------------+---------+------------------------------+----------------------+------------------------------+---------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "jamb.qsys" to "jamb.BAK.qsys"
+Info (11902): Backing up file "jamb/synthesis/jamb.v" to "jamb.BAK.v"
+Info (11837): Started upgrading IP component altera_jtag_avalon_master with file "jamb.qsys"
+Info: Picked up _JAVA_OPTIONS: -Xmx1024M
+Info: 2025.03.28.09:45:05 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2025.03.28.09:45:05 Info: Finished upgrading the ip cores
+Info: Picked up _JAVA_OPTIONS: -Xmx1024M
+Info: 2025.03.28.09:45:38 Info: Saving generation log to C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb
+Info: 2025.03.28.09:45:38 Info: Starting: Create simulation model
+Info: 2025.03.28.09:45:38 Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\jamb.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\jamb\simulation --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Info: 2025.03.28.09:45:38 Info: Loading hyperRAM_controller
+Info: 2025.03.28.09:45:41 Info: Reading input file
+Info: 2025.03.28.09:45:41 Info: Adding master_0 [altera_jtag_avalon_master 24.1]
+Info: 2025.03.28.09:45:41 Info: Parameterizing module master_0
+Info: 2025.03.28.09:45:41 Info: Building connections
+Info: 2025.03.28.09:45:41 Info: Parameterizing connections
+Info: 2025.03.28.09:45:41 Info: Validating
+Info: 2025.03.28.09:45:44 Info: Done reading input file
+Info: 2025.03.28.09:45:51 Info: jamb: Generating "jamb" for SIM_VERILOG
+Info: 2025.03.28.09:46:10 Info: master_0: "jamb" instantiated altera_jtag_avalon_master "master_0"
+Info: 2025.03.28.09:46:10 Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: 2025.03.28.09:46:10 Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: 2025.03.28.09:46:10 Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: 2025.03.28.09:46:10 Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: 2025.03.28.09:46:10 Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: 2025.03.28.09:46:11 Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: 2025.03.28.09:46:11 Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: 2025.03.28.09:46:11 Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: 2025.03.28.09:46:11 Info: rst_controller: "master_0" instantiated altera_reset_controller "rst_controller"
+Info: 2025.03.28.09:46:11 Info: jamb: Done "jamb" with 11 modules, 23 files
+Info: 2025.03.28.09:46:11 Info: qsys-generate succeeded.
+Info: 2025.03.28.09:46:11 Info: Finished: Create simulation model
+Info: 2025.03.28.09:46:11 Info: Starting: Create Modelsim Project.
+Info: 2025.03.28.09:46:11 Info: sim-script-gen --spd=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\jamb\jamb.spd --output-directory=C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/simulation
+Info: 2025.03.28.09:46:11 Info: Doing: ip-make-simscript --spd=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\jamb\jamb.spd --output-directory=C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/simulation
+Info: 2025.03.28.09:46:16 Info: Generating the following file(s) for MODELSIM simulator in C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/simulation
+Info: 2025.03.28.09:46:16 Info:     mentor
+Info: 2025.03.28.09:46:16 Info: Generating the following file(s) for RIVIERA simulator in C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/simulation
+Info: 2025.03.28.09:46:16 Info:     aldec
+Info: 2025.03.28.09:46:16 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/jamb/simulation
+Info: 2025.03.28.09:46:16 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2025.03.28.09:46:16 Info: Finished: Create Modelsim Project.
+Info: 2025.03.28.09:46:16 Info: Starting: Create block symbol file (.bsf)
+Info: 2025.03.28.09:46:16 Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\jamb.qsys --block-symbol-file --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\jamb --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Info: 2025.03.28.09:46:16 Info: Loading hyperRAM_controller
+Info: 2025.03.28.09:46:19 Info: Reading input file
+Info: 2025.03.28.09:46:19 Info: Adding master_0 [altera_jtag_avalon_master 24.1]
+Info: 2025.03.28.09:46:19 Info: Parameterizing module master_0
+Info: 2025.03.28.09:46:19 Info: Building connections
+Info: 2025.03.28.09:46:19 Info: Parameterizing connections
+Info: 2025.03.28.09:46:19 Info: Validating
+Info: 2025.03.28.09:46:22 Info: Done reading input file
+Info: 2025.03.28.09:46:30 Info: qsys-generate succeeded.
+Info: 2025.03.28.09:46:30 Info: Finished: Create block symbol file (.bsf)
+Info: 2025.03.28.09:46:30 Info:
+Info: 2025.03.28.09:46:30 Info: Starting: Create HDL design files for synthesis
+Info: 2025.03.28.09:46:30 Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\jamb.qsys --synthesis=VERILOG --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\jamb\synthesis --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Info: 2025.03.28.09:46:31 Info: Loading hyperRAM_controller
+Info: 2025.03.28.09:46:34 Info: Reading input file
+Info: 2025.03.28.09:46:34 Info: Adding master_0 [altera_jtag_avalon_master 24.1]
+Info: 2025.03.28.09:46:34 Info: Parameterizing module master_0
+Info: 2025.03.28.09:46:34 Info: Building connections
+Info: 2025.03.28.09:46:34 Info: Parameterizing connections
+Info: 2025.03.28.09:46:34 Info: Validating
+Info: 2025.03.28.09:46:37 Info: Done reading input file
+Info: 2025.03.28.09:46:43 Info: jamb: Generating "jamb" for QUARTUS_SYNTH
+Info: 2025.03.28.09:47:02 Info: master_0: "jamb" instantiated altera_jtag_avalon_master "master_0"
+Info: 2025.03.28.09:47:02 Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: 2025.03.28.09:47:03 Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: 2025.03.28.09:47:03 Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: 2025.03.28.09:47:03 Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: 2025.03.28.09:47:03 Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: 2025.03.28.09:47:03 Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: 2025.03.28.09:47:03 Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: 2025.03.28.09:47:03 Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: 2025.03.28.09:47:03 Info: rst_controller: "master_0" instantiated altera_reset_controller "rst_controller"
+Info: 2025.03.28.09:47:03 Info: jamb: Done "jamb" with 11 modules, 23 files
+Info: 2025.03.28.09:47:03 Info: qsys-generate succeeded.
+Info: 2025.03.28.09:47:03 Info: Finished: Create HDL design files for synthesis
+Info (11902): Backing up file "issp/issp.qsys" to "issp/issp.BAK.qsys"
+Info (11902): Backing up file "issp/issp/synthesis/issp.v" to "issp/issp.BAK.v"
+Info (11837): Started upgrading IP component altera_in_system_sources_probes with file "issp/issp.qsys"
+Info: Picked up _JAVA_OPTIONS: -Xmx1024M
+Info: 2025.03.28.09:47:30 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2025.03.28.09:47:30 Info: Finished upgrading the ip cores
+Info: Picked up _JAVA_OPTIONS: -Xmx1024M
+Info: 2025.03.28.09:47:58 Info: Saving generation log to C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp
+Info: 2025.03.28.09:47:58 Info: Starting: Create simulation model
+Info: 2025.03.28.09:47:58 Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\issp\issp.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\issp\issp\simulation --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Info: 2025.03.28.09:47:58 Info: Loading issp
+Info: 2025.03.28.09:48:01 Info: Reading input file
+Info: 2025.03.28.09:48:01 Info: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 24.1]
+Info: 2025.03.28.09:48:01 Info: Parameterizing module in_system_sources_probes_0
+Info: 2025.03.28.09:48:01 Info: Building connections
+Info: 2025.03.28.09:48:01 Info: Parameterizing connections
+Info: 2025.03.28.09:48:01 Info: Validating
+Info: 2025.03.28.09:48:01 Info: Done reading input file
+Info: 2025.03.28.09:48:04 Info: issp: Generating "issp" for SIM_VERILOG
+Info: 2025.03.28.09:48:11 Info: in_system_sources_probes_0: "issp" instantiated altera_in_system_sources_probes "in_system_sources_probes_0"
+Info: 2025.03.28.09:48:11 Info: issp: Done "issp" with 2 modules, 2 files
+Info: 2025.03.28.09:48:11 Info: qsys-generate succeeded.
+Info: 2025.03.28.09:48:11 Info: Finished: Create simulation model
+Info: 2025.03.28.09:48:11 Info: Starting: Create Modelsim Project.
+Info: 2025.03.28.09:48:11 Info: sim-script-gen --spd=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\issp\issp\issp.spd --output-directory=C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/simulation
+Info: 2025.03.28.09:48:11 Info: Doing: ip-make-simscript --spd=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\issp\issp\issp.spd --output-directory=C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/simulation
+Info: 2025.03.28.09:48:15 Info: Generating the following file(s) for MODELSIM simulator in C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/simulation
+Info: 2025.03.28.09:48:15 Info:     mentor
+Info: 2025.03.28.09:48:15 Info: Generating the following file(s) for RIVIERA simulator in C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/simulation
+Info: 2025.03.28.09:48:15 Info:     aldec
+Info: 2025.03.28.09:48:15 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/issp/issp/simulation
+Info: 2025.03.28.09:48:15 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2025.03.28.09:48:15 Info: Finished: Create Modelsim Project.
+Info: 2025.03.28.09:48:15 Info: Starting: Create block symbol file (.bsf)
+Info: 2025.03.28.09:48:15 Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\issp\issp.qsys --block-symbol-file --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\issp\issp --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Info: 2025.03.28.09:48:15 Info: Loading issp
+Info: 2025.03.28.09:48:18 Info: Reading input file
+Info: 2025.03.28.09:48:18 Info: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 24.1]
+Info: 2025.03.28.09:48:18 Info: Parameterizing module in_system_sources_probes_0
+Info: 2025.03.28.09:48:18 Info: Building connections
+Info: 2025.03.28.09:48:18 Info: Parameterizing connections
+Info: 2025.03.28.09:48:18 Info: Validating
+Info: 2025.03.28.09:48:18 Info: Done reading input file
+Info: 2025.03.28.09:48:23 Info: qsys-generate succeeded.
+Info: 2025.03.28.09:48:23 Info: Finished: Create block symbol file (.bsf)
+Info: 2025.03.28.09:48:23 Info:
+Info: 2025.03.28.09:48:23 Info: Starting: Create HDL design files for synthesis
+Info: 2025.03.28.09:48:24 Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\issp\issp.qsys --synthesis=VERILOG --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\issp\issp\synthesis --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Info: 2025.03.28.09:48:24 Info: Loading issp
+Info: 2025.03.28.09:48:28 Info: Reading input file
+Info: 2025.03.28.09:48:28 Info: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 24.1]
+Info: 2025.03.28.09:48:28 Info: Parameterizing module in_system_sources_probes_0
+Info: 2025.03.28.09:48:28 Info: Building connections
+Info: 2025.03.28.09:48:28 Info: Parameterizing connections
+Info: 2025.03.28.09:48:28 Info: Validating
+Info: 2025.03.28.09:48:28 Info: Done reading input file
+Info: 2025.03.28.09:48:31 Info: issp: Generating "issp" for QUARTUS_SYNTH
+Info: 2025.03.28.09:48:38 Info: in_system_sources_probes_0: "issp" instantiated altera_in_system_sources_probes "in_system_sources_probes_0"
+Info: 2025.03.28.09:48:38 Info: issp: Done "issp" with 2 modules, 2 files
+Info: 2025.03.28.09:48:38 Info: qsys-generate succeeded.
+Info: 2025.03.28.09:48:38 Info: Finished: Create HDL design files for synthesis
+Info (11902): Backing up file "dq/dq.v" to "dq/dq.BAK.v"
+Info (11837): Started upgrading IP component ALTDDIO_BIDIR with file "dq/dq.v"
+Info (11902): Backing up file "pll2/pll2.v" to "pll2/pll2.BAK.v"
+Info (11837): Started upgrading IP component ALTPLL with file "pll2/pll2.v"
+Info (11902): Backing up file "ck/ck.v" to "ck/ck.BAK.v"
+Info (11837): Started upgrading IP component ALTDDIO_OUT with file "ck/ck.v"
+Info (11131): Completed upgrading IP component altera_jtag_avalon_master with file "jamb.qsys"
+Info (11131): Completed upgrading IP component altera_in_system_sources_probes with file "issp/issp.qsys"
+Info (11131): Completed upgrading IP component ALTDDIO_BIDIR with file "dq/dq.v"
+Info (11131): Completed upgrading IP component ALTPLL with file "pll2/pll2.v"
+Info (11131): Completed upgrading IP component ALTDDIO_OUT with file "ck/ck.v"
+Info (23030): Evaluation of Tcl script d:/intelfpga_standard/24.1std/quartus/common/tcl/internal/ip_regen/ip_regen.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4889 megabytes
+    Info: Processing ended: Fri Mar 28 09:50:00 2025
+    Info: Elapsed time: 00:06:27
+    Info: Total CPU time (on all processors): 00:06:16
+
+

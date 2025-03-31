@@ -10,10 +10,20 @@ module top_stm(
     output reg  rwds_out,
     output reg  rwds_oe,
     output wire [15:0] datain,
-    input  wire [15:0] dataout
+    input  wire [15:0] dataout,
+
+    input  wire [1:0]  csr_address,
+    input  wire        csr_read,
+    input  wire        csr_write,
+    output wire [31:0] csr_readdata,
+    output wire        csr_readdatavalid,
+    input  wire [31:0] csr_writedata,
+    input  wire        csr_waitrequest
+
 
 
 );
+
 
     typedef enum logic [3:0] {
         IDLE,
@@ -24,19 +34,20 @@ module top_stm(
     } top_state;
 
     top_state state;
+    reg regr,regw;
 
     `ifdef DEBUG
-        wire memr,memw,regr,regw;
+        wire memr,memw;
         altsource_probe_top #(
             .sld_auto_instance_index ("YES"),
             .sld_instance_index      (0),
             .instance_id             ("NONE"),
             .probe_width             (0),
-            .source_width            (4),
+            .source_width            (2),
             .source_initial_value    ("0"),
             .enable_metastability    ("NO")
         ) control_inst (
-            .source     ({memr,memw,regr,regw}), // sources.source
+            .source     ({memr,memw}), // sources.source
             .source_ena (1'b1)    // (terminated)
         );
 
@@ -76,16 +87,23 @@ module top_stm(
             prev_memw <= 0;
             prev_regr <= 0;
             prev_regw <= 0;
+            CA_sigr <= 0;
+            regr <= 0;
+            regw <= 0;
             for (int i = 0;i<4 ;i++ ) begin
                 stm_start[i] <= 0;
             end
         end else begin
+            regr <= csr_read;
+            regw = csr_write;
             prev_memr <= memr;
             prev_memw <= memw;
             prev_regr <= regr;
             prev_regw <= regw;
+
             case (state)
                 IDLE: begin
+                    CA_sigr   <= 0;
                     if (regr && !prev_regr) begin
                         state <= RDREG;
                     end else
@@ -103,8 +121,17 @@ module top_stm(
                     if(stm_end[0]) begin
                         state <= IDLE;
                         stm_start[0] <= 0;
+
                     end else begin
                         stm_start[0] <= 1;
+                        case (csr_address)
+                            0: CA_sigr <= 'hc000_0000_0000;
+                            1: CA_sigr <= 'hc000_0000_0001;
+                            2: CA_sigr <= 'hc000_0100_0000;
+                            3: CA_sigr <= 'hc000_0100_0001;
+                            default: CA_sigr <= 'hc000_0000_0000;
+                        endcase
+                            
                     end
                 end
                 WRREG: begin
@@ -138,7 +165,7 @@ module top_stm(
 
     always@(posedge clk) begin
         if(rst) begin
-            CA_sigr <= 0;
+            
             rwds_out <= 0;
             rwds_oe  <= 0;
             datain <= 0;
@@ -148,7 +175,7 @@ module top_stm(
         end else begin
             
 
-            CA_sigr <= CA_sig;
+            
             rwds_out <= stm_start[3] ? wrmem_rwds_out : 'h0;
             rwds_oe  <= stm_start[3] ? wrmem_rwds_oe  : 'h0;
 
@@ -186,7 +213,9 @@ module top_stm(
         .datain         (rdreg_datain),
         .dataout        (dataout),
 		.rwds_in		(rwds_in),
-        .casig          (CA_sigr)
+        .casig          (CA_sigr),
+        .valid          (csr_readdatavalid),
+        .dataoutr       (csr_readdata)
     );
 
     rdmem_stm rdmem_inst (

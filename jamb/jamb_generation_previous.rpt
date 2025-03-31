@@ -1,0 +1,24 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\jamb.qsys --synthesis=VERILOG --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\jamb\synthesis --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Progress: Loading hyperRAM_controller/jamb.qsys
+Progress: Reading input file
+Progress: Adding master_0 [altera_jtag_avalon_master 23.1]
+Progress: Parameterizing module master_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: jamb: Generating jamb "jamb" for QUARTUS_SYNTH
+Info: master_0: "jamb" instantiated altera_jtag_avalon_master "master_0"
+Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: rst_controller: "master_0" instantiated altera_reset_controller "rst_controller"
+Info: jamb: Done "jamb" with 11 modules, 23 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

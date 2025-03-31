@@ -1,0 +1,23 @@
+IP Ports Diff Report for issp
+Fri Mar 28 09:50:00 2025
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. IP Information
+
+
+
++---------------------------------------------------+
+; IP Information                                    ;
++----------------------+----------------------------+
+; IP Variation Name    ; issp                       ;
+; Prior Version        ; 23.1                       ;
+; New Version          ; 24.1                       ;
+; New File             ; issp/issp/synthesis/issp.v ;
+; Has Port Differences ; No                         ;
++----------------------+----------------------------+
+
+
