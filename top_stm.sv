@@ -12,7 +12,7 @@ module top_stm(
     output wire [15:0] datain,
     input  wire [15:0] dataout,
 
-    input  wire [1:0]  csr_address,
+    input  wire [9:0]  csr_address,
     input  wire        csr_read,
     input  wire        csr_write,
     output wire [31:0] csr_readdata,
@@ -124,15 +124,15 @@ module top_stm(
 
                     end else begin
                         stm_start[0] <= 1;
-                        case (csr_address)
-                            0: CA_sigr <= 'hc000_0000_0000;
-                            1: CA_sigr <= 'hc000_0000_0001;
-                            2: CA_sigr <= 'hc000_0100_0000;
-                            3: CA_sigr <= 'hc000_0100_0001;
-                            default: CA_sigr <= 'hc000_0000_0000;
-                        endcase
-                            
                     end
+
+                    case (csr_address)
+                            'h0: CA_sigr <= 48'hc000_0000_0000;
+                            'h4: CA_sigr <= 48'hc000_0000_0001;
+                            'h8: CA_sigr <= 48'hc000_0100_0000;
+                            'hc: CA_sigr <= 48'hc000_0100_0001;
+                            default: CA_sigr <= 48'hc000_0000_0000;
+                    endcase
                 end
                 WRREG: begin
                     if(stm_end[1]) begin
