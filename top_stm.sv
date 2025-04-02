@@ -42,39 +42,39 @@ module top_stm(
 
     top_state state;
     reg regr,regw;
-    wire memr,memw;
+    reg memr,memw;
     wire [47:0] CA_sig;
     reg  [47:0] CA_sigr;
 
     `ifdef DEBUG
         
-        altsource_probe_top #(
-            .sld_auto_instance_index ("YES"),
-            .sld_instance_index      (0),
-            .instance_id             ("NONE"),
-            .probe_width             (0),
-            .source_width            (2),
-            .source_initial_value    ("0"),
-            .enable_metastability    ("NO")
-        ) control_inst (
-            .source     ({memr,memw}), // sources.source
-            .source_ena (1'b1)    // (terminated)
-        );
+        // altsource_probe_top #(
+        //     .sld_auto_instance_index ("YES"),
+        //     .sld_instance_index      (0),
+        //     .instance_id             ("NONE"),
+        //     .probe_width             (0),
+        //     .source_width            (2),
+        //     .source_initial_value    ("0"),
+        //     .enable_metastability    ("NO")
+        // ) control_inst (
+        //     .source     ({memr,memw}), // sources.source
+        //     .source_ena (1'b1)    // (terminated)
+        // );
 
         //debug
         
-        altsource_probe_top #(
-                .sld_auto_instance_index ("YES"),
-                .sld_instance_index      (0),
-                .instance_id             ("NONE"),
-                .probe_width             (0),
-                .source_width            (48),
-                .source_initial_value    ("0"),
-                .enable_metastability    ("NO")
-        ) ca_input_inst (
-            .source     (CA_sig), // sources.source
-            .source_ena (1'b1)    // (terminated)
-        );
+        // altsource_probe_top #(
+        //         .sld_auto_instance_index ("YES"),
+        //         .sld_instance_index      (0),
+        //         .instance_id             ("NONE"),
+        //         .probe_width             (0),
+        //         .source_width            (48),
+        //         .source_initial_value    ("0"),
+        //         .enable_metastability    ("NO")
+        // ) ca_input_inst (
+        //     .source     (CA_sig), // sources.source
+        //     .source_ena (1'b1)    // (terminated)
+        // );
 
     `endif
 
@@ -93,13 +93,15 @@ module top_stm(
     always@(posedge clk) begin
         if(rst) begin
             state <= IDLE;
+            regr <= 0;
+            regw <= 0;
+            memr <= 0;
+            memw <= 0;
             prev_memr <= 0;
             prev_memw <= 0;
             prev_regr <= 0;
             prev_regw <= 0;
             CA_sigr <= 0;
-            regr <= 0;
-            regw <= 0;
             acc_counter <= 0;
             for (int i = 0;i<4 ;i++ ) begin
                 stm_start[i] <= 0;
@@ -107,10 +109,13 @@ module top_stm(
         end else begin
             regr <= csr_read;
             regw <= csr_write;
-            prev_memr <= memr;
-            prev_memw <= memw;
+            memr <= s0_read;
+            memw <= s0_write;
+
             prev_regr <= regr;
             prev_regw <= regw;
+            prev_memr <= memr;
+            prev_memw <= memw;
 
             case (state)
                 IDLE: begin
@@ -240,6 +245,13 @@ module top_stm(
         .dataoutr       (csr_readdata)
     );
 
+    addr_decode addr_decode_inst (
+        .in_addr        (s0_address),
+        .read           (stm_start[2]),
+        .write          (stm_start[3]),
+        .out_addr       (CA_sig)
+    );
+
     rdmem_stm rdmem_inst (
         .clk            (clk),
         .rst            (rst),
@@ -251,7 +263,8 @@ module top_stm(
         .datain         (rdmem_datain),
         .dataout        (dataout),
 		.rwds_in		(rwds_in),
-        .casig          (s0_address)
+        .valid          (s0_readdatavalid),
+        .casig          (CA_sigr)
     );
 
     wrmem_stm wrmem_inst (
@@ -266,7 +279,7 @@ module top_stm(
 		.rwds_in		(rwds_in),
         .rwds_out       (wrmem_rwds_out),
         .rwds_oe        (wrmem_rwds_oe),
-        .casig          (s0_address)
+        .casig          (CA_sigr)
     );
 
     

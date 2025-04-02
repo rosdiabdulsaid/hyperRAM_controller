@@ -290,6 +290,7 @@ module rdmem_stm(
     input  wire rwds_in,
     output wire [15:0] datain,
     input  wire [15:0] dataout,
+    output reg  valid,
     input  wire [47:0] casig
 );
 
@@ -305,7 +306,7 @@ reg [5:0] counter;
 fsm_state_e state;
 reg [15:0] buffer_out[0:2];
 reg [15:0] dataoutr;
-reg        valid;
+
 always@(posedge clk) begin
     if(rst) begin
         stm_end <= 0;
