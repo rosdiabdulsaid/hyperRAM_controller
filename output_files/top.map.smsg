@@ -1,4 +1,4 @@
-Warning (10268): Verilog HDL information at top_stm.sv(83): always construct contains both blocking and non-blocking assignments File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 83
+Warning (10268): Verilog HDL information at top_stm.sv(93): always construct contains both blocking and non-blocking assignments File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/top_stm.sv Line: 93
 Warning (10273): Verilog HDL warning at topv2.sv(17): extended using "x" or "z" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv2.sv Line: 17
 Warning (10268): Verilog HDL information at topv2.sv(172): always construct contains both blocking and non-blocking assignments File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv2.sv Line: 172
 Warning (10273): Verilog HDL warning at topv3.sv(14): extended using "x" or "z" File: C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/topv3.sv Line: 14

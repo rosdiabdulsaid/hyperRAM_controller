@@ -61,31 +61,51 @@ module topv3(
 
     wire		    clk_clk;                //i
 	wire		    clk_reset_reset;        //i
-	wire	[31:0]	master_address;         //o
-	wire	[31:0]	master_readdata;        //i
-	wire		    master_read;            //o
-	wire		    master_write;           //o
-	wire	[31:0]	master_writedata;       //o
-	wire		    master_waitrequest;     //i
-	wire		    master_readdatavalid;   //i
-	wire	[3:0]	master_byteenable;      //o
-	wire		    master_reset_reset;     //o
+	wire	[31:0]	csr_address;         //o
+	wire	[31:0]	csr_readdata;        //i
+	wire		    csr_read;            //o
+	wire		    csr_write;           //o
+	wire	[31:0]	csr_writedata;       //o
+	wire		    csr_waitrequest;     //i
+	wire		    csr_readdatavalid;   //i
+
+    wire	[31:0]	s0_address;         //o
+	wire	[31:0]	s0_readdata;        //i
+	wire		    s0_read;            //o
+	wire		    s0_write;           //o
+	wire	[31:0]	s0_writedata;       //o
+	wire		    s0_waitrequest;     //i
+	wire		    s0_readdatavalid;   //i
 
 
-    jamb jamb (
+    jamb jamb_csr (
 		.clk_clk              (clk0),                 //          clk.clk
 		.clk_reset_reset      (rst),                  //    clk_reset.reset
-		.master_address       (master_address),       //       master.address
-		.master_readdata      (master_readdata),      //             .readdata
-		.master_read          (master_read),          //             .read
-		.master_write         (master_write),         //             .write
-		.master_writedata     (master_writedata),     //             .writedata
-		.master_waitrequest   (master_waitrequest),   //             .waitrequest
-		.master_readdatavalid (master_readdatavalid), //             .readdatavalid
+		.master_address       (csr_address),       //       master.address
+		.master_readdata      (csr_readdata),      //             .readdata
+		.master_read          (csr_read),          //             .read
+		.master_write         (csr_write),         //             .write
+		.master_writedata     (csr_writedata),     //             .writedata
+		.master_waitrequest   (csr_waitrequest),   //             .waitrequest
+		.master_readdatavalid (csr_readdatavalid), //             .readdatavalid
 		.master_byteenable    (4'hf),                 //             .byteenable
 		.master_reset_reset   ()                      // master_reset.reset
 	);
     
+
+    jamb jamb_data (
+		.clk_clk              (clk0),                 //          clk.clk
+		.clk_reset_reset      (rst),                  //    clk_reset.reset
+		.master_address       (s0_address),       //       master.address
+		.master_readdata      (s0_readdata),      //             .readdata
+		.master_read          (s0_read),          //             .read
+		.master_write         (s0_write),         //             .write
+		.master_writedata     (s0_writedata),     //             .writedata
+		.master_waitrequest   (s0_waitrequest),   //             .waitrequest
+		.master_readdatavalid (s0_readdatavalid), //             .readdatavalid
+		.master_byteenable    (4'hf),                 //             .byteenable
+		.master_reset_reset   ()                      // master_reset.reset
+	);
 
     top_stm stm_inst(
         .clk            (clk0),
@@ -99,13 +119,21 @@ module topv3(
         .rwds_oe        (rwds_oe),
         .dataout        (dataout),
 
-        .csr_address       (master_address),       //       master.address
-        .csr_readdata      (master_readdata),      //             .readdata
-        .csr_read          (master_read),          //             .read
-        .csr_write         (master_write),         //             .write
-        .csr_writedata     (master_writedata),     //             .writedata
-        .csr_waitrequest   (master_waitrequest),   //             .waitreques
-        .csr_readdatavalid (master_readdatavalid) //             .readdatava
+        .csr_address       (csr_address),       //       master.address
+        .csr_readdata      (csr_readdata),      //             .readdata
+        .csr_read          (csr_read),          //             .read
+        .csr_write         (csr_write),         //             .write
+        .csr_writedata     (csr_writedata),     //             .writedata
+        .csr_waitrequest   (csr_waitrequest),   //             .waitreques
+        .csr_readdatavalid (csr_readdatavalid), //             .readdatavalid
+
+        .s0_address       (s0_address),       //       master.address
+        .s0_readdata      (s0_readdata),      //             .readdata
+        .s0_read          (s0_read),          //             .read
+        .s0_write         (s0_write),         //             .write
+        .s0_writedata     (s0_writedata),     //             .writedata
+        .s0_waitrequest   (s0_waitrequest),   //             .waitreques
+        .s0_readdatavalid (s0_readdatavalid) //             .readdatavalid
     );
 
 

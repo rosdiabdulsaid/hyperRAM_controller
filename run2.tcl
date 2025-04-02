@@ -61,7 +61,7 @@ write_source_data -instance_index 0 -value 0x0 -value_in_hex
 write_source_data -instance_index 1 -value 0x0 -value_in_hex
 # write_source_data -instance_index 3 -value 0xe -value_in_hex
 # write_source_data -instance_index 0 -value 0x00 -value_in_hex
-write_source_data -instance_index 2 -value 0x000000000009 -value_in_hex
+write_source_data -instance_index 2 -value 0x000000000000 -value_in_hex
 write_source_data -instance_index 5 -value 0xaa11bb22cc33dd44ee55ff66117722883399441055116612771388149915aa16 -value_in_hex
 write_source_data -instance_index 1 -value 0x1 -value_in_hex
 
@@ -75,21 +75,21 @@ write_source_data -instance_index 1 -value 0x0 -value_in_hex
 # write_source_data -instance_index 0 -value 0x00 -value_in_hex
 write_source_data -instance_index 2 -value 0x800000000000 -value_in_hex
 write_source_data -instance_index 1 -value 0x2 -value_in_hex
+puts "read data at 0x0"
+puts [read_probe_data -instance_index 3 -value_in_hex]
+
+gets stdin
+write_source_data -instance_index 0 -value 0x1 -value_in_hex
+write_source_data -instance_index 0 -value 0x0 -value_in_hex
+write_source_data -instance_index 1 -value 0x0 -value_in_hex
+# write_source_data -instance_index 3 -value 0xe -value_in_hex
+# write_source_data -instance_index 0 -value 0x00 -value_in_hex
+write_source_data -instance_index 2 -value 0x800000000007 -value_in_hex
+write_source_data -instance_index 1 -value 0x2 -value_in_hex
+puts "read data at 0x7"
 puts [read_probe_data -instance_index 3 -value_in_hex]
 
 
-# #write mem
-# gets stdin
-write_source_data -instance_index 0 -value 0x1 -value_in_hex
-write_source_data -instance_index 0 -value 0x0 -value_in_hex
-write_source_data -instance_index 1 -value 0x0 -value_in_hex
-# write_source_data -instance_index 3 -value 0xe -value_in_hex
-# write_source_data -instance_index 0 -value 0x00 -value_in_hex
-write_source_data -instance_index 2 -value 0x000000000009 -value_in_hex
-write_source_data -instance_index 5 -value 0xaa11bb22cc33dd44ee55ff66117722883399441055116612771388149915aa16 -value_in_hex
-write_source_data -instance_index 1 -value 0x1 -value_in_hex
-
-
 #read mem
 gets stdin
 write_source_data -instance_index 0 -value 0x1 -value_in_hex
@@ -97,8 +97,9 @@ write_source_data -instance_index 0 -value 0x0 -value_in_hex
 write_source_data -instance_index 1 -value 0x0 -value_in_hex
 # write_source_data -instance_index 3 -value 0xe -value_in_hex
 # write_source_data -instance_index 0 -value 0x00 -value_in_hex
-write_source_data -instance_index 2 -value 0x800000000000 -value_in_hex
+write_source_data -instance_index 2 -value [expr {0x800000000000|0x7}] 
 write_source_data -instance_index 1 -value 0x2 -value_in_hex
+puts "read data at [expr {0x800000000000|0x7}]"
 puts [read_probe_data -instance_index 3 -value_in_hex]
 
 # after 1000

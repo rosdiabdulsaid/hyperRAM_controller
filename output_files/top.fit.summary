@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Apr  1 11:40:16 2025
+Fitter Status : Successful - Wed Apr  2 10:00:51 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Standard Edition
 Revision Name : top
 Top-level Entity Name : topv3
 Family : Cyclone 10 LP
 Device : 10CL025YU256I7G
 Timing Models : Final
-Total logic elements : 3,605 / 24,624 ( 15 % )
-    Total combinational functions : 2,516 / 24,624 ( 10 % )
-    Dedicated logic registers : 2,774 / 24,624 ( 11 % )
-Total registers : 2794
+Total logic elements : 3,622 / 24,624 ( 15 % )
+    Total combinational functions : 2,525 / 24,624 ( 10 % )
+    Dedicated logic registers : 2,779 / 24,624 ( 11 % )
+Total registers : 2799
 Total pins : 14 / 151 ( 9 % )
 Total virtual pins : 0
 Total memory bits : 14,720 / 608,256 ( 2 % )

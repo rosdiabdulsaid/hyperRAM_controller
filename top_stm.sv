@@ -12,15 +12,21 @@ module top_stm(
     output reg [15:0] datain,
     input  wire [15:0] dataout,
 
-    input  wire [9:0]  csr_address,
-    input  wire        csr_read,
-    input  wire        csr_write,
-    output wire [31:0] csr_readdata,
-    output wire        csr_readdatavalid,
-    input  wire [31:0] csr_writedata,
-    input  wire        csr_waitrequest
+    input  wire [9:0]  csr_address,         //     csr.address
+    input  wire        csr_read,            //        .read
+    input  wire        csr_write,           //        .write
+    output wire [31:0] csr_readdata,        //        .readdata
+    output wire        csr_readdatavalid,   //        .readdatavalid
+    input  wire [31:0] csr_writedata,       //        .writedata
+    input  wire        csr_waitrequest,      //        .waitrequest
 
-
+    input  wire [31:0] s0_address,          //       s0.address
+    input  wire        s0_read,             //         .read
+    input  wire        s0_write,            //         .write
+    output wire [31:0] s0_readdata,         //         .readdata
+    output wire        s0_readdatavalid,    //         .readdatavalid
+    input  wire [31:0] s0_writedata,        //         .writedata
+    output wire        s0_waitrequest       //         .waitrequest
 
 );
 
@@ -36,9 +42,12 @@ module top_stm(
 
     top_state state;
     reg regr,regw;
+    wire memr,memw;
+    wire [47:0] CA_sig;
+    reg  [47:0] CA_sigr;
 
     `ifdef DEBUG
-        wire memr,memw;
+        
         altsource_probe_top #(
             .sld_auto_instance_index ("YES"),
             .sld_instance_index      (0),
@@ -53,8 +62,7 @@ module top_stm(
         );
 
         //debug
-        wire [47:0] CA_sig;
-        reg  [47:0] CA_sigr;
+        
         altsource_probe_top #(
                 .sld_auto_instance_index ("YES"),
                 .sld_instance_index      (0),
@@ -98,7 +106,7 @@ module top_stm(
             end
         end else begin
             regr <= csr_read;
-            regw = csr_write;
+            regw <= csr_write;
             prev_memr <= memr;
             prev_memw <= memw;
             prev_regr <= regr;
@@ -190,28 +198,28 @@ module top_stm(
             
 
             
-            rwds_out <= stm_start[3] ? wrmem_rwds_out : 'h0;
-            rwds_oe  <= stm_start[3] ? wrmem_rwds_oe  : 'h0;
+            rwds_out <= stm_start[3] ? wrmem_rwds_out : 1'h0;
+            rwds_oe  <= stm_start[3] ? wrmem_rwds_oe  : 1'h0;
 
             datain  <=  stm_start[0] ? rdreg_datain :
                         stm_start[1] ? wrreg_datain :
                         stm_start[2] ? rdmem_datain :
-                        stm_start[3] ? wrmem_datain : 'h0;
+                        stm_start[3] ? wrmem_datain : 1'h0;
 
             oe_data <=  stm_start[0] ? rdreg_oe  :
                         stm_start[1] ? wrreg_oe  :
                         stm_start[2] ? rdmem_oe  :
-                        stm_start[3] ? wrmem_oe  : 'h0;
+                        stm_start[3] ? wrmem_oe  : 1'h0;
 
             oe_clk  <=  stm_start[0] ? rdreg_oe_clk  :
                         stm_start[1] ? wrreg_oe_clk  :
                         stm_start[2] ? rdmem_oe_clk  :
-                        stm_start[3] ? wrmem_oe_clk  : 'h0;
+                        stm_start[3] ? wrmem_oe_clk  : 1'h0;
 
             csn     <=  stm_start[0] ? rdreg_csn :
                         stm_start[1] ? wrreg_csn :
                         stm_start[2] ? rdmem_csn :
-                        stm_start[3] ? wrmem_csn : 'h1;
+                        stm_start[3] ? wrmem_csn : 1'h1;
 
         end
     end
@@ -243,7 +251,7 @@ module top_stm(
         .datain         (rdmem_datain),
         .dataout        (dataout),
 		.rwds_in		(rwds_in),
-        .casig          (CA_sigr)
+        .casig          (s0_address)
     );
 
     wrmem_stm wrmem_inst (
@@ -258,7 +266,7 @@ module top_stm(
 		.rwds_in		(rwds_in),
         .rwds_out       (wrmem_rwds_out),
         .rwds_oe        (wrmem_rwds_oe),
-        .casig          (CA_sigr)
+        .casig          (s0_address)
     );
 
     
