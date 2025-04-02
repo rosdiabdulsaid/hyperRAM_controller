@@ -3,13 +3,13 @@ module top_stm(
     input wire clk,  
     input wire rst,
 
-    output wire oe_data,
-    output wire oe_clk,
-    output wire csn,
+    output reg oe_data,
+    output reg oe_clk,
+    output reg csn,
     input  wire rwds_in,
     output reg  rwds_out,
     output reg  rwds_oe,
-    output wire [15:0] datain,
+    output reg [15:0] datain,
     input  wire [15:0] dataout,
 
     input  wire [9:0]  csr_address,
@@ -30,7 +30,8 @@ module top_stm(
         RDREG,
         WRREG,
         RDMEM,
-        WRMEM
+        WRMEM,
+        ACCDLY
     } top_state;
 
     top_state state;
@@ -79,6 +80,7 @@ module top_stm(
     wire        rdreg_csn,wrreg_csn,rdmem_csn,wrmem_csn;
     wire        rdreg_oe_clk,wrreg_oe_clk,rdmem_oe_clk,wrmem_oe_clk;
 
+    reg [3:0] acc_counter;
 
     always@(posedge clk) begin
         if(rst) begin
@@ -90,6 +92,7 @@ module top_stm(
             CA_sigr <= 0;
             regr <= 0;
             regw <= 0;
+            acc_counter <= 0;
             for (int i = 0;i<4 ;i++ ) begin
                 stm_start[i] <= 0;
             end
@@ -104,6 +107,7 @@ module top_stm(
             case (state)
                 IDLE: begin
                     CA_sigr   <= 0;
+                    acc_counter <= 8;
                     if (regr && !prev_regr) begin
                         state <= RDREG;
                     end else
@@ -141,23 +145,33 @@ module top_stm(
                     end else begin
                         stm_start[1] <= 1;
                     end
+                    
                 end
                 RDMEM: begin
                     if(stm_end[2]) begin
-                        state <= IDLE;
+                        state <= ACCDLY;
                         stm_start[2] <= 0;
                     end else begin
                         stm_start[2] <= 1;
                     end
+                    CA_sigr <= CA_sig;
                 end
                 WRMEM: begin
                     if(stm_end[3]) begin
-                        state <= IDLE;
+                        state <= ACCDLY;
                         stm_start[3] <= 0;
                     end else begin
                         stm_start[3] <= 1;
                     end
-                end 
+                    CA_sigr <= CA_sig;
+                end
+                ACCDLY: begin
+                    if (acc_counter == 0) begin
+                        state <= IDLE;
+                    end else begin
+                        acc_counter <= acc_counter - 1;
+                    end
+                end
                 default: state <= IDLE;
             endcase
         end
