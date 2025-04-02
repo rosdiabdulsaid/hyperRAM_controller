@@ -263,6 +263,7 @@ module top_stm(
         .datain         (rdmem_datain),
         .dataout        (dataout),
 		.rwds_in		(rwds_in),
+        .dataoutr       (s0_readdata),
         .valid          (s0_readdatavalid),
         .casig          (CA_sigr)
     );

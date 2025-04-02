@@ -93,18 +93,18 @@ always@(posedge clk) begin
     end
 end
 
-altsource_probe_top #(
-    .sld_auto_instance_index ("YES"),
-    .sld_instance_index      (0),
-    .instance_id             ("NONE"),
-    .probe_width             (16),
-    .source_width            (0),
-    .source_initial_value    ("0"),
-    .enable_metastability    ("NO")
-) sp_inst (
-    .probe      (dataoutr),  //  probes.probe
-    .source_ena (1'b1)    // (terminated)
-);
+// altsource_probe_top #(
+//     .sld_auto_instance_index ("YES"),
+//     .sld_instance_index      (0),
+//     .instance_id             ("NONE"),
+//     .probe_width             (16),
+//     .source_width            (0),
+//     .source_initial_value    ("0"),
+//     .enable_metastability    ("NO")
+// ) sp_inst (
+//     .probe      (dataoutr),  //  probes.probe
+//     .source_ena (1'b1)    // (terminated)
+// );
         
 
 assign datain = buffer_out[0];
@@ -290,6 +290,7 @@ module rdmem_stm(
     input  wire rwds_in,
     output wire [15:0] datain,
     input  wire [15:0] dataout,
+    output reg [15:0] dataoutr,
     output reg  valid,
     input  wire [47:0] casig
 );
@@ -305,7 +306,7 @@ typedef enum logic [1:0] {
 reg [5:0] counter;
 fsm_state_e state;
 reg [15:0] buffer_out[0:2];
-reg [15:0] dataoutr;
+
 
 always@(posedge clk) begin
     if(rst) begin
