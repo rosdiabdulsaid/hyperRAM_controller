@@ -46,6 +46,7 @@ module top_stm(
     wire [47:0] CA_sig;
     reg  [47:0] CA_sigr;
 
+
     `ifdef DEBUG
         
         // altsource_probe_top #(
@@ -248,7 +249,6 @@ module top_stm(
     addr_decode addr_decode_inst (
         .in_addr        (s0_address),
         .read           (stm_start[2]),
-        .write          (stm_start[3]),
         .out_addr       (CA_sig)
     );
 

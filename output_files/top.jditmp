@@ -1,11 +1,11 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="5aaf0896f10980879a7b"/>
+    <hash md5_digest_80b="13b6614038e98c9ace68"/>
   </project>
   <file_info>
     <file device="10CL025YU256I7G" path="top.sof" usercode="0xFFFFFFFF"/>
   </file_info>
-  <hub_info hub_ir_width="10" ir_width="10" node_addr_width="3" node_count="7"/>
+  <hub_info hub_ir_width="10" ir_width="10" node_addr_width="3" node_count="6"/>
   <node_info>
     <node hpath="altsource_probe_top:rst_control|altsource_probe:issp_impl" instance_id="0" mfg_id="110" node_id="9" sld_node_info="0x486E00" version="0">
       <parameters>
@@ -209,67 +209,7 @@
         <port name="jtag.bp.jamb_data_master_0_jtag_phy_embedded_in_jtag_master_node_sld_virtual_jtag_component_sld_virtual_jtag_impl_inst_ir_out_2_"/>
       </outputs>
     </node>
-    <node hpath="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" instance_id="1" mfg_id="110" node_id="9" sld_node_info="0x486E01" version="0">
-      <parameters>
-        <parameter name="lpm_type" type="string" value="altsource_probe"/>
-        <parameter name="lpm_hint" type="string" value="UNUSED"/>
-        <parameter name="sld_auto_instance_index" type="string" value="YES"/>
-        <parameter name="sld_instance_index" type="dec" value="0"/>
-        <parameter name="SLD_NODE_INFO" type="dec" value="4746752"/>
-        <parameter name="sld_ir_width" type="dec" value="4"/>
-        <parameter name="instance_id" type="string" value="NONE"/>
-        <parameter name="probe_width" type="dec" value="16"/>
-        <parameter name="source_width" type="dec" value="0"/>
-        <parameter name="source_initial_value" type="string" value="0"/>
-        <parameter name="enable_metastability" type="string" value="NO"/>
-      </parameters>
-      <inputs>
-        <port name="probe[0]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[0]"/>
-        <port name="probe[1]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[1]"/>
-        <port name="probe[2]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[2]"/>
-        <port name="probe[3]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[3]"/>
-        <port name="probe[4]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[4]"/>
-        <port name="probe[5]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[5]"/>
-        <port name="probe[6]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[6]"/>
-        <port name="probe[7]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[7]"/>
-        <port name="probe[8]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[8]"/>
-        <port name="probe[9]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[9]"/>
-        <port name="probe[10]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[10]"/>
-        <port name="probe[11]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[11]"/>
-        <port name="probe[12]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[12]"/>
-        <port name="probe[13]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[13]"/>
-        <port name="probe[14]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[14]"/>
-        <port name="probe[15]" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|probe[15]"/>
-        <port name="source_clk" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|source_clk"/>
-        <port name="source_ena" source="top_stm:stm_inst|rdreg_stm:rdreg_inst|altsource_probe_top:sp_inst|source_ena"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_raw_tck" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_raw_tck"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_tdi" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_tdi"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_usr1" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_usr1"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_cdr" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_cdr"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_sdr" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_sdr"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_e1dr" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_e1dr"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_udr" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_udr"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_cir" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_cir"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_uir" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_uir"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_tlr" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_jtag_state_tlr"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_clr" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_clr"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ena" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ena"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_in_0_" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_in_0_"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_in_1_" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_in_1_"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_in_2_" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_in_2_"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_in_3_" source="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_in_3_"/>
-      </inputs>
-      <outputs>
-        <port name="source[0]"/>
-        <port name="source[-1]"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_out_0_"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_out_1_"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_out_2_"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_ir_out_3_"/>
-        <port name="jtag.bp.stm_inst_rdreg_inst_sp_inst_issp_impl_tdo"/>
-      </outputs>
-    </node>
-    <node hpath="top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" instance_id="2" mfg_id="110" node_id="9" sld_node_info="0x486E02" version="0">
+    <node hpath="top_stm:stm_inst|rdmem_stm:rdmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" instance_id="1" mfg_id="110" node_id="9" sld_node_info="0x486E01" version="0">
       <parameters>
         <parameter name="lpm_type" type="string" value="altsource_probe"/>
         <parameter name="lpm_hint" type="string" value="UNUSED"/>
@@ -330,7 +270,7 @@
         <port name="jtag.bp.stm_inst_rdmem_inst_sp_inst_issp_impl_tdo"/>
       </outputs>
     </node>
-    <node hpath="top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" instance_id="3" mfg_id="110" node_id="9" sld_node_info="0x486E03" version="0">
+    <node hpath="top_stm:stm_inst|wrmem_stm:wrmem_inst|altsource_probe_top:sp_inst|altsource_probe:issp_impl" instance_id="2" mfg_id="110" node_id="9" sld_node_info="0x486E02" version="0">
       <parameters>
         <parameter name="lpm_type" type="string" value="altsource_probe"/>
         <parameter name="lpm_hint" type="string" value="UNUSED"/>
@@ -638,8 +578,8 @@
         <parameter name="SLD_IP_VERSION" type="dec" value="6"/>
         <parameter name="SLD_IP_MINOR_VERSION" type="dec" value="0"/>
         <parameter name="SLD_COMMON_IP_VERSION" type="dec" value="0"/>
-        <parameter name="sld_data_bits" type="unknown" value="111"/>
-        <parameter name="sld_trigger_bits" type="unknown" value="1"/>
+        <parameter name="sld_data_bits" type="unknown" value="115"/>
+        <parameter name="sld_trigger_bits" type="unknown" value="2"/>
         <parameter name="SLD_NODE_CRC_BITS" type="dec" value="32"/>
         <parameter name="SLD_NODE_CRC_HIWORD" type="dec" value="41394"/>
         <parameter name="SLD_NODE_CRC_LOWORD" type="dec" value="50132"/>
@@ -673,14 +613,14 @@
         <parameter name="SLD_ADVANCED_TRIGGER_8" type="string" value="NONE"/>
         <parameter name="SLD_ADVANCED_TRIGGER_9" type="string" value="NONE"/>
         <parameter name="SLD_ADVANCED_TRIGGER_10" type="string" value="NONE"/>
-        <parameter name="sld_inversion_mask_length" type="unknown" value="24"/>
-        <parameter name="sld_inversion_mask" type="unknown" value="000000000000000000000000"/>
+        <parameter name="sld_inversion_mask_length" type="unknown" value="27"/>
+        <parameter name="sld_inversion_mask" type="unknown" value="000000000000000000000000000"/>
         <parameter name="sld_power_up_trigger" type="unknown" value="0"/>
         <parameter name="SLD_STATE_FLOW_MGR_ENTITY" type="string" value="state_flow_mgr_entity.vhd"/>
         <parameter name="sld_state_flow_use_generated" type="unknown" value="0"/>
         <parameter name="sld_current_resource_width" type="unknown" value="1"/>
         <parameter name="sld_attribute_mem_mode" type="unknown" value="OFF"/>
-        <parameter name="sld_storage_qualifier_bits" type="unknown" value="111"/>
+        <parameter name="sld_storage_qualifier_bits" type="unknown" value="115"/>
         <parameter name="SLD_STORAGE_QUALIFIER_GAP_RECORD" type="dec" value="0"/>
         <parameter name="SLD_STORAGE_QUALIFIER_MODE" type="string" value="OFF"/>
         <parameter name="SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION" type="dec" value="0"/>
