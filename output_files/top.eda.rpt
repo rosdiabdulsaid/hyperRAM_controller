@@ -1,5 +1,5 @@
 EDA Netlist Writer report for top
-Thu Apr  3 02:33:09 2025
+Sun Apr  6 00:44:08 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Standard Edition
 
 
@@ -37,7 +37,7 @@ on the Quartus Prime software download page.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Apr  3 02:33:09 2025 ;
+; EDA Netlist Writer Status ; Successful - Sun Apr  6 00:44:08 2025 ;
 ; Revision Name             ; top                                   ;
 ; Top-level Entity Name     ; topv3                                 ;
 ; Family                    ; Cyclone 10 LP                         ;
@@ -81,14 +81,14 @@ on the Quartus Prime software download page.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Standard Edition
-    Info: Processing started: Thu Apr  3 02:33:05 2025
+    Info: Processing started: Sun Apr  6 00:44:04 2025
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file top.svo in folder "C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/simulation/questa/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4704 megabytes
-    Info: Processing ended: Thu Apr  3 02:33:09 2025
+    Info: Processing ended: Sun Apr  6 00:44:08 2025
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 

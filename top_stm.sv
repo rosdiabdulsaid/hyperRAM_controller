@@ -43,6 +43,7 @@ module top_stm(
     top_state state;
     reg regr,regw;
     reg memr,memw;
+    // wire [31:0] s0_address;
     wire [47:0] CA_sig;
     reg  [47:0] CA_sigr;
 
@@ -69,11 +70,11 @@ module top_stm(
         //         .sld_instance_index      (0),
         //         .instance_id             ("NONE"),
         //         .probe_width             (0),
-        //         .source_width            (48),
+        //         .source_width            (32),
         //         .source_initial_value    ("0"),
         //         .enable_metastability    ("NO")
         // ) ca_input_inst (
-        //     .source     (CA_sig), // sources.source
+        //     .source     (s0_address), // sources.source
         //     .source_ena (1'b1)    // (terminated)
         // );
 
@@ -89,7 +90,16 @@ module top_stm(
     wire        rdreg_csn,wrreg_csn,rdmem_csn,wrmem_csn;
     wire        rdreg_oe_clk,wrreg_oe_clk,rdmem_oe_clk,wrmem_oe_clk;
 
-    reg [3:0] acc_counter;
+    reg [3:0] acc_counter;  
+    reg rd_tmp, wr_tmp;
+
+
+    addr_decode addr_decode_inst (
+        .in_addr        (s0_address),
+        .read           (rd_tmp),
+        .out_addr       (CA_sig)
+    );
+
 
     always@(posedge clk) begin
         if(rst) begin
@@ -98,6 +108,9 @@ module top_stm(
             regw <= 0;
             memr <= 0;
             memw <= 0;
+            rd_tmp <= 0;
+            wr_tmp <= 0;
+
             prev_memr <= 0;
             prev_memw <= 0;
             prev_regr <= 0;
@@ -121,6 +134,8 @@ module top_stm(
             case (state)
                 IDLE: begin
                     CA_sigr   <= 0;
+                    rd_tmp    <= 0;
+                    wr_tmp    <= 0;
                     acc_counter <= 8;
                     if (regr && !prev_regr) begin
                         state <= RDREG;
@@ -166,18 +181,22 @@ module top_stm(
                         state <= ACCDLY;
                         stm_start[2] <= 0;
                     end else begin
-                        stm_start[2] <= 1;
+                        stm_start[2] <= rd_tmp;
+                        rd_tmp <= 1;
+                        CA_sigr <= CA_sig;
                     end
-                    CA_sigr <= CA_sig;
+                    
                 end
                 WRMEM: begin
                     if(stm_end[3]) begin
                         state <= ACCDLY;
                         stm_start[3] <= 0;
                     end else begin
-                        stm_start[3] <= 1;
+                        stm_start[3] <= wr_tmp;
+                        wr_tmp  <= 1;
+                        CA_sigr <= CA_sig;
                     end
-                    CA_sigr <= CA_sig;
+                    
                 end
                 ACCDLY: begin
                     if (acc_counter == 0) begin
@@ -246,12 +265,7 @@ module top_stm(
         .dataoutr       (csr_readdata)
     );
 
-    addr_decode addr_decode_inst (
-        .in_addr        (s0_address),
-        .read           (stm_start[2]),
-        .out_addr       (CA_sig)
-    );
-
+    
     rdmem_stm rdmem_inst (
         .clk            (clk),
         .rst            (rst),
