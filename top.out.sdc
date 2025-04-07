@@ -41,15 +41,15 @@ set_time_format -unit ns -decimal_places 3
 
 create_clock -name {altera_reserved_tck} -period 100.000 -waveform { 0.000 50.000 } [get_ports {altera_reserved_tck}]
 create_clock -name {refclk} -period 20.000 -waveform { 0.000 10.000 } [get_ports {refclk}]
-create_clock -name {rwds} -period 10.000 -waveform { 0.000 5.000 } [get_ports {rwds}]
+create_clock -name {rwds} -period 20.000 -waveform { 0.000 10.000 } [get_ports {rwds}]
 
 
 #**************************************************************
 # Create Generated Clock
 #**************************************************************
 
-create_generated_clock -name {pll_clk} -source [get_pins {pll2_inst|altpll_component|auto_generated|pll1|inclk[0]}] -duty_cycle 50/1 -multiply_by 2 -divide_by 1 -master_clock {refclk} [get_pins {pll2_inst|altpll_component|auto_generated|pll1|clk[0]}] 
-create_generated_clock -name {pll_clk90} -source [get_pins {pll2_inst|altpll_component|auto_generated|pll1|inclk[0]}] -duty_cycle 50/1 -multiply_by 2 -divide_by 1 -phase 90 -master_clock {refclk} [get_pins {pll2_inst|altpll_component|auto_generated|pll1|clk[1]}]
+create_generated_clock -name {pll_clk} -source [get_pins {pll2_inst|altpll_component|auto_generated|pll1|inclk[0]}] -duty_cycle 50/1 -multiply_by 1 -divide_by 1 -master_clock {refclk} [get_pins {pll2_inst|altpll_component|auto_generated|pll1|clk[0]}] 
+create_generated_clock -name {pll_clk90} -source [get_pins {pll2_inst|altpll_component|auto_generated|pll1|inclk[0]}] -duty_cycle 50/1 -multiply_by 1 -divide_by 1 -phase 90 -master_clock {refclk} [get_pins {pll2_inst|altpll_component|auto_generated|pll1|clk[1]}]
 #**************************************************************
 # Set Clock Latency
 #**************************************************************

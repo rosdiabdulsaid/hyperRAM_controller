@@ -33,10 +33,13 @@ module top_stm(
 
     typedef enum logic [3:0] {
         IDLE,
+        CHKID,
         RDREG,
         WRREG,
         RDMEM,
         WRMEM,
+        BUF_MISS,
+        BUF_HIT,
         ACCDLY
     } top_state;
 
@@ -93,13 +96,31 @@ module top_stm(
     reg [3:0] acc_counter;  
     reg rd_tmp, wr_tmp;
 
+    wire [13:0] row_id;
+    wire [4:0]  page_id;
+    wire [4:0] buf_addr;
+    reg [31:0] buf_data [0:7];
+
+    reg [13:0] curr_row_id;
+    reg [4:0]  curr_page_id;
 
     addr_decode addr_decode_inst (
         .in_addr        (s0_address),
         .read           (rd_tmp),
-        .out_addr       (CA_sig)
+        .write          (wr_tmp),
+        .out_addr       (CA_sig),
+        .row_id         (row_id),
+        .page_id        (page_id),
+        .buffer_addr    (buf_addr),
     );
 
+    reg fuse,row;
+    wire buffer_hit, buffer_miss,;
+
+    assign buffer_hit = fuse == 1? (curr_row_id == row_id) && (curr_page_id == page_id) : 0;
+    assign buffer_miss = fuse == 0? 1 : (curr_row_id != row_id) || (curr_page_id != page_id) ;
+
+    
 
     always@(posedge clk) begin
         if(rst) begin
@@ -110,13 +131,19 @@ module top_stm(
             memw <= 0;
             rd_tmp <= 0;
             wr_tmp <= 0;
-
+            row <= 0;
             prev_memr <= 0;
             prev_memw <= 0;
             prev_regr <= 0;
             prev_regw <= 0;
             CA_sigr <= 0;
             acc_counter <= 0;
+            curr_row_id <= 0;
+            curr_page_id <= 0;
+            fuse <= 0;
+            for (int i = 0;i<8 ;i++ ) begin
+                buf_data[i] <= 0;
+            end
             for (int i = 0;i<4 ;i++ ) begin
                 stm_start[i] <= 0;
             end
@@ -144,10 +171,12 @@ module top_stm(
                         state <= WRREG;
                     end else
                     if (memr && !prev_memr) begin
-                        state <= RDMEM;
+                        state <= CHKID;
+                        row <= 1;
                     end else
                     if (memw && !prev_memw) begin
-                        state <= WRMEM;
+                        state <= CHKID;
+                        row <= 0;
                     end
                 end
                 RDREG: begin
@@ -174,6 +203,28 @@ module top_stm(
                     end else begin
                         stm_start[1] <= 1;
                     end
+                    
+                end
+                CHKID: begin
+                    if (fuse == 0) begin
+                        fuse <= 1;
+                    end
+                    if (buffer_hit) begin
+                        state <= BUF_HIT;
+                    end else if (buffer_miss) begin
+                        state <= BUF_MISS;
+                    end else begin
+                        state <= IDLE;
+                    end
+                end
+                BUF_MISS: begin
+                    if(row) begin
+                        state <= RDMEM;
+                    end else if(row == 0) begin
+                        state <= WRMEM;
+                    end 
+                end
+                BUF_HIT: begin
                     
                 end
                 RDMEM: begin

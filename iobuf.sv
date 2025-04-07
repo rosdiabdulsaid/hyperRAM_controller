@@ -17,7 +17,7 @@ module iobuf(
 		.outclock 	( clk0 ), // <-- center aligned to pad
 		.datain_h 	( datain[15:8] ),
 		.datain_l 	( datain[7:0] ),
-		.inclock  	( clk0 ),  //<-- edge aligned to pad
+		.inclock  	( clk90 ),  //<-- edge aligned to pad
 		.dataout_h 	( dataout[7:0] ),	//somehow i wr big-endian but rd little-endian
 		.dataout_l 	( dataout[15:8] ),	//so lets swap this.
 		.oe 		( oe_data ),

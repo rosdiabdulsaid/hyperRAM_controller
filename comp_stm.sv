@@ -354,14 +354,14 @@ always@(posedge clk) begin
                 end
             end
             STATE_RUN: begin
-                if (counter == 33) begin
+                if (counter == 32) begin
                     state <= STATE_DONE;
                     stm_end <= 1;
                     counter <= 0;
                     csn     <= 1;
                     valid   <= 0;
                 end else
-                if (counter > 16) begin
+                if (counter > 15) begin
                     dataoutr <= dataout;
                     valid    <= 1;
                     counter <= counter + 1;
