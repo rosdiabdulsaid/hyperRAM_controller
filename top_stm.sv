@@ -50,37 +50,6 @@ module top_stm(
     reg  [47:0] CA_sigr;
 
 
-    `ifdef DEBUG
-        
-        // altsource_probe_top #(
-        //     .sld_auto_instance_index ("YES"),
-        //     .sld_instance_index      (0),
-        //     .instance_id             ("NONE"),
-        //     .probe_width             (0),
-        //     .source_width            (2),
-        //     .source_initial_value    ("0"),
-        //     .enable_metastability    ("NO")
-        // ) control_inst (
-        //     .source     ({memr,memw}), // sources.source
-        //     .source_ena (1'b1)    // (terminated)
-        // );
-
-        //debug
-        
-        // altsource_probe_top #(
-        //         .sld_auto_instance_index ("YES"),
-        //         .sld_instance_index      (0),
-        //         .instance_id             ("NONE"),
-        //         .probe_width             (0),
-        //         .source_width            (32),
-        //         .source_initial_value    ("0"),
-        //         .enable_metastability    ("NO")
-        // ) ca_input_inst (
-        //     .source     (s0_address), // sources.source
-        //     .source_ena (1'b1)    // (terminated)
-        // );
-
-    `endif
 
     reg prev_memr,prev_memw,prev_regr,prev_regw;
 
@@ -103,7 +72,9 @@ module top_stm(
     reg [4:0]  curr_page_id;
     reg [31:0] captured_s0_address;
     reg [9:0]  captured_csr_address;
-
+    wire buffer_valid;
+    wire [31:0] buffer_dataout;
+    reg [255:0] buffer_wrmem;
     // wire [31:0] int_s0_addr;
 
     // assign int_s0_addr = s0_address - 4;
@@ -124,7 +95,7 @@ module top_stm(
 
     reg [31:0] buffer [0:7];
     wire buffer_hit; //buffer hit, else buffer miss
-
+    reg row; //read or write
     assign buffer_hit = (curr_row_id == row_id) && (curr_page_id == page_id);
 
     
@@ -150,7 +121,8 @@ module top_stm(
             s0_readdatavalid <= 0;
             curr_row_id <=0;
             curr_page_id <=0;
-
+            buffer_wrmem <= 0;
+            row <= 0;
             for (int i = 0;i<8 ;i++ ) begin
                 buffer[i] <= 0;
             end
@@ -168,9 +140,6 @@ module top_stm(
             prev_regw <= regw;
             prev_memr <= memr;
             prev_memw <= memw;
-
-            curr_row_id <= row_id;
-            curr_page_id <= page_id;
             
 
             case (state)
@@ -178,6 +147,7 @@ module top_stm(
                     CA_sigr   <= 0;
                     rd_tmp    <= 0;
                     wr_tmp    <= 0;
+                    buffer_wrmem <= 0;
                     s0_readdatavalid <= 0;
                     acc_counter <= 8;
                     if (regr && !prev_regr) begin
@@ -187,6 +157,7 @@ module top_stm(
                         state <= WRREG;
                     end else
                     if (memr && !prev_memr) begin
+                        row <= 1;
                         if (buffer_hit) begin
                             state <= RDMEM1;
                         end else begin
@@ -194,10 +165,15 @@ module top_stm(
                         end
                     end else
                     if (memw && !prev_memw) begin
+                        row <= 0;
                         if (buffer_hit) begin
                             state <= WRMEM1;
                         end else begin
-                            state <= WRMEM2;
+                            /*
+                            when we write during buffer miss, we need to read data from memory, store it in buffer
+                            the buffer is updated with the new data, and then we write to memory.
+                            */
+                            state <= RDMEM2;
                         end
                     end
                 end
@@ -254,22 +230,46 @@ module top_stm(
                         5'h1c: buffer[7] <= s0_writedata;
                         default: buffer[0]  <= 32'h0;
                     endcase
-                    state <= IDLE;
+                    if (buffer_hit) begin
+                        state <= IDLE;
+                    end else if (!buffer_hit) begin
+                        state <= WRMEM2;
+                        buffer_wrmem <= {buffer[0],buffer[1],buffer[2],buffer[3],buffer[4],buffer[5],buffer[6],buffer[7]};
+                    end
+                    
                 end
                 RDMEM2: begin
                     if(stm_end[2]) begin
-                        state <= ACCDLY;
+                        if (row) begin
+                            state <= RDMEM1;
+                            
+                            curr_row_id <= row_id;
+                            curr_page_id <= page_id;
+                        end else if(!row) begin
+                            state <= WRMEM1;
+                        end
                         stm_start[2] <= 0;
                     end else begin
                         stm_start[2] <= rd_tmp;
                         rd_tmp <= 1;
                         CA_sigr <= CA_sig;
                     end
+
+                
+                    if (buffer_valid) begin
+                        for (int i = 0; i<7;i++ ) begin
+                            buffer[i] <= buffer[i+1];
+                        end
+                        
+                        buffer[7] <= buffer_dataout;
+                    end
                     
                 end
                 WRMEM2: begin
                     if(stm_end[3]) begin
                         state <= ACCDLY;
+                        curr_row_id <= row_id;
+                        curr_page_id <= page_id;
                         stm_start[3] <= 0;
                     end else begin
                         stm_start[3] <= wr_tmp;
@@ -365,8 +365,8 @@ module top_stm(
         .datain         (rdmem_datain),
         .dataout        (dataout),
 		.rwds_in		(rwds_in),
-        .dataoutr       (),
-        .valid          (),
+        .dataoutr       (buffer_dataout),
+        .wordvalid      (buffer_valid),
         .casig          (CA_sigr)
     );
 
@@ -382,6 +382,7 @@ module top_stm(
 		.rwds_in		(rwds_in),
         .rwds_out       (wrmem_rwds_out),
         .rwds_oe        (wrmem_rwds_oe),
+        .databuffer     (buffer_wrmem),
         .casig          (CA_sigr)
     );
 
