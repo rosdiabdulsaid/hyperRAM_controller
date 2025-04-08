@@ -1,10 +1,5 @@
 <sld_project_info>
   <sld_infos>
-    <sld_info hpath="jamb:jamb_csr" name="jamb_csr">
-      <assignment_values>
-        <assignment_value text="QSYS_NAME jamb HAS_SOPCINFO 1 GENERATION_ID 1743041321"/>
-      </assignment_values>
-    </sld_info>
     <sld_info hpath="jamb:jamb_data" name="jamb_data">
       <assignment_values>
         <assignment_value text="QSYS_NAME jamb HAS_SOPCINFO 1 GENERATION_ID 1743041321"/>

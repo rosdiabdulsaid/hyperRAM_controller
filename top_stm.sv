@@ -23,8 +23,8 @@ module top_stm(
     input  wire [31:0] s0_address,          //       s0.address
     input  wire        s0_read,             //         .read
     input  wire        s0_write,            //         .write
-    output wire [31:0] s0_readdata,         //         .readdata
-    output wire        s0_readdatavalid,    //         .readdatavalid
+    output reg [31:0]  s0_readdata,         //         .readdata
+    output reg         s0_readdatavalid,    //         .readdatavalid
     input  wire [31:0] s0_writedata,        //         .writedata
     output wire        s0_waitrequest       //         .waitrequest
 
@@ -33,13 +33,12 @@ module top_stm(
 
     typedef enum logic [3:0] {
         IDLE,
-        CHKID,
         RDREG,
         WRREG,
-        RDMEM,
-        WRMEM,
-        BUF_MISS,
-        BUF_HIT,
+        RDMEM1,
+        WRMEM1,
+        RDMEM2,
+        WRMEM2,
         ACCDLY
     } top_state;
 
@@ -99,13 +98,18 @@ module top_stm(
     wire [13:0] row_id;
     wire [4:0]  page_id;
     wire [4:0] buf_addr;
-    reg [31:0] buf_data [0:7];
 
     reg [13:0] curr_row_id;
     reg [4:0]  curr_page_id;
+    reg [31:0] captured_s0_address;
+    reg [9:0]  captured_csr_address;
+
+    // wire [31:0] int_s0_addr;
+
+    // assign int_s0_addr = s0_address - 4;
 
     addr_decode addr_decode_inst (
-        .in_addr        (s0_address),
+        .in_addr        (captured_s0_address),
         .read           (rd_tmp),
         .write          (wr_tmp),
         .out_addr       (CA_sig),
@@ -114,13 +118,17 @@ module top_stm(
         .buffer_addr    (buf_addr),
     );
 
-    reg fuse,row;
-    wire buffer_hit, buffer_miss,;
+    //buffer mechanism
+    //initial buffer content should be 0, no need to write to ram yet.
+    //if changed address detected, then write buffer to ram
 
-    assign buffer_hit = fuse == 1? (curr_row_id == row_id) && (curr_page_id == page_id) : 0;
-    assign buffer_miss = fuse == 0? 1 : (curr_row_id != row_id) || (curr_page_id != page_id) ;
+    reg [31:0] buffer [0:7];
+    wire buffer_hit; //buffer hit, else buffer miss
+
+    assign buffer_hit = (curr_row_id == row_id) && (curr_page_id == page_id);
 
     
+
 
     always@(posedge clk) begin
         if(rst) begin
@@ -131,19 +139,22 @@ module top_stm(
             memw <= 0;
             rd_tmp <= 0;
             wr_tmp <= 0;
-            row <= 0;
+
             prev_memr <= 0;
             prev_memw <= 0;
             prev_regr <= 0;
             prev_regw <= 0;
             CA_sigr <= 0;
             acc_counter <= 0;
-            curr_row_id <= 0;
-            curr_page_id <= 0;
-            fuse <= 0;
+            s0_readdata <= 0;
+            s0_readdatavalid <= 0;
+            curr_row_id <=0;
+            curr_page_id <=0;
+
             for (int i = 0;i<8 ;i++ ) begin
-                buf_data[i] <= 0;
+                buffer[i] <= 0;
             end
+
             for (int i = 0;i<4 ;i++ ) begin
                 stm_start[i] <= 0;
             end
@@ -158,11 +169,16 @@ module top_stm(
             prev_memr <= memr;
             prev_memw <= memw;
 
+            curr_row_id <= row_id;
+            curr_page_id <= page_id;
+            
+
             case (state)
                 IDLE: begin
                     CA_sigr   <= 0;
                     rd_tmp    <= 0;
                     wr_tmp    <= 0;
+                    s0_readdatavalid <= 0;
                     acc_counter <= 8;
                     if (regr && !prev_regr) begin
                         state <= RDREG;
@@ -171,12 +187,18 @@ module top_stm(
                         state <= WRREG;
                     end else
                     if (memr && !prev_memr) begin
-                        state <= CHKID;
-                        row <= 1;
+                        if (buffer_hit) begin
+                            state <= RDMEM1;
+                        end else begin
+                            state <= RDMEM2;
+                        end
                     end else
                     if (memw && !prev_memw) begin
-                        state <= CHKID;
-                        row <= 0;
+                        if (buffer_hit) begin
+                            state <= WRMEM1;
+                        end else begin
+                            state <= WRMEM2;
+                        end
                     end
                 end
                 RDREG: begin
@@ -188,7 +210,7 @@ module top_stm(
                         stm_start[0] <= 1;
                     end
 
-                    case (csr_address)
+                    case (captured_csr_address)
                             'h0: CA_sigr <= 48'hc000_0000_0000;
                             'h4: CA_sigr <= 48'hc000_0000_0001;
                             'h8: CA_sigr <= 48'hc000_0100_0000;
@@ -205,29 +227,36 @@ module top_stm(
                     end
                     
                 end
-                CHKID: begin
-                    if (fuse == 0) begin
-                        fuse <= 1;
-                    end
-                    if (buffer_hit) begin
-                        state <= BUF_HIT;
-                    end else if (buffer_miss) begin
-                        state <= BUF_MISS;
-                    end else begin
-                        state <= IDLE;
-                    end
+                RDMEM1: begin
+                    case (buf_addr)
+                        5'h0: s0_readdata <= buffer[0];
+                        5'h4: s0_readdata <= buffer[1];
+                        5'h8: s0_readdata <= buffer[2];
+                        5'hc: s0_readdata <= buffer[3];
+                        5'h10: s0_readdata <= buffer[4];
+                        5'h14: s0_readdata <= buffer[5];
+                        5'h18: s0_readdata <= buffer[6];
+                        5'h1c: s0_readdata <= buffer[7];
+                        default: s0_readdata <= 32'h0;
+                    endcase
+                    s0_readdatavalid <= 1;
+                    state <= IDLE;
                 end
-                BUF_MISS: begin
-                    if(row) begin
-                        state <= RDMEM;
-                    end else if(row == 0) begin
-                        state <= WRMEM;
-                    end 
+                WRMEM1: begin
+                    case (buf_addr)
+                        5'h0: buffer[0]  <= s0_writedata;
+                        5'h4: buffer[1]  <= s0_writedata;
+                        5'h8: buffer[2]  <= s0_writedata;
+                        5'hc: buffer[3]  <= s0_writedata;
+                        5'h10: buffer[4] <= s0_writedata;
+                        5'h14: buffer[5] <= s0_writedata;
+                        5'h18: buffer[6] <= s0_writedata;
+                        5'h1c: buffer[7] <= s0_writedata;
+                        default: buffer[0]  <= 32'h0;
+                    endcase
+                    state <= IDLE;
                 end
-                BUF_HIT: begin
-                    
-                end
-                RDMEM: begin
+                RDMEM2: begin
                     if(stm_end[2]) begin
                         state <= ACCDLY;
                         stm_start[2] <= 0;
@@ -238,7 +267,7 @@ module top_stm(
                     end
                     
                 end
-                WRMEM: begin
+                WRMEM2: begin
                     if(stm_end[3]) begin
                         state <= ACCDLY;
                         stm_start[3] <= 0;
@@ -270,10 +299,18 @@ module top_stm(
             oe_data <= 0;
             oe_clk <= 0;
             csn  <= 1;
+            captured_s0_address <= 0;
+            captured_csr_address <= 0;
         end else begin
             
-
+            if(s0_read || s0_write) begin
+                captured_s0_address <= s0_address;
+            end
             
+            if (csr_read || csr_write) begin
+                captured_csr_address <= csr_address;
+            end
+
             rwds_out <= stm_start[3] ? wrmem_rwds_out : 1'h0;
             rwds_oe  <= stm_start[3] ? wrmem_rwds_oe  : 1'h0;
 
@@ -328,8 +365,8 @@ module top_stm(
         .datain         (rdmem_datain),
         .dataout        (dataout),
 		.rwds_in		(rwds_in),
-        .dataoutr       (s0_readdata),
-        .valid          (s0_readdatavalid),
+        .dataoutr       (),
+        .valid          (),
         .casig          (CA_sigr)
     );
 

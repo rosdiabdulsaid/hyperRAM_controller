@@ -78,19 +78,19 @@ module topv3(
 	wire		    s0_readdatavalid;   //i
 
 
-    jamb jamb_csr (
-		.clk_clk              (clk0),                 //          clk.clk
-		.clk_reset_reset      (rst),                  //    clk_reset.reset
-		.master_address       (csr_address),       //       master.address
-		.master_readdata      (csr_readdata),      //             .readdata
-		.master_read          (csr_read),          //             .read
-		.master_write         (csr_write),         //             .write
-		.master_writedata     (csr_writedata),     //             .writedata
-		.master_waitrequest   (csr_waitrequest),   //             .waitrequest
-		.master_readdatavalid (csr_readdatavalid), //             .readdatavalid
-		.master_byteenable    (4'hf),                 //             .byteenable
-		.master_reset_reset   ()                      // master_reset.reset
-	);
+    // jamb jamb_csr (
+	// 	.clk_clk              (clk0),                 //          clk.clk
+	// 	.clk_reset_reset      (rst),                  //    clk_reset.reset
+	// 	.master_address       (csr_address),       //       master.address
+	// 	.master_readdata      (csr_readdata),      //             .readdata
+	// 	.master_read          (csr_read),          //             .read
+	// 	.master_write         (csr_write),         //             .write
+	// 	.master_writedata     (csr_writedata),     //             .writedata
+	// 	.master_waitrequest   (csr_waitrequest),   //             .waitrequest
+	// 	.master_readdatavalid (csr_readdatavalid), //             .readdatavalid
+	// 	.master_byteenable    (4'hf),                 //             .byteenable
+	// 	.master_reset_reset   ()                      // master_reset.reset
+	// );
     
 
     jamb jamb_data (
