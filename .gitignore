@@ -6,3 +6,4 @@ incremental_db/
 *.log
 simulation/
 output_files/
+software/
