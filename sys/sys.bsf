@@ -4,57 +4,130 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2025  Intel Corporation. All rights reserved.
-Your use of Intel Corporation's design tools, logic functions 
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the Intel FPGA Software License Subscription Agreements 
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
 on the Quartus Prime software download page.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 0 0 184 168)
-	(text "sys" (rect 82 0 97 12)(font "Arial" (font_size 11)))
-	(text "inst" (rect 8 152 20 164)(font "Arial" ))
+	(rect 0 0 256 304)
+	(text "sys" (rect 118 -1 133 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 288 20 300)(font "Arial" ))
 	(port
-		(pt 0 76)
+		(pt 0 192)
 		(input)
-		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
-		(text "clk_clk" (rect 4 65 46 76)(font "Arial" (font_size 8)))
-		(line (pt 0 76)(pt 68 76)(line_width 1))
+		(text "memrst_reset" (rect 0 0 57 12)(font "Arial" (font_size 8)))
+		(text "memrst_reset" (rect 4 181 76 192)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 80 192)(line_width 1))
 	)
 	(port
-		(pt 0 126)
+		(pt 0 232)
 		(input)
-		(text "reset_reset" (rect 0 0 46 12)(font "Arial" (font_size 8)))
-		(text "reset_reset" (rect 4 115 70 126)(font "Arial" (font_size 8)))
-		(line (pt 0 126)(pt 68 126)(line_width 1))
+		(text "refclk_clk" (rect 0 0 38 12)(font "Arial" (font_size 8)))
+		(text "refclk_clk" (rect 4 221 64 232)(font "Arial" (font_size 8)))
+		(line (pt 0 232)(pt 80 232)(line_width 1))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "rst_reset" (rect 0 0 36 12)(font "Arial" (font_size 8)))
+		(text "rst_reset" (rect 4 261 58 272)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 80 272)(line_width 1))
+	)
+	(port
+		(pt 0 104)
+		(output)
+		(text "io_ckout" (rect 0 0 33 12)(font "Arial" (font_size 8)))
+		(text "io_ckout" (rect 4 93 52 104)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 80 104)(line_width 1))
+	)
+	(port
+		(pt 0 120)
+		(output)
+		(text "io_ckoutn" (rect 0 0 37 12)(font "Arial" (font_size 8)))
+		(text "io_ckoutn" (rect 4 109 58 120)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 80 120)(line_width 1))
+	)
+	(port
+		(pt 0 136)
+		(output)
+		(text "io_csn" (rect 0 0 25 12)(font "Arial" (font_size 8)))
+		(text "io_csn" (rect 4 125 40 136)(font "Arial" (font_size 8)))
+		(line (pt 0 136)(pt 80 136)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(output)
+		(text "io_rstn" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "io_rstn" (rect 4 141 46 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 80 152)(line_width 1))
+	)
+	(port
+		(pt 256 72)
+		(output)
+		(text "jtag_uart_0_irq_irq" (rect 0 0 75 12)(font "Arial" (font_size 8)))
+		(text "jtag_uart_0_irq_irq" (rect 160 61 274 72)(font "Arial" (font_size 8)))
+		(line (pt 256 72)(pt 144 72)(line_width 1))
+	)
+	(port
+		(pt 0 72)
+		(bidir)
+		(text "io_dq[7..0]" (rect 0 0 41 12)(font "Arial" (font_size 8)))
+		(text "io_dq[7..0]" (rect 4 61 70 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 80 72)(line_width 3))
+	)
+	(port
+		(pt 0 88)
+		(bidir)
+		(text "io_rwds" (rect 0 0 30 12)(font "Arial" (font_size 8)))
+		(text "io_rwds" (rect 4 77 46 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 80 88)(line_width 1))
 	)
 	(drawing
-		(text "clk" (rect 53 46 124 105)(font "Arial" (color 128 0 0)(font_size 9)))
-		(text "clk" (rect 73 71 164 152)(font "Arial" (color 0 0 0)))
-		(text "reset" (rect 39 96 108 205)(font "Arial" (color 128 0 0)(font_size 9)))
-		(text "reset" (rect 73 121 176 252)(font "Arial" (color 0 0 0)))
-		(text " system " (rect 152 151 352 312)(font "Arial" ))
-		(line (pt 68 34)(pt 119 34)(line_width 1))
-		(line (pt 119 34)(pt 119 151)(line_width 1))
-		(line (pt 68 151)(pt 119 151)(line_width 1))
-		(line (pt 68 34)(pt 68 151)(line_width 1))
-		(line (pt 69 55)(pt 69 80)(line_width 1))
-		(line (pt 70 55)(pt 70 80)(line_width 1))
-		(line (pt 69 105)(pt 69 130)(line_width 1))
-		(line (pt 70 105)(pt 70 130)(line_width 1))
-		(line (pt 0 0)(pt 184 0)(line_width 1))
-		(line (pt 184 0)(pt 184 168)(line_width 1))
-		(line (pt 0 168)(pt 184 168)(line_width 1))
-		(line (pt 0 0)(pt 0 168)(line_width 1))
+		(text "io" (rect 71 43 154 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "dq" (rect 85 67 182 144)(font "Arial" (color 0 0 0)))
+		(text "rwds" (rect 85 83 194 176)(font "Arial" (color 0 0 0)))
+		(text "ckout" (rect 85 99 200 208)(font "Arial" (color 0 0 0)))
+		(text "ckoutn" (rect 85 115 206 240)(font "Arial" (color 0 0 0)))
+		(text "csn" (rect 85 131 188 272)(font "Arial" (color 0 0 0)))
+		(text "rstn" (rect 85 147 194 304)(font "Arial" (color 0 0 0)))
+		(text "jtag_uart_0_irq" (rect 145 43 380 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "irq" (rect 130 67 278 144)(font "Arial" (color 0 0 0)))
+		(text "memrst" (rect 36 163 108 339)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset" (rect 85 187 200 384)(font "Arial" (color 0 0 0)))
+		(text "refclk" (rect 48 203 132 419)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 85 227 188 464)(font "Arial" (color 0 0 0)))
+		(text "rst" (rect 65 243 148 499)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset" (rect 85 267 200 544)(font "Arial" (color 0 0 0)))
+		(text " sys " (rect 237 288 504 586)(font "Arial" ))
+		(line (pt 80 32)(pt 144 32)(line_width 1))
+		(line (pt 144 32)(pt 144 288)(line_width 1))
+		(line (pt 80 288)(pt 144 288)(line_width 1))
+		(line (pt 80 32)(pt 80 288)(line_width 1))
+		(line (pt 81 52)(pt 81 156)(line_width 1))
+		(line (pt 82 52)(pt 82 156)(line_width 1))
+		(line (pt 143 52)(pt 143 76)(line_width 1))
+		(line (pt 142 52)(pt 142 76)(line_width 1))
+		(line (pt 81 172)(pt 81 196)(line_width 1))
+		(line (pt 82 172)(pt 82 196)(line_width 1))
+		(line (pt 81 212)(pt 81 236)(line_width 1))
+		(line (pt 82 212)(pt 82 236)(line_width 1))
+		(line (pt 81 252)(pt 81 276)(line_width 1))
+		(line (pt 82 252)(pt 82 276)(line_width 1))
+		(line (pt 0 0)(pt 256 0)(line_width 1))
+		(line (pt 256 0)(pt 256 304)(line_width 1))
+		(line (pt 0 304)(pt 256 304)(line_width 1))
+		(line (pt 0 0)(pt 0 304)(line_width 1))
 	)
 )

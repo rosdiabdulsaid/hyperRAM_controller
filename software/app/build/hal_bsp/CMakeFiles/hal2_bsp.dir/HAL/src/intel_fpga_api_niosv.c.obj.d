@@ -1,0 +1,19 @@
+hal_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_api_niosv.c.obj: \
+ C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/software/hal_bsp/HAL/src/intel_fpga_api_niosv.c \
+ C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/software/hal_bsp/HAL/inc/sys/intel_fpga_api_cmn_inf.h \
+ D:/intelFPGA_standard/24.1std/riscfree/toolchain/riscv32-unknown-elf/lib/gcc/riscv32-unknown-elf/13.2.0/include/stdbool.h \
+ D:/intelFPGA_standard/24.1std/riscfree/toolchain/riscv32-unknown-elf/lib/gcc/riscv32-unknown-elf/13.2.0/include/stdint.h \
+ D:/intelFPGA_standard/24.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/stdint.h \
+ D:/intelFPGA_standard/24.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/machine/_default_types.h \
+ D:/intelFPGA_standard/24.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/sys/features.h \
+ D:/intelFPGA_standard/24.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/_newlib_version.h \
+ D:/intelFPGA_standard/24.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/sys/_intsup.h \
+ D:/intelFPGA_standard/24.1std/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/sys/_stdint.h \
+ D:/intelFPGA_standard/24.1std/riscfree/toolchain/riscv32-unknown-elf/lib/gcc/riscv32-unknown-elf/13.2.0/include/stdarg.h \
+ C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/software/hal_bsp/HAL/inc/intel_fpga_platform.h \
+ C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/software/hal_bsp/HAL/inc/sys/intel_fpga_platform_niosv.h \
+ D:/intelFPGA_standard/24.1std/riscfree/toolchain/riscv32-unknown-elf/lib/gcc/riscv32-unknown-elf/13.2.0/include/stddef.h \
+ C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/software/hal_bsp/HAL/inc/sys/intel_fpga_platform_api_niosv.h \
+ C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/software/hal_bsp/system.h \
+ C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/software/hal_bsp/linker.h \
+ C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/software/hal_bsp/HAL/inc/sys/intel_fpga_api_cmn_msg.h

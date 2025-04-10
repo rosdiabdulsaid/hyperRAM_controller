@@ -1,7 +1,15 @@
 	component sys is
 		port (
-			clk_clk     : in std_logic := 'X'; -- clk
-			reset_reset : in std_logic := 'X'  -- reset
+			io_dq               : inout std_logic_vector(7 downto 0) := (others => 'X'); -- dq
+			io_rwds             : inout std_logic                    := 'X';             -- rwds
+			io_ckout            : out   std_logic;                                       -- ckout
+			io_ckoutn           : out   std_logic;                                       -- ckoutn
+			io_csn              : out   std_logic;                                       -- csn
+			io_rstn             : out   std_logic;                                       -- rstn
+			jtag_uart_0_irq_irq : out   std_logic;                                       -- irq
+			memrst_reset        : in    std_logic                    := 'X';             -- reset
+			refclk_clk          : in    std_logic                    := 'X';             -- clk
+			rst_reset           : in    std_logic                    := 'X'              -- reset
 		);
 	end component sys;
 

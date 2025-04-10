@@ -1,0 +1,108 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\sys.qsys --block-symbol-file --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\sys --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Progress: Loading hyperRAM_controller/sys.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 24.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hyperram_controller_0 [hyperram_controller 0.3]
+Progress: Parameterizing module hyperram_controller_0
+Progress: Adding intel_niosv_m_0 [intel_niosv_m 26.0.0]
+Progress: Parameterizing module intel_niosv_m_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 24.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 24.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding reset_bridge_0 [altera_reset_bridge 24.1]
+Progress: Parameterizing module reset_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: sys.hyperram_controller_0.corerst: No synchronous edges, but has associated clock
+Warning: sys.intel_niosv_m_0: Properties (associatedClock) have been set on interface reset - in composed mode these are ignored
+Warning: sys.intel_niosv_m_0: Properties (associatedClock,associatedReset) have been set on interface instruction_manager - in composed mode these are ignored
+Warning: sys.intel_niosv_m_0: Properties (associatedClock,associatedReset) have been set on interface data_manager - in composed mode these are ignored
+Warning: sys.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\sys.qsys --synthesis=VERILOG --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\sys\synthesis --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Progress: Loading hyperRAM_controller/sys.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 24.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hyperram_controller_0 [hyperram_controller 0.3]
+Progress: Parameterizing module hyperram_controller_0
+Progress: Adding intel_niosv_m_0 [intel_niosv_m 26.0.0]
+Progress: Parameterizing module intel_niosv_m_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 24.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 24.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding reset_bridge_0 [altera_reset_bridge 24.1]
+Progress: Parameterizing module reset_bridge_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: sys.hyperram_controller_0.corerst: No synchronous edges, but has associated clock
+Warning: sys.intel_niosv_m_0: Properties (associatedClock) have been set on interface reset - in composed mode these are ignored
+Warning: sys.intel_niosv_m_0: Properties (associatedClock,associatedReset) have been set on interface instruction_manager - in composed mode these are ignored
+Warning: sys.intel_niosv_m_0: Properties (associatedClock,associatedReset) have been set on interface data_manager - in composed mode these are ignored
+Warning: sys.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: sys: Generating "sys" for QUARTUS_SYNTH
+Info: hyperram_controller_0: "sys" instantiated hyperram_controller "hyperram_controller_0"
+Info: intel_niosv_m_0: "sys" instantiated intel_niosv_m "intel_niosv_m_0"
+Info: jtag_uart_0: "sys" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'sys_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec cmd /c {set LC_ALL=C&& D:/intelfpga_standard/24.1std/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_standard/24.1std/quartus/bin64/perl/lib -I D:/intelfpga_standard/24.1std/quartus/sopc_builder/bin/europa -I D:/intelfpga_standard/24.1std/quartus/sopc_builder/bin -I D:/intelfpga_standard/24.1std/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_standard/24.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_standard/24.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=sys_onchip_memory2_0 --dir=C:/Users/ROSDIA~1/AppData/Local/Temp/alt0187_6890490887042862529.dir/0004_onchip_memory2_0_gen/ --quartus_dir=D:/intelfpga_standard/24.1std/quartus --verilog --config=C:/Users/ROSDIA~1/AppData/Local/Temp/alt0187_6890490887042862529.dir/0004_onchip_memory2_0_gen//sys_onchip_memory2_0_component_configuration.pl --do_build_sim=0}]
+Info: onchip_memory2_0: Done RTL generation for module 'sys_onchip_memory2_0'
+Info: onchip_memory2_0: "sys" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "sys" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "sys" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "sys" instantiated altera_reset_controller "rst_controller"
+Info: niosv_reset_controller: "Generating: niosv_reset_controller"
+Info: hart: "intel_niosv_m_0" instantiated intel_niosv_m_unit "hart"
+Info: timer_module: "intel_niosv_m_0" instantiated intel_niosv_timer_msip "timer_module"
+Info: dbg_mod: "intel_niosv_m_0" instantiated intel_niosv_dbg_mod "dbg_mod"
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys/synthesis/submodules/niosv_ram.sv
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys/synthesis/submodules/altera_reset_synchronizer.v
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys/synthesis/submodules/altera_reset_controller.v
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys/synthesis/submodules/altera_reset_controller.sdc
+Info: irq_mapper: "intel_niosv_m_0" instantiated altera_irq_mapper "irq_mapper"
+Info: intel_niosv_m_0_data_manager_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "intel_niosv_m_0_data_manager_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: intel_niosv_m_0_data_manager_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "intel_niosv_m_0_data_manager_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: intel_niosv_m_0_data_manager_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "intel_niosv_m_0_data_manager_limiter"
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: niosv_reset_controller: "hart" instantiated intel_niosv_m_unit "niosv_reset_controller"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: sys: Done "sys" with 33 modules, 96 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,67 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\sys_jamb.qsys --block-symbol-file --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\sys_jamb --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Progress: Loading hyperRAM_controller/sys_jamb.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 24.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hyperram_controller_0 [hyperram_controller 0.3]
+Progress: Parameterizing module hyperram_controller_0
+Progress: Adding master_0 [altera_jtag_avalon_master 24.1]
+Progress: Parameterizing module master_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: sys_jamb.hyperram_controller_0.corerst: Associated reset sinks not declared
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\sys_jamb.qsys --synthesis=VERILOG --output-directory=C:\Users\rosdiabdulsaid\Desktop\prj\c10lp\hyperRAM_controller\sys_jamb\synthesis --family="Cyclone 10 LP" --part=10CL025YU256I7G
+Progress: Loading hyperRAM_controller/sys_jamb.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 24.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hyperram_controller_0 [hyperram_controller 0.3]
+Progress: Parameterizing module hyperram_controller_0
+Progress: Adding master_0 [altera_jtag_avalon_master 24.1]
+Progress: Parameterizing module master_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: sys_jamb.hyperram_controller_0.corerst: Associated reset sinks not declared
+Info: sys_jamb: Generating "sys_jamb" for QUARTUS_SYNTH
+Info: hyperram_controller_0: "sys_jamb" instantiated hyperram_controller "hyperram_controller_0"
+Info: master_0: "sys_jamb" instantiated altera_jtag_avalon_master "master_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "sys_jamb" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "sys_jamb" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: master_0_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "master_0_master_translator"
+Info: hyperram_controller_0_csr_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "hyperram_controller_0_csr_translator"
+Info: master_0_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "master_0_master_agent"
+Info: hyperram_controller_0_csr_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "hyperram_controller_0_csr_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: master_0_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "master_0_master_limiter"
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys_jamb/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys_jamb/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/rosdiabdulsaid/Desktop/prj/c10lp/hyperRAM_controller/sys_jamb/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: sys_jamb: Done "sys_jamb" with 26 modules, 49 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,5 +1,5 @@
 `define DEBUG
-module top_stm(
+module hyperram_controller(
     input wire clk,  
     input wire rst,
 
@@ -18,15 +18,15 @@ module top_stm(
     output wire [31:0] csr_readdata,        //        .readdata
     output wire        csr_readdatavalid,   //        .readdatavalid
     input  wire [31:0] csr_writedata,       //        .writedata
-    input  wire        csr_waitrequest,      //        .waitrequest
+    // input  wire        csr_waitrequest,      //        .waitrequest
 
-    input  wire [31:0] s0_address,          //       s0.address
+    input  wire [21:0] s0_address,          //       s0.address
     input  wire        s0_read,             //         .read
     input  wire        s0_write,            //         .write
     output reg [31:0]  s0_readdata,         //         .readdata
     output reg         s0_readdatavalid,    //         .readdatavalid
-    input  wire [31:0] s0_writedata,        //         .writedata
-    output wire        s0_waitrequest       //         .waitrequest
+    input  wire [31:0] s0_writedata        //         .writedata
+    // output wire        s0_waitrequest       //         .waitrequest
 
 );
 
@@ -70,14 +70,13 @@ module top_stm(
 
     reg [13:0] curr_row_id;
     reg [4:0]  curr_page_id;
-    reg [31:0] captured_s0_address;
+    reg [21:0] captured_s0_address;
     reg [9:0]  captured_csr_address;
     wire buffer_valid;
     wire [31:0] buffer_dataout;
     reg [255:0] buffer_wrmem;
     // wire [31:0] int_s0_addr;
 
-    // assign int_s0_addr = s0_address - 4;
 
     addr_decode addr_decode_inst (
         .in_addr        (captured_s0_address),
@@ -96,7 +95,9 @@ module top_stm(
     reg [31:0] buffer [0:7];
     wire buffer_hit; //buffer hit, else buffer miss
     reg row; //read or write
-    assign buffer_hit = (curr_row_id == row_id) && (curr_page_id == page_id);
+    reg inbuffer_valid;
+    // assign buffer_hit = (curr_row_id == row_id) && (curr_page_id == page_id);
+    assign buffer_hit = 1'b0;
 
     
 
@@ -123,6 +124,7 @@ module top_stm(
             curr_page_id <=0;
             buffer_wrmem <= 0;
             row <= 0;
+            inbuffer_valid <= 0;
             for (int i = 0;i<8 ;i++ ) begin
                 buffer[i] <= 0;
             end
@@ -150,6 +152,7 @@ module top_stm(
                     buffer_wrmem <= 0;
                     s0_readdatavalid <= 0;
                     acc_counter <= 8;
+                    inbuffer_valid <= 0;
                     if (regr && !prev_regr) begin
                         state <= RDREG;
                     end else
@@ -188,9 +191,9 @@ module top_stm(
 
                     case (captured_csr_address)
                             'h0: CA_sigr <= 48'hc000_0000_0000;
-                            'h4: CA_sigr <= 48'hc000_0000_0001;
-                            'h8: CA_sigr <= 48'hc000_0100_0000;
-                            'hc: CA_sigr <= 48'hc000_0100_0001;
+                            'h1: CA_sigr <= 48'hc000_0000_0001;
+                            'h2: CA_sigr <= 48'hc000_0100_0000;
+                            'h3: CA_sigr <= 48'hc000_0100_0001;
                             default: CA_sigr <= 48'hc000_0000_0000;
                     endcase
                 end
@@ -206,13 +209,13 @@ module top_stm(
                 RDMEM1: begin
                     case (buf_addr)
                         5'h0: s0_readdata <= buffer[0];
-                        5'h4: s0_readdata <= buffer[1];
-                        5'h8: s0_readdata <= buffer[2];
-                        5'hc: s0_readdata <= buffer[3];
-                        5'h10: s0_readdata <= buffer[4];
-                        5'h14: s0_readdata <= buffer[5];
-                        5'h18: s0_readdata <= buffer[6];
-                        5'h1c: s0_readdata <= buffer[7];
+                        5'h1: s0_readdata <= buffer[1];
+                        5'h2: s0_readdata <= buffer[2];
+                        5'h3: s0_readdata <= buffer[3];
+                        5'h4: s0_readdata <= buffer[4];
+                        5'h5: s0_readdata <= buffer[5];
+                        5'h6: s0_readdata <= buffer[6];
+                        5'h7: s0_readdata <= buffer[7];
                         default: s0_readdata <= 32'h0;
                     endcase
                     s0_readdatavalid <= 1;
@@ -220,20 +223,21 @@ module top_stm(
                 end
                 WRMEM1: begin
                     case (buf_addr)
-                        5'h0: buffer[0]  <= s0_writedata;
-                        5'h4: buffer[1]  <= s0_writedata;
-                        5'h8: buffer[2]  <= s0_writedata;
-                        5'hc: buffer[3]  <= s0_writedata;
-                        5'h10: buffer[4] <= s0_writedata;
-                        5'h14: buffer[5] <= s0_writedata;
-                        5'h18: buffer[6] <= s0_writedata;
-                        5'h1c: buffer[7] <= s0_writedata;
+                        5'h0: buffer[0] <= s0_writedata;
+                        5'h1: buffer[1] <= s0_writedata;
+                        5'h2: buffer[2] <= s0_writedata;
+                        5'h3: buffer[3] <= s0_writedata;
+                        5'h4: buffer[4] <= s0_writedata;
+                        5'h5: buffer[5] <= s0_writedata;
+                        5'h6: buffer[6] <= s0_writedata;
+                        5'h7: buffer[7] <= s0_writedata;
                         default: buffer[0]  <= 32'h0;
                     endcase
                     if (buffer_hit) begin
                         state <= IDLE;
                     end else if (!buffer_hit) begin
                         state <= WRMEM2;
+                        inbuffer_valid <= 1;
                         buffer_wrmem <= {buffer[0],buffer[1],buffer[2],buffer[3],buffer[4],buffer[5],buffer[6],buffer[7]};
                     end
                     
@@ -246,6 +250,7 @@ module top_stm(
                             curr_row_id <= row_id;
                             curr_page_id <= page_id;
                         end else if(!row) begin
+                            inbuffer_valid <= 0;
                             state <= WRMEM1;
                         end
                         stm_start[2] <= 0;
@@ -266,6 +271,7 @@ module top_stm(
                     
                 end
                 WRMEM2: begin
+                    inbuffer_valid <= 0; 
                     if(stm_end[3]) begin
                         state <= ACCDLY;
                         curr_row_id <= row_id;
@@ -275,6 +281,7 @@ module top_stm(
                         stm_start[3] <= wr_tmp;
                         wr_tmp  <= 1;
                         CA_sigr <= CA_sig;
+                        
                     end
                     
                 end
@@ -383,6 +390,7 @@ module top_stm(
         .rwds_out       (wrmem_rwds_out),
         .rwds_oe        (wrmem_rwds_oe),
         .databuffer     (buffer_wrmem),
+        .valid          (inbuffer_valid),
         .casig          (CA_sigr)
     );
 

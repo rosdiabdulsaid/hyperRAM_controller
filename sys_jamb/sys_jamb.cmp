@@ -1,0 +1,15 @@
+	component sys_jamb is
+		port (
+			clk_clk            : in    std_logic                    := 'X';             -- clk
+			io_dq              : inout std_logic_vector(7 downto 0) := (others => 'X'); -- dq
+			io_rwds            : inout std_logic                    := 'X';             -- rwds
+			io_ckout           : out   std_logic;                                       -- ckout
+			io_ckoutn          : out   std_logic;                                       -- ckoutn
+			io_csn             : out   std_logic;                                       -- csn
+			io_rstn            : out   std_logic;                                       -- rstn
+			master_reset_reset : out   std_logic;                                       -- reset
+			memrst_reset       : in    std_logic                    := 'X';             -- reset
+			reset_reset_n      : in    std_logic                    := 'X'              -- reset_n
+		);
+	end component sys_jamb;
+
