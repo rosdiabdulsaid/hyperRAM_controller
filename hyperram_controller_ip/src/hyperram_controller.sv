@@ -161,23 +161,12 @@ module hyperram_controller(
                     end else
                     if (memr && !prev_memr) begin
                         row <= 1;
-                        if (buffer_hit) begin
-                            state <= RDMEM1;
-                        end else begin
-                            state <= RDMEM2;
-                        end
+                        state <= RDMEM2;
+                        
                     end else
                     if (memw && !prev_memw) begin
                         row <= 0;
-                        if (buffer_hit) begin
-                            state <= WRMEM1;
-                        end else begin
-                            /*
-                            when we write during buffer miss, we need to read data from memory, store it in buffer
-                            the buffer is updated with the new data, and then we write to memory.
-                            */
-                            state <= RDMEM2;
-                        end
+                        state <= RDMEM2;
                     end
                 end
                 RDREG: begin
@@ -233,13 +222,9 @@ module hyperram_controller(
                         5'h7: buffer[7] <= s0_writedata;
                         default: buffer[0]  <= 32'h0;
                     endcase
-                    if (buffer_hit) begin
-                        state <= IDLE;
-                    end else if (!buffer_hit) begin
-                        state <= WRMEM2;
-                        inbuffer_valid <= 1;
-                        buffer_wrmem <= {buffer[0],buffer[1],buffer[2],buffer[3],buffer[4],buffer[5],buffer[6],buffer[7]};
-                    end
+                    state <= WRMEM2;
+                    inbuffer_valid <= 1;
+                    buffer_wrmem <= {buffer[0],buffer[1],buffer[2],buffer[3],buffer[4],buffer[5],buffer[6],buffer[7]};
                     
                 end
                 RDMEM2: begin
